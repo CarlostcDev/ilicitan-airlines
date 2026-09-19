@@ -130,3 +130,19 @@ h1 {
 .md-sidebar__scrollwrap:hover {
     scrollbar-color: var(--primary) #000000 !important;
 }
+
+.md-top:hover {
+    background: var(--primary) !important;
+}
+
+.md-typeset a {
+    color: var(--primary) !important;
+}
+
+.md-typeset a:hover {
+    color: var(--hover) !important;
+}
+
+.twemoji svg {
+    fill: var(--primary) !important;
+}
