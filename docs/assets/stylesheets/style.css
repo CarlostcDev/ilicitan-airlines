@@ -1,0 +1,132 @@
+:root {
+    --primary: #00803e;
+    --primary-light: #34813923;
+    --primary-dark: #172518;
+    --hover: #acacac;
+}
+
+::selection {
+    background: var(--primary);
+    color: white;
+}
+
+@font-face {
+    font-family: "Ilicitan Airlines";
+    src: url("../fonts/ilicitan-airlines.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+body, .md-typeset {
+    font-family: "Ilicitan Airlines", sans-serif;
+}
+
+[data-md-color-scheme="default"] .md-header .md-logo img {
+    content: url("../images/logos/logo-light.svg");
+}
+
+[data-md-color-scheme="slate"] .md-header .md-logo img {
+    content: url("../images/logos/logo-dark.svg");
+}
+
+h1 {
+    font-size: 2rem !important;
+    letter-spacing: 0 !important;
+    margin: 0 !important;
+}
+
+.md-content .md-path {
+    padding: 0 !important;
+}
+
+.md-nav__item .md-nav__link--active,
+.md-nav__item .md-nav__link--active code {
+    color: var(--primary) !important;
+}
+
+.md-nav--secondary .md-nav__link[href]:hover {
+    color: var(--primary) !important;
+}
+
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__item .md-nav__link--active {
+    background: var(--primary-light) !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__item .md-nav__link--active {
+    color: var(--primary) !important;
+    background: var(--primary-dark) !important;
+    font-weight: bold !important;
+}
+
+.md-tabs__item--active {
+    color: var(--primary) !important;
+    font-weight: bold !important;
+    border-bottom: 3px solid var(--primary) !important;
+}
+
+.md-tabs__item:hover {
+    border-bottom: 3px solid var(--hover);
+}
+
+.theme-banner .banner-dark {
+    display: none;
+}
+
+[data-md-color-scheme="slate"] .theme-banner .banner-light {
+    display: none;
+}
+
+[data-md-color-scheme="slate"] .theme-banner .banner-dark {
+    display: block;
+}
+
+.md-footer {
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-footer-meta {
+    background: var(--md-default-bg-color);
+}
+
+.md-footer-meta__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 1.5rem;
+}
+
+.md-footer-copyright {
+    color: var(--md-default-fg-color--light);
+    font-size: 0.8rem;
+}
+
+.md-footer-social {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.md-footer-social__link {
+    color: var(--md-default-fg-color--light);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.md-footer-social__link:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.md-copyright a[href="https://zensical.org/"] {
+    display: none !important;
+}
+
+.md-copyright {
+    color: var(--md-default-bg-color);
+}
+
+.md-social__link:hover svg {
+    color: var(--primary) !important;
+}
+
+.md-sidebar__scrollwrap:hover {
+    scrollbar-color: var(--primary) #000000 !important;
+}

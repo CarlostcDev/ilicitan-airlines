@@ -1,0 +1,103 @@
+[project]
+site_name = "Ilicitan Airlines Wiki"
+copyright = "© 2026 Ilicitan Airlines"
+site_url = "https://carlostcdev.github.io/ilicitan-airlines/"
+docs_dir = "docs"
+
+extra_css = [
+  "assets/stylesheets/style.css",
+]
+
+nav = [
+  { "Inicio" = [
+    "index.md",
+    { "Propuesta individual de proyecto" = "home/actividad-1.md" }
+  ] },
+  { "Requisitos" = [
+    "requirements/index.md",
+    { "Requisitos funcionales" = "requirements/requisitos-funcionales.md" },
+    { "Requisitos no funcionales" = "requirements/requisitos-no-funcionales.md" }
+  ] },
+  { "Análisis" = [
+    "analysis/index.md",
+  ] },
+  { "Diseño" = [
+    "design/index.md",
+  ] },
+  { "Implementación" = [
+    "implementation/index.md",
+  ] },
+  { "Pruebas" = [
+    "testing/index.md",
+  ] },
+  { "Despliegue" = [
+    "deployment/index.md",
+  ] },
+  { "Sprints" = [
+    "sprints/index.md",
+  ] },
+  { "Informes" = [
+    "reports/index.md",
+  ] },
+]
+
+[project.theme]
+name = "material"
+variant = "modern"
+language = "es"
+logo = "assets/images/logos/logo-dark.svg"
+favicon = "assets/images/logos/logo-dark.svg"
+features = [
+  "navigation.instant",
+  "navigation.instant.prefetch",
+  "navigation.instant.progress",
+  "navigation.tracking",
+  "navigation.tabs",
+  "navigation.tabs.sticky",
+  "navigation.sections",
+  "navigation.expand",
+  "navigation.path",
+  "navigation.top",
+  "navigation.footer",
+  "toc.follow",
+  "search.highlight",
+  "content.code.copy",
+  "content.code.select",
+  "content.tooltips",
+]
+
+[project.theme.font]
+text = "Ilicitan Airlines"
+code = "Google Sans Code"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+
+[project.theme.palette.toggle]
+icon = "material/brightness-7"
+name = "Cambiar a modo oscuro"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+
+[project.theme.palette.toggle]
+icon = "material/brightness-4"
+name = "Cambiar a modo claro"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/CarlostcDev"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/linkedin"
+link = "https://linkedin.com/in/cartorcas"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/docker"
+link = "https://hub.docker.com/u/carlostc2003"
+
+[[project.extra.social]]
+icon = "fontawesome/solid/code"
+link = "https://carlostcdev.github.io/"
