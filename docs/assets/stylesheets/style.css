@@ -1,7 +1,7 @@
 :root {
     --primary: #00803e;
-    --primary-light: #34813923;
-    --primary-dark: #172518;
+    --primary-light: #28a73033;
+    --primary-dark: #0e220f;
     --hover: #acacac;
 }
 
@@ -67,6 +67,13 @@ h1 {
 
 .md-tabs__item:hover {
     border-bottom: 3px solid var(--hover);
+}
+
+.theme-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .theme-banner .banner-dark {
@@ -135,7 +142,7 @@ h1 {
     background: var(--primary) !important;
 }
 
-.md-typeset a {
+.md-content__inner a {
     color: var(--primary) !important;
 }
 
@@ -145,4 +152,134 @@ h1 {
 
 .twemoji svg {
     fill: var(--primary) !important;
+}
+
+.tech-content {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap
+}
+
+.tech-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.tech-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 3px;
+    border-radius: inherit;
+    background: var(--tech-color);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.tech-card img {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+}
+
+.tech-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 5px;
+}
+
+.tech-info span {
+    font-family: "Fira Code", "Google Sans Code", system-ui;
+    line-height: 1.2;
+    font-size: 0.6rem;
+    font-weight: bold;
+    background: var(--tech-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.angular {
+    --tech-color: linear-gradient(90deg, #f5094e, #ff31d4, #9c19ed);
+}
+
+.kotlin {
+    --tech-color: linear-gradient(90deg, #8f43f8, #d8318e);
+}
+
+.typescript {
+    --tech-color: #2f74c0;
+}
+
+.spring {
+    --tech-color: #6DB33F;
+}
+
+.mariadb {
+    --tech-color: #00779b;
+}
+
+.java {
+    --tech-color: linear-gradient(90deg, #ea2d2e 0 50%, #0074bd 50% 100%);
+}
+
+.maven {
+    --tech-color: linear-gradient(90deg, #f69921 0 20%, #d43433 20% 40%, #bc2046 40% 60%, #a91e5f 60% 80%, #782c84 80% 100%);
+}
+
+.junit {
+    --tech-color: linear-gradient(90deg, #dc514a 0 50%, #23a161 50% 100%);;
+}
+
+.git {
+    --tech-color: #F05032;
+}
+
+.github {
+    --tech-color: linear-gradient(90deg, #6e6e6e, #8d8d8d);;
+}
+
+.sass {
+    --tech-color: #cf649b;
+}
+
+.html {
+    --tech-color: linear-gradient(90deg, #dd4b25, #e96228);
+}
+
+.intellij {
+    --tech-color: linear-gradient(90deg, #fc7723, #fe2857, #007eff);
+}
+
+.webstorm {
+    --tech-color: linear-gradient(90deg, #3097ff, #e8e417);
+}
+
+.androidstudio {
+    --tech-color: linear-gradient(90deg, #3ddc84 0 50%, #4285f4 50% 100%);
+}
+
+.vscode {
+    --tech-color: linear-gradient(90deg, #24aef3, #0089d2);
+}
+
+.compose {
+    --tech-color: linear-gradient(90deg, #3ddc84 0 33%, #4285f4 33% 66%, #083042 66% 100%);
+}
+
+.figma {
+    --tech-color: linear-gradient(90deg, #f24e1e 0 20%, #ff7262 20% 40%, #a259ff 40% 60%, #1abcfe 60% 80%, #0acf83 80% 100%);
 }

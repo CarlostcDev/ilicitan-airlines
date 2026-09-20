@@ -25,7 +25,7 @@ El identificador permite referenciar un requisito desde otras partes de la docum
 
 | Estado | ID | Requisito |
 |---|---|---|
-| :material-checkbox-marked: | **RF-01** | El sistema permitirá a los usuarios crear una cuenta mediante correo electrónico y contraseña. |
+| :material-checkbox-blank-outline: | **RF-01** | El sistema permitirá a los usuarios crear una cuenta mediante correo electrónico y contraseña. |
 | :material-checkbox-blank-outline: | **RF-02** | El sistema permitirá registrarse e iniciar sesión mediante una cuenta de Google. |
 | :material-checkbox-blank-outline: | **RF-03** | El usuario podrá iniciar y cerrar sesión desde la aplicación web y móvil. |
 | :material-checkbox-blank-outline: | **RF-04** | El usuario podrá consultar y modificar los datos personales almacenados en su perfil. |
