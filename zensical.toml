@@ -11,7 +11,8 @@ extra_css = [
 nav = [
   { "Inicio" = [
     "index.md",
-    { "Propuesta individual de proyecto" = "home/actividad-1.md" }
+    { "Propuesta individual de proyecto" = "home/actividad-1.md" },
+    { "Bocetos del proyecto" = "home/actividad-2.md" }
   ] },
   { "Requisitos" = [
     "requirements/index.md",
