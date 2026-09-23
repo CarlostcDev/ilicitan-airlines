@@ -1,8 +1,6 @@
 # Inicio
 
-Según la metodología Waterfall, los requisitos funcionales y no funcionales constatan el primer paso para asegurarse de recoger todas las funcionalidades previstas inicialmente para evitar la menor cantidad de cambios posibles, debido a ello, se puede ver detalladamente todas las funcionalidades propuestas desde [Requisitos funcionales](./requisitos-funcionales.md) y [Requisitos no funcionales](./requisitos-no-funcionales.md).
-
-En la siguiente lista se marcarán las funcionalidades que se hayan implementado, para ello, puede visitar como se van a implementar sobre el sistema propuesto en [Implementación](../implementation/index.md).
+Se pueden ver detalladamente todas las funcionalidades propuestas desde [Requisitos funcionales](./requisitos-funcionales.md) y [Requisitos no funcionales](./requisitos-no-funcionales.md).
 
 ## Alcance
 
@@ -18,6 +16,10 @@ Los requisitos se identifican mediante un código único:
 - **RNF-XX** - Requisito no funcional.
 
 El identificador permite referenciar un requisito desde otras partes de la documentación, como el análisis, la implementación y las pruebas.
+
+---
+
+En la siguiente lista se marcarán las funcionalidades que se hayan implementado, para ello, puede visitar como se van a implementar sobre el sistema propuesto en [Implementación](../implementation/index.md).
 
 ---
 
@@ -86,6 +88,8 @@ El identificador permite referenciar un requisito desde otras partes de la docum
 | :material-checkbox-blank-outline: | **RF-59** | El administrador podrá importar y exportar información relacionada con vuelos, usuarios, aeronaves, aeropuertos y demás entidades gestionadas por el sistema. |
 | :material-checkbox-blank-outline: | **RF-60** | El usuario deberá tener una lista de aeropuertos cercanos al seleccionar un aeropuerto origen |
 
+---
+
 ## Requisitos no funcionales
 
 | Estado | ID | Requisito |
@@ -121,3 +125,28 @@ El identificador permite referenciar un requisito desde otras partes de la docum
 | :material-checkbox-blank-outline: | **RNF-29** | El sistema deberá registrar los errores producidos en el backend para facilitar su diagnóstico y mantenimiento. |
 | :material-checkbox-blank-outline: | **RNF-30** | El sistema deberá limitar el acceso a los datos personales de los pasajeros según los permisos del usuario autenticado. |
 | :material-checkbox-blank-outline: | **RNF-31** | Los datos personales de los usuarios deberán almacenarse únicamente cuando sean necesarios para proporcionar las funcionalidades del sistema. |
+
+## Reglas de negocio
+
+| Estado                            | ID            | Requisito                                                                                                                                                                      |
+| --------------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| :material-checkbox-blank-outline: | **RN-01** | Cada dirección de correo electrónico podrá estar asociada a una única cuenta de usuario.                                                                                       |
+| :material-checkbox-blank-outline: | **RN-02** | Una cuenta registrada mediante Google no podrá crear posteriormente una segunda cuenta utilizando el mismo correo electrónico mediante el formulario de registro, y viceversa. |
+| :material-checkbox-blank-outline: | **RN-03** | Un usuario podrá realizar múltiples reservas, siempre que los vuelos seleccionados cumplan las condiciones establecidas por el sistema.                                        |
+| :material-checkbox-blank-outline: | **RN-04** | Un usuario no podrá realizar reservas para vuelos cuya fecha de salida ya haya pasado.                                                                                         |
+| :material-checkbox-blank-outline: | **RN-05** | Un usuario únicamente podrá consultar y gestionar sus propias reservas y no podrá acceder a las reservas de otros usuarios.                                                    |
+| :material-checkbox-blank-outline: | **RN-06** | Una reserva podrá incluir un máximo de 8 pasajeros.                                                                                                                            |
+| :material-checkbox-blank-outline: | **RN-07** | La clase de viaje seleccionada para una reserva se aplicará a todos los pasajeros incluidos en dicha reserva.                                                                  |
+| :material-checkbox-blank-outline: | **RN-08** | Los usuarios registrados mediante el formulario recibirán una fotografía de perfil predeterminada cuando no proporcionen una fotografía propia.                                |
+| :material-checkbox-blank-outline: | **RN-09** | Los usuarios registrados mediante Google utilizarán como fotografía de perfil la proporcionada por su cuenta de Google, cuando esté disponible.                                |
+| :material-checkbox-blank-outline: | **RN-10** | Un vuelo deberá tener un aeropuerto de origen y un aeropuerto de destino diferentes.                                                                                           |
+| :material-checkbox-blank-outline: | **RN-11** | Los administradores no accederán a la interfaz destinada a los usuarios normales, sino únicamente al panel de administración correspondiente a su rol.                         |
+| :material-checkbox-blank-outline: | **RN-12** | Los administradores podrán importar y exportar información del sistema mediante archivos en formato CSV.                                                                       |
+| :material-checkbox-blank-outline: | **RN-13** | Un mismo asiento no podrá estar asignado simultáneamente a más de un pasajero en un mismo vuelo.                                                                               |
+| :material-checkbox-blank-outline: | **RN-14** | Un vuelo no podrá tener más pasajeros que la capacidad máxima de la aeronave asignada.                                                                                         |
+| :material-checkbox-blank-outline: | **RN-15** | La aeronave asignada a un vuelo deberá ser compatible con las condiciones establecidas para dicho vuelo.                                                                       |
+| :material-checkbox-blank-outline: | **RN-16** | Una reserva de ida y vuelta deberá tener un vuelo de regreso cuya fecha sea posterior a la fecha del vuelo de ida.                                                             |
+| :material-checkbox-blank-outline: | **RN-17** | Las modificaciones y cancelaciones de una reserva estarán sujetas a las condiciones del billete adquirido.                                                                     |
+| :material-checkbox-blank-outline: | **RN-18** | La disponibilidad del check-in estará condicionada por las condiciones del billete, el tipo de vuelo y el periodo establecido para realizarlo.                                 |
+| :material-checkbox-blank-outline: | **RN-19** | Las operaciones administrativas estarán limitadas a las funciones autorizadas para el rol correspondiente.                                                                     |
+| :material-checkbox-blank-outline: | **RN-20** | Los datos de un usuario no podrán ser modificados ni eliminados por otro usuario que no disponga de los permisos administrativos correspondientes.                             |

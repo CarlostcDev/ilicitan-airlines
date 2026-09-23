@@ -103,3 +103,4 @@
 | **RF-57** | El administrador de vuelos podrá asignar una aeronave a un vuelo cuando sea compatible con el recorrido. |
 | **RF-58** | El administrador de vuelos podrá activar o desactivar vuelos para controlar su disponibilidad para la venta. |
 | **RF-59** | El administrador podrá importar y exportar información relacionada con vuelos, usuarios, aeronaves, aeropuertos y demás entidades gestionadas por el sistema. |
+| **RF-60** | El usuario deberá tener una lista de aeropuertos cercanos al seleccionar un aeropuerto origen |
