@@ -22,6 +22,9 @@ nav = [
   ] },
   { "Análisis" = [
     "analysis/index.md",
+    { "Casos de uso" = "analysis/casos-uso.md" },
+    { "Diagramas de actividad" = "analysis/diagramas-actividad.md" },
+    { "Modelo de datos" = "analysis/modelo-datos.md" }
   ] },
   { "Diseño" = [
     "design/index.md",
