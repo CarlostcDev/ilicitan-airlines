@@ -8,8 +8,7 @@ CREATE TABLE flight (
     scheduled_arrival_utc DATETIME(0) NOT NULL,
     estimated_departure_utc DATETIME(0),
     estimated_arrival_utc DATETIME(0),
-    status ENUM('SCHEDULED','BOARDING','DEPARTED','ARRIVED','DELAYED','CANCELLED'
-    ) NOT NULL DEFAULT 'SCHEDULED',
+    status ENUM('SCHEDULED','BOARDING','DEPARTED','ARRIVED','DELAYED','CANCELLED') NOT NULL DEFAULT 'SCHEDULED',
     created_at DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
     updated_at DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6),
     UNIQUE KEY uq_flight_number_departure (flight_number, scheduled_departure_utc),

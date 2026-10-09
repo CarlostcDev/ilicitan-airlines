@@ -6,13 +6,12 @@ CREATE TABLE reservation_passenger (
     last_name VARCHAR(100) NOT NULL,
     date_of_birth DATE NOT NULL,
     gender ENUM('MALE', 'FEMALE', 'UNSPECIFIED') NOT NULL,
-    nationality_country_id BIGINT UNSIGNED,
+    nationality_country VARCHAR(50) NOT NULL,
     document_type ENUM('PASSPORT', 'ID_CARD', 'OTHER') NOT NULL,
     document_number VARCHAR(50) NOT NULL,
     email VARCHAR(255),
     phone VARCHAR(30),
     UNIQUE KEY uq_reservation_passenger_number (reservation_id, passenger_number),
     CONSTRAINT fk_reservation_passenger_reservation FOREIGN KEY (reservation_id) REFERENCES reservation(id) ON DELETE CASCADE,
-    CONSTRAINT fk_reservation_passenger_nationality FOREIGN KEY (nationality_country_id) REFERENCES country(id),
     CONSTRAINT chk_reservation_passenger_number CHECK (passenger_number > 0)
 ) ENGINE=InnoDB;
