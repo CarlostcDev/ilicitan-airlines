@@ -1,0 +1,19 @@
+@use 'variables';
+@use 'mixins';
+
+.btn {
+  @include mixins.a($transition: "background 0.3s");
+  border-radius: 5px;
+  padding: 12px 15px;
+  background-color: variables.$primary;
+}
+
+.btn:hover {
+  background-color: variables.$hover;
+}
+
+.content {
+  @include mixins.flex(center, space-between);
+  width: min(100% - 2rem, 1200px);
+  margin: 0 auto;
+}

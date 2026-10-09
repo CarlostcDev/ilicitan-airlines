@@ -1,0 +1,34 @@
+@use 'mixins';
+@use 'variables';
+
+#header {
+  @include mixins.position(fixed, 10000);
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  animation: header-bg linear both;
+  animation-timeline: scroll();
+  animation-range: 0 30px;
+}
+
+#header .header-menu ul {
+  @include mixins.flex($gap: 15px);
+  list-style-type: none;
+  padding: 0;
+}
+
+#header .header-menu ul li a {
+  @include mixins.a($transition: "background 0.3s");
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#header .header-menu ul li a:hover, #header a.active {
+  background: rgba(255, 255, 255, 0.13);
+}
+
+@keyframes header-bg {
+  to {
+    background: variables.$gray;
+  }
+}

@@ -1,0 +1,64 @@
+@use 'typography';
+@use 'functions';
+
+@mixin flex($align: center, $justify: center, $direction: row, $gap: 0) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+@mixin grid($columns: null, $rows: null, $align: center) {
+  display: grid;
+  @if $columns != null {grid-template-columns: $columns;}
+  @if $rows != null {grid-template-rows: $rows;}
+  align-items: $align;
+}
+
+@mixin position($position, $z-index, $top: null, $right: null, $bottom: null, $left: null, $pseudo: false) {
+  position: $position;
+  @if $top != null {top: $top;}
+  @if $right != null {right: $right;}
+  @if $bottom != null {bottom: $bottom;}
+  @if $left != null {left: $left;}
+  @if $pseudo {content: "";}
+  z-index: $z-index;
+}
+
+@mixin font($weight: 400, $size: medium, $color: white, $fluid: false, $shadow: null, $align: null) {
+  font-family: "Ilicitan Airlines", sans-serif;
+  color: $color;
+  @if $fluid {font-size: functions.fluid-font(1.2rem, $size);}
+  @else {font-size: $size;}
+  @if $shadow != null {text-shadow: $shadow;}
+  @if $align != null {text-align: $align;}
+  @if $weight != null {font-weight: $weight;}
+}
+
+@mixin border($width: none, $type: solid, $color: transparent, $radius: 0) {
+  @if $width == none {
+    border: none;
+    outline: none;
+  } @else {
+    border-width: $width;
+    border-style: $type;
+    border-color: $color;
+  }
+
+  @if $radius != 0 {border-radius: $radius;}
+}
+
+@mixin svg($size: 30px, $color: white) {
+  width: $size;
+  aspect-ratio: 1;
+  fill: $color;
+  min-width: $size;
+  max-width: $size;
+}
+
+@mixin a($color: white, $decoration: none, $transition: none) {
+  color: $color;
+  text-decoration: $decoration;
+  transition: $transition;
+}

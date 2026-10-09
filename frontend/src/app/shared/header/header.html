@@ -1,0 +1,24 @@
+<header id="header">
+  <div class="content">
+    <div class="header-logo">
+      <a routerLink="/">
+        <img ngSrc="/images/logos/banner-light.webp" alt="Logo de Ilicitan Airlines - Book Flights" width="175" height="60">
+      </a>
+    </div>
+
+    <div class="header-menu">
+      <ul>
+        <li><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a></li>
+        <li><a routerLink="/explore" routerLinkActive="active">Explorar</a></li>
+        <li><a routerLink="/check-in" routerLinkActive="active">Check-in</a></li>
+        <li><a routerLink="/booking" routerLinkActive="active">Reservar</a></li>
+        <li><a routerLink="/fidelity" routerLinkActive="active">Fidelidad</a></li>
+        <li><a routerLink="/help" routerLinkActive="active">Ayuda</a></li>
+      </ul>
+    </div>
+
+    <div class="header-login">
+      <a routerLink="/login" routerLinkActive="active" class="btn">Acceso</a>
+    </div>
+  </div>
+</header>
