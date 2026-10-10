@@ -1,4 +1,4 @@
-package com.carlostcdev.ilicitanairlines.flights.entity;
+package com.carlostcdev.ilicitanairlines.flight.entity;
 
 import com.carlostcdev.ilicitanairlines.aircraft.entity.CabinClass;
 import com.carlostcdev.ilicitanairlines.validation.BuilderValidator;

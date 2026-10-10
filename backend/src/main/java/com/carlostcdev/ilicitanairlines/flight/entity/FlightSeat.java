@@ -1,7 +1,7 @@
-package com.carlostcdev.ilicitanairlines.flights.entity;
+package com.carlostcdev.ilicitanairlines.flight.entity;
 
 import com.carlostcdev.ilicitanairlines.aircraft.entity.Seat;
-import com.carlostcdev.ilicitanairlines.flights.enums.FlightSeatStatus;
+import com.carlostcdev.ilicitanairlines.flight.enums.FlightSeatStatus;
 import com.carlostcdev.ilicitanairlines.validation.BuilderValidator;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;

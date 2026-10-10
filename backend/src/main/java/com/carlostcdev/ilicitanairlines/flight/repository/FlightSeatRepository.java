@@ -1,6 +1,6 @@
-package com.carlostcdev.ilicitanairlines.flights.repository;
+package com.carlostcdev.ilicitanairlines.flight.repository;
 
-import com.carlostcdev.ilicitanairlines.flights.entity.FlightSeat;
+import com.carlostcdev.ilicitanairlines.flight.entity.FlightSeat;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 interface FlightSeatRepository extends JpaRepository<FlightSeat, Long> {

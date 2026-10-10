@@ -1,7 +1,7 @@
-package com.carlostcdev.ilicitanairlines.flights.entity;
+package com.carlostcdev.ilicitanairlines.flight.entity;
 
 import com.carlostcdev.ilicitanairlines.aircraft.entity.Aircraft;
-import com.carlostcdev.ilicitanairlines.flights.enums.FlightStatus;
+import com.carlostcdev.ilicitanairlines.flight.enums.FlightStatus;
 import com.carlostcdev.ilicitanairlines.validation.BuilderValidator;
 import com.carlostcdev.ilicitanairlines.validation.FlightValidator;
 import com.carlostcdev.ilicitanairlines.location.entity.*;
