@@ -1,4 +1,4 @@
-package com.carlostcdev.ilicitanairlines.flights.validation;
+package com.carlostcdev.ilicitanairlines.validation;
 
 import com.carlostcdev.ilicitanairlines.exception.IlicitanAirlinesException;
 import com.carlostcdev.ilicitanairlines.location.entity.Airport;

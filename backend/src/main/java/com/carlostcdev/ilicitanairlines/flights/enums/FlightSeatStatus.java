@@ -1,4 +1,4 @@
-package com.carlostcdev.ilicitanairlines.flights.entity;
+package com.carlostcdev.ilicitanairlines.flights.enums;
 
 public enum FlightSeatStatus {
     AVAILABLE, BLOCKED

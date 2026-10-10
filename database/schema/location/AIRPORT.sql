@@ -6,7 +6,7 @@ CREATE TABLE airport (
     timezone VARCHAR(64) NOT NULL,
     latitude DECIMAL(10,7),
     longitude DECIMAL(10,7),
-    status ENUM('ACTIVE', 'INACTIVE') NOT NULL DEFAULT 'ACTIVE',
+    status ENUM('ACTIVE', 'INACTIVE') NOT NULL DEFAULT 'INACTIVE',
     UNIQUE KEY uq_airport_iata_code (iata_code),
     CONSTRAINT fk_airport_city FOREIGN KEY (city_id) REFERENCES city(id),
     CONSTRAINT chk_airport_latitude CHECK (latitude IS NULL OR latitude BETWEEN -90 AND 90),

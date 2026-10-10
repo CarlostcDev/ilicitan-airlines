@@ -1,11 +1,12 @@
 package com.carlostcdev.ilicitanairlines.flights.entity;
 
 import com.carlostcdev.ilicitanairlines.aircraft.entity.Seat;
+import com.carlostcdev.ilicitanairlines.flights.enums.FlightSeatStatus;
+import com.carlostcdev.ilicitanairlines.validation.BuilderValidator;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.*;
-
-import java.math.BigDecimal;
+import java.math.*;
 
 @Entity
 @Getter
@@ -29,14 +30,15 @@ public class FlightSeat {
     @Column(name = "status", nullable = false)
     private FlightSeatStatus status;
 
+    @NotNull
     @PositiveOrZero
     @Column(name = "extra_price", nullable = false, precision = 10, scale = 2)
     private BigDecimal extraPrice;
 
     @Builder
     public FlightSeat(Flight flight, Seat seat, FlightSeatStatus status, BigDecimal extraPrice) {
-        this.flight = flight;
-        this.seat = seat;
+        this.flight = BuilderValidator.validateNull(flight);
+        this.seat = BuilderValidator.validateNull(seat);
         this.status = status != null ? status : FlightSeatStatus.BLOCKED;
         this.extraPrice = extraPrice != null ? extraPrice : BigDecimal.ZERO;
     }

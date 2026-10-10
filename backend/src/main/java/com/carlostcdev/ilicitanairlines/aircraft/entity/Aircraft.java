@@ -1,5 +1,7 @@
 package com.carlostcdev.ilicitanairlines.aircraft.entity;
 
+import com.carlostcdev.ilicitanairlines.aircraft.enums.AircraftStatus;
+import com.carlostcdev.ilicitanairlines.validation.BuilderValidator;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.*;
@@ -33,8 +35,8 @@ public class Aircraft {
 
     @Builder
     public Aircraft(AircraftModel aircraftModel, String registration, String serialNumber, AircraftStatus status) {
-        this.aircraftModel = aircraftModel;
-        this.registration = registration;
+        this.aircraftModel = BuilderValidator.validateNull(aircraftModel);
+        this.registration = BuilderValidator.validateNull(registration);
         this.serialNumber = serialNumber;
         this.status = status != null ? status : AircraftStatus.INACTIVE;
     }

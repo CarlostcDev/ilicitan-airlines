@@ -1,7 +1,9 @@
 package com.carlostcdev.ilicitanairlines.flights.entity;
 
 import com.carlostcdev.ilicitanairlines.aircraft.entity.Aircraft;
-import com.carlostcdev.ilicitanairlines.flights.validation.FlightValidator;
+import com.carlostcdev.ilicitanairlines.flights.enums.FlightStatus;
+import com.carlostcdev.ilicitanairlines.validation.BuilderValidator;
+import com.carlostcdev.ilicitanairlines.validation.FlightValidator;
 import com.carlostcdev.ilicitanairlines.location.entity.*;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
@@ -76,10 +78,10 @@ public class Flight {
         FlightValidator.validateSchedule(scheduledDepartureUtc, scheduledArrivalUtc);
         FlightValidator.validateEstimated(estimatedDepartureUtc, estimatedArrivalUtc);
         FlightValidator.validateAirports(origin, destination);
-        this.flightNumber = flightNumber;
+        this.flightNumber = BuilderValidator.validateNull(flightNumber);
         this.origin = origin;
         this.destination = destination;
-        this.aircraft = aircraft;
+        this.aircraft = BuilderValidator.validateNull(aircraft);
         this.scheduledDepartureUtc = scheduledDepartureUtc;
         this.scheduledArrivalUtc = scheduledArrivalUtc;
         this.estimatedDepartureUtc = estimatedDepartureUtc;
