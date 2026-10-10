@@ -1,6 +1,5 @@
 package com.carlostcdev.ilicitanairlines.aircraft.entity;
 
-import com.carlostcdev.ilicitanairlines.validation.BuilderValidator;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.*;
@@ -38,9 +37,9 @@ public class Seat {
 
     @Builder
     public Seat(Aircraft aircraft, CabinClass cabinClass, Short seatRow, String seatLetter) {
-        this.aircraft = BuilderValidator.validateNull(aircraft);
-        this.cabinClass = BuilderValidator.validateNull(cabinClass);
-        this.seatRow = BuilderValidator.validateNull(seatRow);
-        this.seatLetter = BuilderValidator.validateNull(seatLetter);
+        this.aircraft = aircraft;
+        this.cabinClass = cabinClass;
+        this.seatRow = seatRow;
+        this.seatLetter = seatLetter;
     }
 }

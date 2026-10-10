@@ -1,6 +1,5 @@
 package com.carlostcdev.ilicitanairlines.location.entity;
 
-import com.carlostcdev.ilicitanairlines.validation.BuilderValidator;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -33,7 +32,7 @@ public class Country {
 
     @Builder
     public Country(String isoCode, String name) {
-        this.isoCode = BuilderValidator.validateNull(isoCode).toUpperCase(Locale.ROOT);
-        this.name = BuilderValidator.validateNull(name);
+        this.isoCode = isoCode != null ? isoCode.toUpperCase(Locale.ROOT) : null;
+        this.name = name;
     }
 }

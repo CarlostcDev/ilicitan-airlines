@@ -1,6 +1,5 @@
 package com.carlostcdev.ilicitanairlines.aircraft.entity;
 
-import com.carlostcdev.ilicitanairlines.validation.BuilderValidator;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.*;
@@ -27,7 +26,7 @@ public class CabinClass {
 
     @Builder
     public CabinClass(String code, String name) {
-        this.code = BuilderValidator.validateNull(code);
-        this.name = BuilderValidator.validateNull(name);
+        this.code = code;
+        this.name = name;
     }
 }

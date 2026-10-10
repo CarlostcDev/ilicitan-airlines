@@ -1,6 +1,5 @@
 package com.carlostcdev.ilicitanairlines.aircraft.entity;
 
-import com.carlostcdev.ilicitanairlines.validation.BuilderValidator;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.*;
@@ -31,8 +30,8 @@ public class AircraftModel {
 
     @Builder
     public AircraftModel(String manufacturer, String model, Short capacity) {
-        this.manufacturer = BuilderValidator.validateNull(manufacturer);
-        this.model = BuilderValidator.validateNull(model);
-        this.capacity = BuilderValidator.validateNull(capacity);
+        this.manufacturer = manufacturer;
+        this.model = model;
+        this.capacity = capacity;
     }
 }

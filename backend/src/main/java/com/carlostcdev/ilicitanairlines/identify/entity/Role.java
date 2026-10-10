@@ -1,6 +1,5 @@
 package com.carlostcdev.ilicitanairlines.identify.entity;
 
-import com.carlostcdev.ilicitanairlines.validation.BuilderValidator;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -31,7 +30,7 @@ public class Role {
 
     @Builder
     public Role(String code, String name) {
-        this.code = BuilderValidator.validateNull(code);
-        this.name = BuilderValidator.validateNull(name);
+        this.code = code;
+        this.name = name;
     }
 }

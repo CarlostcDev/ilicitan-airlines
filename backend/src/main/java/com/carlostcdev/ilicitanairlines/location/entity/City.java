@@ -1,6 +1,5 @@
 package com.carlostcdev.ilicitanairlines.location.entity;
 
-import com.carlostcdev.ilicitanairlines.validation.BuilderValidator;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -31,13 +30,13 @@ public class City {
     @URL
     @NotBlank
     @Size(max = 500)
-    @Column(name = "banner_city_url", length = 500)
+    @Column(name = "banner_city_url", nullable = false, length = 500)
     private String bannerCityUrl;
 
     @Builder
     public City(Country country, String name, String bannerCityUrl) {
-        this.country = BuilderValidator.validateNull(country);
-        this.name = BuilderValidator.validateNull(name);
-        this.bannerCityUrl = BuilderValidator.validateNull(bannerCityUrl);
+        this.country = country;
+        this.name = name;
+        this.bannerCityUrl = bannerCityUrl;
     }
 }

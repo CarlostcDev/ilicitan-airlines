@@ -1,7 +1,6 @@
 package com.carlostcdev.ilicitanairlines.identify.entity;
 
 import com.carlostcdev.ilicitanairlines.identify.enums.UserAccountStatus;
-import com.carlostcdev.ilicitanairlines.validation.BuilderValidator;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.AccessLevel;
@@ -67,12 +66,12 @@ public class UserAccount {
     @Builder
     public UserAccount(Role role, String firstName, String lastName, String email,
                        String phone, String profilePhotoUrl, UserAccountStatus status) {
-        this.role = BuilderValidator.validateNull(role);
-        this.firstName = BuilderValidator.validateNull(firstName);
-        this.lastName = BuilderValidator.validateNull(lastName);
-        this.email = BuilderValidator.validateNull(email);
+        this.role = role;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
         this.phone = phone;
-        this.profilePhotoUrl = BuilderValidator.validateNull(profilePhotoUrl);
+        this.profilePhotoUrl = profilePhotoUrl;
         this.status = status != null ? status : UserAccountStatus.SUSPENDED;
     }
 }

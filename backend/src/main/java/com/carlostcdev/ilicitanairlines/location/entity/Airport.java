@@ -2,7 +2,6 @@ package com.carlostcdev.ilicitanairlines.location.entity;
 
 import com.carlostcdev.ilicitanairlines.location.enums.AirportStatus;
 import com.carlostcdev.ilicitanairlines.validation.AirportValidator;
-import com.carlostcdev.ilicitanairlines.validation.BuilderValidator;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.AccessLevel;
@@ -54,10 +53,10 @@ public class Airport {
     @Builder
     public Airport(City city, String name, String iataCode, String timezone,
                    BigDecimal latitude, BigDecimal longitude, AirportStatus status) {
-        this.city = BuilderValidator.validateNull(city);
-        this.name = BuilderValidator.validateNull(name);
-        this.iataCode = BuilderValidator.validateNull(iataCode).toUpperCase(Locale.ROOT);
-        this.timezone = BuilderValidator.validateNull(timezone);
+        this.city = city;
+        this.name = name;
+        this.iataCode = iataCode != null ? iataCode.toUpperCase(Locale.ROOT): null;
+        this.timezone = timezone;
         this.latitude = AirportValidator.checkCoords(latitude, -90, 90) ? latitude : null;
         this.longitude = AirportValidator.checkCoords(longitude, -180, 180) ? longitude : null;
         this.status = status != null ? status : AirportStatus.INACTIVE;

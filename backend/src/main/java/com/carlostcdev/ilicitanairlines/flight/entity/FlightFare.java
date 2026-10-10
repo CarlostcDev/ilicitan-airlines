@@ -1,7 +1,6 @@
 package com.carlostcdev.ilicitanairlines.flight.entity;
 
 import com.carlostcdev.ilicitanairlines.aircraft.entity.CabinClass;
-import com.carlostcdev.ilicitanairlines.validation.BuilderValidator;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.AccessLevel;
@@ -60,11 +59,11 @@ public class FlightFare {
     @Builder
     public FlightFare(Flight flight, CabinClass cabinClass, String fareCode, BigDecimal basePrice, String currency,
                       BigDecimal baggageAllowance, Boolean refundable, Boolean changeable) {
-        this.flight = BuilderValidator.validateNull(flight);
-        this.cabinClass = BuilderValidator.validateNull(cabinClass);
-        this.fareCode = BuilderValidator.validateNull(fareCode).toUpperCase(Locale.ROOT);
-        this.basePrice = BuilderValidator.validateNull(basePrice);
-        this.currency = BuilderValidator.validateNull(currency).toUpperCase(Locale.ROOT);
+        this.flight = flight;
+        this.cabinClass = cabinClass;
+        this.fareCode = fareCode != null ? fareCode.toUpperCase(Locale.ROOT) : null;
+        this.basePrice = basePrice;
+        this.currency = currency != null ? currency.toUpperCase(Locale.ROOT) : null;
         this.baggageAllowance = baggageAllowance != null ? baggageAllowance : BigDecimal.ZERO;
         this.refundable = refundable != null && refundable;
         this.changeable = changeable != null && changeable;
