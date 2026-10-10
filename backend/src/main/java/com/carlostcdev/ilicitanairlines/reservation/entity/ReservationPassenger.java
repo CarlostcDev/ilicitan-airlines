@@ -1,5 +1,6 @@
 package com.carlostcdev.ilicitanairlines.reservation.entity;
 
+import com.carlostcdev.ilicitanairlines.reservation.enums.ReservationPassengerDocument;
 import com.carlostcdev.ilicitanairlines.reservation.enums.ReservationPassengerGender;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
