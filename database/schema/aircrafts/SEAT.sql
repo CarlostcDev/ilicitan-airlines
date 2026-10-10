@@ -4,7 +4,7 @@ CREATE TABLE seat (
     cabin_class_id BIGINT UNSIGNED NOT NULL,
     seat_row SMALLINT UNSIGNED NOT NULL,
     seat_letter CHAR(1) NOT NULL,
-    seat_number VARCHAR(10) AS (CONCAT(seat_row, seat_letter)) VIRTUAL,
+    seat_number VARCHAR(10) AS (CONCAT(seat_row, RTRIM(seat_letter))) VIRTUAL,
     UNIQUE KEY uq_seat_aircraft_number (aircraft_id, seat_number),
     UNIQUE KEY uq_seat_aircraft_position (aircraft_id, seat_row, seat_letter),
     CONSTRAINT fk_seat_aircraft FOREIGN KEY (aircraft_id) REFERENCES aircraft(id),
