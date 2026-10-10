@@ -47,7 +47,7 @@ public class Airport {
     private BigDecimal longitude;
 
     @NotNull
-    @Enumerated(value = EnumType.STRING)
+    @Enumerated(EnumType.STRING)
     @Column(name = "status", nullable = false)
     private AirportStatus status;
 

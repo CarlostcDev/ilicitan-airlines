@@ -8,6 +8,7 @@ import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.URL;
 
 @Entity
 @Getter
@@ -27,6 +28,8 @@ public class City {
     @Column(name = "name", nullable = false, length = 100)
     private String name;
 
+    @URL
+    @NotBlank
     @Size(max = 500)
     @Column(name = "banner_city_url", length = 500)
     private String bannerCityUrl;
@@ -35,6 +38,6 @@ public class City {
     public City(Country country, String name, String bannerCityUrl) {
         this.country = BuilderValidator.validateNull(country);
         this.name = BuilderValidator.validateNull(name);
-        this.bannerCityUrl = bannerCityUrl;
+        this.bannerCityUrl = BuilderValidator.validateNull(bannerCityUrl);
     }
 }
