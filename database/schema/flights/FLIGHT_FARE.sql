@@ -9,6 +9,7 @@ CREATE TABLE flight_fare (
     refundable BOOLEAN NOT NULL DEFAULT FALSE,
     changeable BOOLEAN NOT NULL DEFAULT FALSE,
     UNIQUE KEY uq_flight_fare (flight_id, fare_code),
+    UNIQUE KEY uq_flight_fare_id_flight (id, flight_id),
     CONSTRAINT fk_flight_fare_flight FOREIGN KEY (flight_id) REFERENCES flight(id) ON DELETE CASCADE,
     CONSTRAINT fk_flight_fare_cabin_class FOREIGN KEY (cabin_class_id) REFERENCES cabin_class(id)
 ) ENGINE=InnoDB;

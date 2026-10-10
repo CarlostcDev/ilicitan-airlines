@@ -10,5 +10,5 @@ CREATE TABLE reservation_flight (
     UNIQUE KEY uq_reservation_flight (reservation_id, flight_id),
     CONSTRAINT fk_reservation_flight_reservation FOREIGN KEY (reservation_id) REFERENCES reservation(id) ON DELETE CASCADE,
     CONSTRAINT fk_reservation_flight_flight FOREIGN KEY (flight_id) REFERENCES flight(id),
-    CONSTRAINT fk_reservation_flight_fare FOREIGN KEY (flight_fare_id) REFERENCES flight_fare(id)
+    CONSTRAINT fk_reservation_flight_fare FOREIGN KEY (flight_fare_id, flight_id) REFERENCES flight_fare(id, flight_id)
 ) ENGINE=InnoDB;
