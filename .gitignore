@@ -15,6 +15,11 @@ build/
 captures/
 .externalNativeBuild/
 .cxx/
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
 # Node
 /node_modules
@@ -25,14 +30,24 @@ yarn-error.log
 .gradle/
 local.properties
 
+# Maven
+HELP.md
+.mvn/wrapper/maven-wrapper.jar
+
 # IDEs and editors
 .idea/
 *.iml
+*.iws
+*.ipr
 .project
 .classpath
 .c9/
 *.launch
 .settings/
+.factorypath
+.apt_generated/
+.springBeans
+.sts4-cache/
 *.sublime-workspace
 
 # Visual Studio Code
@@ -44,6 +59,12 @@ local.properties
 !.vscode/mcp.json
 .history/*
 
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/nbdist/
+/.nb-gradle/
+
 # Angular
 /.angular/cache
 .sass-cache/
@@ -53,7 +74,7 @@ local.properties
 /coverage
 /libpeerconnection.log
 testem.log
-/typings
+/typings/
 __screenshots__/
 
 # Operating systems
