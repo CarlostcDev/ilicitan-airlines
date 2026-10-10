@@ -13,7 +13,7 @@ SOURCE schema/location/AIRPORT.sql;
 SOURCE schema/aircrafts/AIRCRAFT_MODEL.sql;
 SOURCE schema/aircrafts/AIRCRAFT.sql;
 SOURCE schema/aircrafts/CABIN_CLASS.sql;
-SOURCE schema/flights/SEAT.sql;
+SOURCE schema/aircrafts/SEAT.sql;
 SOURCE schema/flights/FLIGHT.sql;
 SOURCE schema/flights/FLIGHT_FARE.sql;
 SOURCE schema/flights/FLIGHT_SEAT.sql;
