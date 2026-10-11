@@ -7,7 +7,7 @@ CREATE TABLE ticket (
     status ENUM('PENDING','CONFIRMED','CHECKED_IN','BOARDED','CANCELLED') NOT NULL DEFAULT 'PENDING',
     base_fare DECIMAL(10,2) UNSIGNED NOT NULL DEFAULT 0,
     taxes DECIMAL(10,2) UNSIGNED NOT NULL DEFAULT 0,
-    total_amount DECIMAL(10,2) UNSIGNED NOT NULL DEFAULT 0,
+    total_amount DECIMAL(10,2) UNSIGNED AS (base_fare + taxes) VIRTUAL,
     created_at DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
     UNIQUE KEY uq_ticket_number (ticket_number),
     UNIQUE KEY uq_ticket_passenger_segment (reservation_flight_id, reservation_passenger_id),

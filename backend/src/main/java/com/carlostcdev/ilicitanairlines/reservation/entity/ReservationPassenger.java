@@ -1,7 +1,7 @@
 package com.carlostcdev.ilicitanairlines.reservation.entity;
 
-import com.carlostcdev.ilicitanairlines.reservation.enums.ReservationPassengerDocument;
-import com.carlostcdev.ilicitanairlines.reservation.enums.ReservationPassengerGender;
+import com.carlostcdev.ilicitanairlines.global.enums.DocumentType;
+import com.carlostcdev.ilicitanairlines.global.enums.Gender;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.AccessLevel;
@@ -46,7 +46,7 @@ public class ReservationPassenger {
     @NotNull
     @Enumerated(EnumType.STRING)
     @Column(name = "gender", nullable = false)
-    private ReservationPassengerGender gender;
+    private Gender gender;
 
     @NotBlank
     @Size(max = 50)
@@ -56,7 +56,7 @@ public class ReservationPassenger {
     @NotNull
     @Enumerated(EnumType.STRING)
     @Column(name = "document_type", nullable = false)
-    private ReservationPassengerDocument documentType;
+    private DocumentType documentType;
 
     @NotBlank
     @Size(max = 50)
@@ -74,14 +74,14 @@ public class ReservationPassenger {
 
     @Builder
     public ReservationPassenger(Reservation reservation, Short passengerNumber, String firstName, String lastName, LocalDate birthDate,
-                                ReservationPassengerGender gender, String nationalityCountry, ReservationPassengerDocument documentType,
+                                Gender gender, String nationalityCountry, DocumentType documentType,
                                 String documentNumber, String email, String phone) {
         this.reservation = reservation;
         this.passengerNumber = passengerNumber;
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthDate = birthDate;
-        this.gender = gender != null ? gender : ReservationPassengerGender.UNSPECIFIED;
+        this.gender = gender != null ? gender : Gender.UNSPECIFIED;
         this.nationalityCountry = nationalityCountry;
         this.documentType = documentType;
         this.documentNumber = documentNumber;
