@@ -60,7 +60,6 @@ public class Ticket {
     @Column(name = "total_amount", insertable = false, updatable = false, nullable = false)
     private BigDecimal totalAmount;
 
-    @NotNull
     @Column(name = "created_at", insertable = false, updatable = false, nullable = false)
     private LocalDateTime createdAt;
 

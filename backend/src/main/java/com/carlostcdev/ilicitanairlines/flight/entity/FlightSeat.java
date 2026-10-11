@@ -36,8 +36,8 @@ public class FlightSeat {
 
     @Builder
     public FlightSeat(Flight flight, Seat seat, FlightSeatStatus status, BigDecimal extraPrice) {
-        this.flight = BuilderValidator.validateNull(flight);
-        this.seat = BuilderValidator.validateNull(seat);
+        this.flight = flight;
+        this.seat = seat;
         this.status = status != null ? status : FlightSeatStatus.BLOCKED;
         this.extraPrice = extraPrice != null ? extraPrice : BigDecimal.ZERO;
     }

@@ -60,11 +60,9 @@ public class ApiData {
     @Column(name = "gender", nullable = false)
     private Gender gender;
 
-    @NotNull
     @Column(name = "created_at", insertable = false, updatable = false, nullable = false)
     private LocalDateTime createdAt;
 
-    @NotNull
     @Column(name = "updated_at", insertable = false, updatable = false, nullable = false)
     private LocalDateTime updatedAt;
 

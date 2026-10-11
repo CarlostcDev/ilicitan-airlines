@@ -62,11 +62,9 @@ public class Flight {
     @Column(name = "status", nullable = false)
     private FlightStatus status;
 
-    @NotNull
     @Column(name = "created_at", insertable = false, updatable = false, nullable = false)
     private LocalDateTime createdAt;
 
-    @NotNull
     @Column(name = "updated_at", insertable = false, updatable = false, nullable = false)
     private LocalDateTime updatedAt;
 

@@ -46,7 +46,6 @@ public class BoardingPass {
     @Column(name = "boarding_zone", length = 20)
     private String boardingZone;
 
-    @NotNull
     @Column(name = "issued_at_utc", insertable = false, updatable = false, nullable = false)
     private LocalDateTime issuedAt;
 

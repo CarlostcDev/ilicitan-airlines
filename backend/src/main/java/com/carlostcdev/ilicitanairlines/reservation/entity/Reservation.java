@@ -56,11 +56,9 @@ public class Reservation {
     @Column(name = "currency", nullable = false, length = 3)
     private String currency;
 
-    @NotNull
     @Column(name = "created_at", insertable = false, updatable = false, nullable = false)
     private LocalDateTime createdAt;
 
-    @NotNull
     @Column(name = "updated_at", insertable = false, updatable = false, nullable = false)
     private LocalDateTime updatedAt;
 

@@ -38,11 +38,9 @@ public class AuthAccount {
     @Column(name = "password_hash", length = 255)
     private String passwordHash;
 
-    @NotNull
     @Column(name = "created_at", insertable = false, updatable = false, nullable = false)
     private LocalDateTime createdAt;
 
-    @NotNull
     @Column(name = "updated_at", insertable = false, updatable = false, nullable = false)
     private LocalDateTime updatedAt;
 

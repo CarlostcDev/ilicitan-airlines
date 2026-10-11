@@ -32,11 +32,9 @@ public class Checkin {
     @Column(name = "checked_in_at_utc")
     private LocalDateTime checkedIn;
 
-    @NotNull
     @Column(name = "created_at", insertable = false, updatable = false, nullable = false)
     private LocalDateTime createdAt;
 
-    @NotNull
     @Column(name = "updated_at", insertable = false, updatable = false, nullable = false)
     private LocalDateTime updatedAt;
 
