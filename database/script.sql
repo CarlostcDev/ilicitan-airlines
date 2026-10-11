@@ -21,7 +21,7 @@ SOURCE schema/reservations/RESERVATION.sql;
 SOURCE schema/reservations/RESERVATION_FLIGHT.sql;
 SOURCE schema/reservations/RESERVATION_PASSENGER.sql;
 SOURCE schema/information/TICKET.sql;
-SOURCE schema/aircrafts/BAGGAGE.sql;
+SOURCE schema/information/BAGGAGE.sql;
 SOURCE schema/information/API_DATA.sql;
 SOURCE schema/information/CHECKIN.sql;
 SOURCE schema/information/BOARDING_PASS.sql;
