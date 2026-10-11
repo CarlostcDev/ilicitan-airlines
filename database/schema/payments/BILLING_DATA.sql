@@ -9,7 +9,7 @@ CREATE TABLE billing_data (
     address VARCHAR(255) NOT NULL,
     city VARCHAR(100) NOT NULL,
     postal_code VARCHAR(20) NOT NULL,
-    country BIGINT UNSIGNED NOT NULL,
+    country VARCHAR(50) NOT NULL,
     created_at DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
     UNIQUE KEY uq_billing_data_reservation (reservation_id),
     CONSTRAINT fk_billing_data_reservation FOREIGN KEY (reservation_id) REFERENCES reservation(id) ON DELETE CASCADE,
