@@ -1,7 +1,7 @@
 package com.carlostcdev.ilicitanairlines.location.entity;
 
 import com.carlostcdev.ilicitanairlines.location.enums.AirportStatus;
-import com.carlostcdev.ilicitanairlines.validation.AirportValidator;
+import com.carlostcdev.ilicitanairlines.global.validation.AirportValidator;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.AccessLevel;

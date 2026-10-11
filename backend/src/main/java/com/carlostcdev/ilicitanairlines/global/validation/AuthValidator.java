@@ -1,10 +1,6 @@
-package com.carlostcdev.ilicitanairlines.validation;
+package com.carlostcdev.ilicitanairlines.global.validation;
 
-import com.carlostcdev.ilicitanairlines.exception.IlicitanAirlinesException;
-import com.carlostcdev.ilicitanairlines.identify.entity.AuthAccount;
 import com.carlostcdev.ilicitanairlines.identify.enums.AuthAccountProvider;
-
-import java.math.BigDecimal;
 
 public final class AuthValidator {
     private AuthValidator() {}

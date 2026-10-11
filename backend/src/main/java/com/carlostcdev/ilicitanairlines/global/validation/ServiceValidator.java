@@ -1,4 +1,4 @@
-package com.carlostcdev.ilicitanairlines.validation;
+package com.carlostcdev.ilicitanairlines.global.validation;
 
 import jakarta.validation.*;
 import jakarta.validation.Validator;

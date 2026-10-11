@@ -1,6 +1,6 @@
-package com.carlostcdev.ilicitanairlines.validation;
+package com.carlostcdev.ilicitanairlines.global.validation;
 
-import com.carlostcdev.ilicitanairlines.exception.IlicitanAirlinesException;
+import com.carlostcdev.ilicitanairlines.global.exception.IlicitanAirlinesException;
 import com.carlostcdev.ilicitanairlines.location.entity.Airport;
 import java.time.LocalDateTime;
 

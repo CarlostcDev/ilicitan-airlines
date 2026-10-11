@@ -1,7 +1,7 @@
 package com.carlostcdev.ilicitanairlines.identify.entity;
 
 import com.carlostcdev.ilicitanairlines.identify.enums.AuthAccountProvider;
-import com.carlostcdev.ilicitanairlines.validation.AuthValidator;
+import com.carlostcdev.ilicitanairlines.global.validation.AuthValidator;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
