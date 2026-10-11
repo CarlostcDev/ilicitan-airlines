@@ -1,5 +1,6 @@
 package com.carlostcdev.ilicitanairlines.global.validation;
 
+import com.carlostcdev.ilicitanairlines.flight.dto.FlightSearchRequest;
 import com.carlostcdev.ilicitanairlines.global.exception.IlicitanAirlinesException;
 import com.carlostcdev.ilicitanairlines.location.entity.Airport;
 import java.time.LocalDateTime;
@@ -32,6 +33,19 @@ public final class FlightValidator {
 
         if (departure.getIataCode().equals(arrival.getIataCode())) {
             throw new IlicitanAirlinesException("El aeropuerto de destino no puede ser el mismo que el de origen");
+        }
+    }
+
+    public static void validateSearch(FlightSearchRequest request) {
+        if (request.originIata() != null &&
+            request.originIata().equals(request.destinationIata())) {
+            throw new IlicitanAirlinesException("El aeropuerto de origen no puede ser el mismo que el de destino");
+        }
+
+        if (request.departureDate() != null &&
+            request.returnDate() != null &&
+            request.returnDate().isBefore(request.departureDate())) {
+            throw new IlicitanAirlinesException("La fecha de vuelta no puede ser anterior a la fecha de ida");
         }
     }
 }

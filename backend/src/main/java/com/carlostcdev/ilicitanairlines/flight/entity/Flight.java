@@ -45,7 +45,7 @@ public class Flight {
 
     @NotNull
     @Column(name = "scheduled_departure_utc", nullable = false)
-    private LocalDateTime scheduledDepartureUtc ;
+    private LocalDateTime scheduledDepartureUtc;
 
     @NotNull
     @Column(name = "scheduled_arrival_utc", nullable = false)

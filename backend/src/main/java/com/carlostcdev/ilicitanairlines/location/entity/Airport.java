@@ -30,7 +30,7 @@ public class Airport {
     private String name;
 
     @NotBlank
-    @Pattern(regexp = "[A-Z]{3}")
+    @Size(min = 3, max = 3)
     @Column(name = "iata_code", nullable = false, length = 3)
     private String iataCode;
 
