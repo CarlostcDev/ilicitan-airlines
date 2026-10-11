@@ -1,0 +1,16 @@
+CREATE TABLE baggage_option (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    type ENUM('PERSONAL_ITEM', 'CABIN', 'CHECKED') NOT NULL,
+    weight_kg DECIMAL(5,2) NOT NULL,
+    length_cm SMALLINT UNSIGNED NOT NULL,
+    width_cm SMALLINT UNSIGNED NOT NULL,
+    height_cm SMALLINT UNSIGNED NOT NULL,
+    price_amount DECIMAL(10,2) NOT NULL,
+    currency CHAR(3) NOT NULL,
+    status ENUM('ACTIVE', 'INACTIVE') NOT NULL DEFAULT 'INACTIVE',
+    created_at DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+    updated_at DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6),
+    CONSTRAINT chk_baggage_option_weight CHECK (weight_kg > 0),
+    CONSTRAINT chk_baggage_option_price CHECK (price_amount > 0)
+);

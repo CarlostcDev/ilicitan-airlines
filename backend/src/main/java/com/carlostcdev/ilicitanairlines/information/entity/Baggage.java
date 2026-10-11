@@ -1,6 +1,5 @@
 package com.carlostcdev.ilicitanairlines.information.entity;
 
-import com.carlostcdev.ilicitanairlines.information.enums.BaggageType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
@@ -8,7 +7,6 @@ import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -25,10 +23,9 @@ public class Baggage {
     @JoinColumn(name = "ticket_id", nullable = false)
     private Ticket ticket;
 
-    @NotNull
-    @Enumerated(EnumType.STRING)
-    @Column(name = "type", nullable = false)
-    private BaggageType type;
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "baggage_option_id", nullable = false)
+    private BaggageOption baggageOption;
 
     @NotNull
     @Positive
@@ -44,9 +41,9 @@ public class Baggage {
     private LocalDateTime createdAt;
 
     @Builder
-    public Baggage(Ticket ticket, BaggageType type, Short quantity, BigDecimal weight) {
+    public Baggage(Ticket ticket, BaggageOption baggageOption, Short quantity, BigDecimal weight) {
         this.ticket = ticket;
-        this.type = type != null ? type : BaggageType.CABIN;
+        this.baggageOption = baggageOption;
         this.quantity = quantity;
         this.weight = weight;
     }

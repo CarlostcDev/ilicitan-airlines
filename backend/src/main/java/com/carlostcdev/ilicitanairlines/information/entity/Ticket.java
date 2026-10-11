@@ -55,7 +55,6 @@ public class Ticket {
     @Column(name = "taxes", nullable = false, precision = 10, scale = 2)
     private BigDecimal taxes;
 
-    @NotNull
     @PositiveOrZero
     @Column(name = "total_amount", insertable = false, updatable = false, nullable = false)
     private BigDecimal totalAmount;
