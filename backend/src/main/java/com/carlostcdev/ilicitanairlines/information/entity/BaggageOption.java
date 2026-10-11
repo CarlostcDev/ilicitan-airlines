@@ -63,7 +63,7 @@ public class BaggageOption {
 
     @NotNull
     @Enumerated(EnumType.STRING)
-    @Column(name = "type", nullable = false)
+    @Column(name = "status", nullable = false)
     private BaggageStatus status;
 
     @Column(name = "created_at", insertable = false, updatable = false, nullable = false)

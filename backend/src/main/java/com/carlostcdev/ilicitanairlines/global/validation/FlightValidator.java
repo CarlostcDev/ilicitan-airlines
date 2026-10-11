@@ -1,6 +1,6 @@
 package com.carlostcdev.ilicitanairlines.global.validation;
 
-import com.carlostcdev.ilicitanairlines.flight.dto.FlightSearchRequest;
+import com.carlostcdev.ilicitanairlines.flight.dto.request.FlightSearchRequest;
 import com.carlostcdev.ilicitanairlines.global.exception.IlicitanAirlinesException;
 import com.carlostcdev.ilicitanairlines.location.entity.Airport;
 import java.time.LocalDateTime;

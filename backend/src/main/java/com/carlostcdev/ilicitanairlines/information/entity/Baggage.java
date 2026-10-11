@@ -30,7 +30,7 @@ public class Baggage {
     @NotNull
     @Positive
     @Column(name = "quantity", nullable = false)
-    private Short quantity;
+    private Byte quantity;
 
     @NotNull
     @Positive
@@ -41,7 +41,7 @@ public class Baggage {
     private LocalDateTime createdAt;
 
     @Builder
-    public Baggage(Ticket ticket, BaggageOption baggageOption, Short quantity, BigDecimal weight) {
+    public Baggage(Ticket ticket, BaggageOption baggageOption, Byte quantity, BigDecimal weight) {
         this.ticket = ticket;
         this.baggageOption = baggageOption;
         this.quantity = quantity;

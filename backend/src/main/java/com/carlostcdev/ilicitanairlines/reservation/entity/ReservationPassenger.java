@@ -27,7 +27,7 @@ public class ReservationPassenger {
     @NotNull
     @Positive
     @Column(name = "passenger_number", nullable = false)
-    private Short passengerNumber;
+    private Byte passengerNumber;
 
     @NotBlank
     @Size(max = 50)
@@ -73,7 +73,7 @@ public class ReservationPassenger {
     private String phone;
 
     @Builder
-    public ReservationPassenger(Reservation reservation, Short passengerNumber, String firstName, String lastName, LocalDate birthDate,
+    public ReservationPassenger(Reservation reservation, Byte passengerNumber, String firstName, String lastName, LocalDate birthDate,
                                 Gender gender, String nationalityCountry, DocumentType documentType,
                                 String documentNumber, String email, String phone) {
         this.reservation = reservation;

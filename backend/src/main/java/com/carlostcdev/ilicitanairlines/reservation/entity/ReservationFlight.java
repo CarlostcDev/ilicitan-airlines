@@ -38,7 +38,7 @@ public class ReservationFlight {
     @NotNull
     @Positive
     @Column(name = "segment_number", nullable = false)
-    private Short segmentNumber;
+    private Byte segmentNumber;
 
     @NotNull
     @Enumerated(EnumType.STRING)
@@ -51,7 +51,7 @@ public class ReservationFlight {
     private BigDecimal priceAmount;
 
     @Builder
-    public ReservationFlight(Reservation reservation, Flight flight, FlightFare flightFare, Short segmentNumber,
+    public ReservationFlight(Reservation reservation, Flight flight, FlightFare flightFare, Byte segmentNumber,
                              ReservationFlightStatus status, BigDecimal priceAmount) {
         this.reservation = reservation;
         this.flight = flight;
