@@ -10,8 +10,8 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.carlostcdev</groupId>
-    <artifactId>ilicitanairlines</artifactId>
+    <groupId>com.ilicitan_airlines</groupId>
+    <artifactId>backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Ilicitan Airlines</name>
     <description>Ilicitan Airlines Backend</description>
