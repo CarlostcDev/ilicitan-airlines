@@ -1,7 +1,7 @@
 [project]
 site_name = "Ilicitan Airlines Wiki"
 copyright = "© 2026 Ilicitan Airlines"
-site_url = "https://carlostcdev.github.io/ilicitan-airlines/"
+site_url = "https://docs.ilicitan-airlines.com/"
 docs_dir = "docs"
 
 extra_css = [
