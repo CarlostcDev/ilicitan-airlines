@@ -74,6 +74,8 @@ MariaDB será el sistema de gestión de bases de datos utilizado para almacenar 
 
 La comunicación con la base de datos se realizará exclusivamente desde la capa de persistencia.
 
+Consulta aquí el [modelo relacional](/design/modelo-relacional.md).
+
 ---
 
 ## Tecnologías

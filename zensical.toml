@@ -28,6 +28,9 @@ nav = [
   ] },
   { "Diseño" = [
     "design/index.md",
+    { "Modelo relacional" = "design/modelo-relacional.md" },
+    { "Diagrama de clases" = "design/diagrama-clases.md" },
+    { "Implementación SQL" = "design/script-implementacion.md" }
   ] },
   { "Implementación" = [
     "implementation/index.md",
