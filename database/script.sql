@@ -31,5 +31,8 @@ SOURCE schema/payment/PAYMENT.sql;
 SOURCE schema/logging/ADMIN_LOG.sql;
 
 -- DML Scripts
-SOURCE seed/roles.sql;
-SOURCE seed/cabin_classes.sql;
+SOURCE data/aircraft/aircraft-data.sql;
+SOURCE data/location/location-data.sql;
+SOURCE data/flight/flight-data.sql;
+SOURCE data/flight/flight-seat-data.sql;
+SOURCE data/flight/flight-fare-data.sql;
