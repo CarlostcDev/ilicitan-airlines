@@ -1,6 +1,6 @@
 package com.ilicitan_airlines.backend.flight.validation;
 
-import com.ilicitan_airlines.backend.flight.dto.request.FlightSearchRequest;
+import com.ilicitan_airlines.backend.flight.dto.user.request.FlightSearchRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 

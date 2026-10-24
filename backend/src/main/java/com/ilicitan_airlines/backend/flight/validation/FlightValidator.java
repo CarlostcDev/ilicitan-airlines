@@ -1,6 +1,5 @@
 package com.ilicitan_airlines.backend.flight.validation;
 
-import com.ilicitan_airlines.backend.flight.dto.request.FlightSearchRequest;
 import com.ilicitan_airlines.backend.global.exception.IlicitanAirlinesException;
 import com.ilicitan_airlines.backend.location.entity.Airport;
 import java.time.LocalDateTime;

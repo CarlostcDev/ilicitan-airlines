@@ -1,8 +1,8 @@
 package com.ilicitan_airlines.backend.flight.service;
 
-import com.ilicitan_airlines.backend.flight.dto.request.FlightSearchRequest;
-import com.ilicitan_airlines.backend.flight.dto.response.FlightOptionResponse;
-import com.ilicitan_airlines.backend.flight.dto.response.FlightSearchResponse;
+import com.ilicitan_airlines.backend.flight.dto.user.request.FlightSearchRequest;
+import com.ilicitan_airlines.backend.flight.dto.user.response.FlightOptionResponse;
+import com.ilicitan_airlines.backend.flight.dto.user.response.FlightSearchResponse;
 import com.ilicitan_airlines.backend.flight.entity.Flight;
 import com.ilicitan_airlines.backend.flight.repository.FlightRepository;
 import com.ilicitan_airlines.backend.flight.validation.FlightServiceValidator;

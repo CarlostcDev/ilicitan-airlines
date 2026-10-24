@@ -1,4 +1,4 @@
-package com.ilicitan_airlines.backend.flight.dto.response;
+package com.ilicitan_airlines.backend.flight.dto.user.response;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.List;

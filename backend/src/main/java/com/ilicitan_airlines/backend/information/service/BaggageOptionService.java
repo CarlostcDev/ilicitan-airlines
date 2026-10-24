@@ -1,8 +1,8 @@
 package com.ilicitan_airlines.backend.information.service;
 
-import com.ilicitan_airlines.backend.information.dto.request.BaggageOptionUpdateAdminRequest;
-import com.ilicitan_airlines.backend.information.dto.response.BaggageOptionAdminResponse;
-import com.ilicitan_airlines.backend.information.dto.response.BaggageOptionResponse;
+import com.ilicitan_airlines.backend.information.dto.admin.request.BaggageOptionUpdateAdminRequest;
+import com.ilicitan_airlines.backend.information.dto.admin.response.BaggageOptionAdminResponse;
+import com.ilicitan_airlines.backend.information.dto.user.response.BaggageOptionResponse;
 import com.ilicitan_airlines.backend.information.entity.BaggageOption;
 import com.ilicitan_airlines.backend.information.enums.BaggageStatus;
 import com.ilicitan_airlines.backend.information.repository.BaggageOptionRepository;

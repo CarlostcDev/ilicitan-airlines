@@ -1,39 +1,48 @@
-package com.ilicitan_airlines.backend.information.dto.request;
+package com.ilicitan_airlines.backend.information.dto.admin.response;
 
 import com.ilicitan_airlines.backend.information.enums.BaggageStatus;
 import com.ilicitan_airlines.backend.information.enums.BaggageType;
 import io.swagger.v3.oas.annotations.media.Schema;
-import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Positive;
-import jakarta.validation.constraints.Size;
+import lombok.Builder;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
-@Schema(name = "BaggageOptionUpdateAdminRequest", description = "Actualización del equipaje")
-public record BaggageOptionUpdateAdminRequest(
+@Builder
+@Schema(name = "BaggageOptionAdminResponse", description = "Equipaje con sus estados y registros para su administración")
+public record BaggageOptionAdminResponse(
+        @Schema(description = "Identificación del equipaje", example = "1")
+        Long id,
+
         @Schema(description = "Nombre del equipaje", example = "Equipaje de cabina")
-        @Size(min = 1, max = 100) @Pattern(regexp = ".*\\S.*") String name,
+        String name,
 
         @Schema(description = "Tipo del equipaje", example = "CABIN")
         BaggageType type,
 
         @Schema(description = "Límite del peso del equipaje", example = "7")
-        @Positive BigDecimal weight,
+        BigDecimal weight,
 
         @Schema(description = "Límite de profundidad del equipaje", example = "40")
-        @Positive Short length,
+        Short length,
 
         @Schema(description = "Límite de ancho del equipaje", example = "30")
-        @Positive Short width,
+        Short width,
 
         @Schema(description = "Límite de altura del equipaje", example = "20")
-        @Positive Short height,
+        Short height,
 
         @Schema(description = "Precio del equipaje", example = "23.99")
-        @Positive BigDecimal price,
+        BigDecimal price,
 
         @Schema(description = "Divisa del precio del equipaje", example = "EUR")
-        @Pattern(regexp = "[A-Z]{3}") String currency,
+        String currency,
 
         @Schema(description = "Estado del equipaje", example = "ACTIVE")
-        BaggageStatus status
-) {}
+        BaggageStatus status,
+
+        @Schema(description = "Fecha de creación del equipaje", example = "2026-10-24 14:35:12.123456")
+        LocalDateTime createdAt,
+
+        @Schema(description = "Fecha de actualización del equipaje", example = "2027-04-16 11:25:42.157251")
+        LocalDateTime updatedAt
+) { }

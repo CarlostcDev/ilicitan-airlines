@@ -1,4 +1,4 @@
-package com.ilicitan_airlines.backend.information.dto.response;
+package com.ilicitan_airlines.backend.information.dto.user.response;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;

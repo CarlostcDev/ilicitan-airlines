@@ -1,7 +1,7 @@
 package com.ilicitan_airlines.backend.flight.controller;
 
-import com.ilicitan_airlines.backend.flight.dto.request.FlightSearchRequest;
-import com.ilicitan_airlines.backend.flight.dto.response.FlightSearchResponse;
+import com.ilicitan_airlines.backend.flight.dto.user.request.FlightSearchRequest;
+import com.ilicitan_airlines.backend.flight.dto.user.response.FlightSearchResponse;
 import com.ilicitan_airlines.backend.flight.service.FlightService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
