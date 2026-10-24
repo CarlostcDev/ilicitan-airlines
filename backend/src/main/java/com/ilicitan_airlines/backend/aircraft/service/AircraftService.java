@@ -7,6 +7,7 @@ import com.ilicitan_airlines.backend.aircraft.entity.AircraftModel;
 import com.ilicitan_airlines.backend.aircraft.repository.AircraftModelRepository;
 import com.ilicitan_airlines.backend.aircraft.repository.AircraftRepository;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,14 +15,10 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class AircraftService {
     private final AircraftRepository aircraftRepository;
     private final AircraftModelRepository aircraftModelRepository;
-
-    public AircraftService(AircraftRepository aircraftRepository, AircraftModelRepository aircraftModelRepository) {
-        this.aircraftRepository = aircraftRepository;
-        this.aircraftModelRepository = aircraftModelRepository;
-    }
 
     @Transactional(readOnly = true)
     public List<AircraftModelOptionResponse> getAircraftModelOptions() {

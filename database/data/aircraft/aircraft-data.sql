@@ -1,24 +1,24 @@
-INSERT INTO aircraft_model (id, manufacturer, model, capacity) VALUES
-(1, 'Airbus', 'A321XLR', 220),
-(2, 'Airbus', 'A321neo', 244),
-(3, 'Airbus', 'A350-900', 340),
-(4, 'Airbus', 'A350-900ULR', 161),
-(5, 'Airbus', 'A350-1000', 390),
-(6, 'Airbus', 'A380-800', 545),
-(7, 'Boeing', '787-8', 240),
-(8, 'Boeing', '787-9', 290),
-(9, 'Boeing', '787-10', 340);
+INSERT INTO aircraft_model (id, manufacturer, model, capacity, range_km, cruise_speed_kmh) VALUES
+(1, 'Airbus', 'A321XLR', 220, 8700, 830),
+(2, 'Airbus', 'A321neo', 244, 7400, 830),
+(3, 'Airbus', 'A350-900', 340, 15750, 903),
+(4, 'Airbus', 'A350-900ULR', 161, 18000, 903),
+(5, 'Airbus', 'A350-1000', 390, 16100, 903),
+(6, 'Airbus', 'A380-800', 545, 14800, 903),
+(7, 'Boeing', '787-8', 240, 14820, 903),
+(8, 'Boeing', '787-9', 290, 15370, 903),
+(9, 'Boeing', '787-10', 340, 13890, 903);
 
-INSERT INTO aircraft (id, aircraft_model_id, registration, serial_number, status) VALUES
-(1, 1, 'EC-MXY', '44721', 'ACTIVE'),
-(2, 2, 'EC-NAB', '52184', 'ACTIVE'),
-(3, 3, 'EC-OCA', '11234', 'ACTIVE'),
-(4, 4, 'EC-MXX', '61432', 'ACTIVE'),
-(5, 5, 'EC-NCD', '10987', 'ACTIVE'),
-(6, 6, 'EC-MXZ', '8321', 'ACTIVE'),
-(7, 7, 'EC-NDE', '12045', 'MAINTENANCE'),
-(8, 8, 'EC-NFG', '12345', 'ACTIVE'),
-(9, 9, 'EC-NHI', '13021', 'INACTIVE');
+INSERT INTO aircraft (id, aircraft_model_id, registration, serial_number, starlink, status) VALUES
+(1, 1, 'EC-MXY', '44721', TRUE, 'ACTIVE'),
+(2, 2, 'EC-NAB', '52184', TRUE, 'ACTIVE'),
+(3, 3, 'EC-OCA', '11234', FALSE, 'ACTIVE'),
+(4, 4, 'EC-MXX', '61432', TRUE, 'ACTIVE'),
+(5, 5, 'EC-NCD', '10987', TRUE, 'ACTIVE'),
+(6, 6, 'EC-MXZ', '8321', FALSE, 'ACTIVE'),
+(7, 7, 'EC-NDE', '12045', TRUE, 'MAINTENANCE'),
+(8, 8, 'EC-NFG', '12345', FALSE, 'ACTIVE'),
+(9, 9, 'EC-NHI', '13021', FALSE, 'INACTIVE');
 
 INSERT INTO cabin_class (id, code, name) VALUES
 (1, 'ECONOMY', 'Economy'),

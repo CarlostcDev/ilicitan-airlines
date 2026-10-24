@@ -1,13 +1,12 @@
 package com.ilicitan_airlines.backend.aircraft.service;
 
 import com.ilicitan_airlines.backend.aircraft.repository.CabinClassRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CabinClass {
+@RequiredArgsConstructor
+public class CabinClassService {
     private final CabinClassRepository cabinClassRepository;
 
-    public CabinClass(CabinClassRepository cabinClassRepository) {
-        this.cabinClassRepository = cabinClassRepository;
-    }
 }

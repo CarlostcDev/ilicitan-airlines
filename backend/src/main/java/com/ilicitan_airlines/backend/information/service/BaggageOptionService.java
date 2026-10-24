@@ -7,17 +7,15 @@ import com.ilicitan_airlines.backend.information.entity.BaggageOption;
 import com.ilicitan_airlines.backend.information.enums.BaggageStatus;
 import com.ilicitan_airlines.backend.information.repository.BaggageOptionRepository;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class BaggageOptionService {
     private final BaggageOptionRepository baggageOptionRepository;
-
-    public BaggageOptionService(BaggageOptionRepository baggageOptionRepository) {
-        this.baggageOptionRepository = baggageOptionRepository;
-    }
 
     @Transactional(readOnly = true)
     public List<BaggageOptionResponse> getBaggageOption(BaggageStatus status) {

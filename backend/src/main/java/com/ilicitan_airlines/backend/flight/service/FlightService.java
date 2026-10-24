@@ -9,6 +9,7 @@ import com.ilicitan_airlines.backend.flight.validation.FlightServiceValidator;
 import com.ilicitan_airlines.backend.global.validation.ServiceValidator;
 import com.ilicitan_airlines.backend.location.entity.Airport;
 import com.ilicitan_airlines.backend.location.repository.AirportRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,14 +21,10 @@ import java.time.ZoneOffset;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class FlightService {
     private final FlightRepository flightRepository;
     private final AirportRepository airportRepository;
-
-    public FlightService(FlightRepository flightRepository, AirportRepository airportRepository) {
-        this.flightRepository = flightRepository;
-        this.airportRepository = airportRepository;
-    }
 
     @Transactional(readOnly = true)
     public FlightSearchResponse searchFlights(FlightSearchRequest request) {
