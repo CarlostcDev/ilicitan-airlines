@@ -21,11 +21,11 @@ import java.util.List;
 @Validated
 @Slf4j
 public class ActivityLogsController {
-    private final ActivityLogsService adminLogService;
+    private final ActivityLogsService activityLogsService;
 
     @GetMapping
-    public ActivityLogsResponse getLogs(@RequestParam(defaultValue = "200") @Min(1) @Max(1000) int lines, Authentication authentication) {
-        List<String> logLines = adminLogService.getLastLines(lines);
+    public ActivityLogsResponse getLogs(@RequestParam(defaultValue = "1000") @Min(1) @Max(1000) int lines, Authentication authentication) {
+        List<String> logLines = activityLogsService.getLastLines(lines);
         log.info("Administrator {} accessed the logs. Number of lines returned: {}", authentication.getName(), logLines.size());
         return new ActivityLogsResponse(logLines, logLines.size());
     }
