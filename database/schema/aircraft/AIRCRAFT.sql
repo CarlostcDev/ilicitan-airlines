@@ -3,7 +3,10 @@ CREATE TABLE aircraft (
     aircraft_model_id BIGINT UNSIGNED NOT NULL,
     registration VARCHAR(20) NOT NULL,
     serial_number VARCHAR(50),
+    starlink BOOLEAN NOT NULL DEFAULT FALSE,
     status ENUM('ACTIVE', 'MAINTENANCE', 'INACTIVE') NOT NULL DEFAULT 'INACTIVE',
+    created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    updated_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(6),
     UNIQUE KEY uq_aircraft_registration (registration),
     UNIQUE KEY uq_aircraft_serial_number (serial_number),
     CONSTRAINT fk_aircraft_model FOREIGN KEY (aircraft_model_id) REFERENCES aircraft_model(id)

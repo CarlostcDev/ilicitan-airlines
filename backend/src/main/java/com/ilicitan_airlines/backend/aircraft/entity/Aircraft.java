@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Getter
 @Table(name = "aircraft")
@@ -28,15 +30,26 @@ public class Aircraft {
     private String serialNumber;
 
     @NotNull
+    @Column(name = "starlink", nullable = false)
+    private Boolean starlink;
+
+    @NotNull
     @Enumerated(EnumType.STRING)
     @Column(name = "status", nullable = false)
     private AircraftStatus status = AircraftStatus.INACTIVE;
 
+    @Column(name = "created_at", insertable = false, updatable = false, nullable = false)
+    private LocalDateTime createdAt;
+
+    @Column(name = "updated_at", insertable = false, updatable = false, nullable = false)
+    private LocalDateTime updatedAt;
+
     @Builder
-    public Aircraft(AircraftModel aircraftModel, String registration, String serialNumber, AircraftStatus status) {
+    public Aircraft(AircraftModel aircraftModel, String registration, String serialNumber, Boolean starlink, AircraftStatus status) {
         this.aircraftModel = aircraftModel;
         this.registration = registration;
         this.serialNumber = serialNumber;
+        this.starlink = starlink != null && starlink;
         this.status = status != null ? status : AircraftStatus.INACTIVE;
     }
 }

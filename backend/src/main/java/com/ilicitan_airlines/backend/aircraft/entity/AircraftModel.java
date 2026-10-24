@@ -28,10 +28,22 @@ public class AircraftModel {
     @Column(name = "capacity", nullable = false)
     private Short capacity;
 
+    @NotNull
+    @Positive
+    @Column(name = "range_km", nullable = false)
+    private Short range;
+
+    @NotNull
+    @Positive
+    @Column(name = "cruise_speed_kmh", nullable = false)
+    private Short cruiseSpeed;
+
     @Builder
-    public AircraftModel(String manufacturer, String model, Short capacity) {
+    public AircraftModel(String manufacturer, String model, Short capacity, Short range, Short cruiseSpeed) {
         this.manufacturer = manufacturer;
         this.model = model;
         this.capacity = capacity;
+        this.range = range;
+        this.cruiseSpeed = cruiseSpeed;
     }
 }
