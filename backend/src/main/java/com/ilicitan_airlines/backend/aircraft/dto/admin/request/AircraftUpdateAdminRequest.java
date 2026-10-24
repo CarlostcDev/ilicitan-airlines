@@ -1,4 +1,4 @@
-package com.ilicitan_airlines.backend.aircraft.dto.request;
+package com.ilicitan_airlines.backend.aircraft.dto.admin.request;
 
 import com.ilicitan_airlines.backend.aircraft.enums.AircraftStatus;
 import io.swagger.v3.oas.annotations.media.Schema;

@@ -1,4 +1,4 @@
-package com.ilicitan_airlines.backend.aircraft.dto.request;
+package com.ilicitan_airlines.backend.aircraft.dto.admin.request;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Pattern;

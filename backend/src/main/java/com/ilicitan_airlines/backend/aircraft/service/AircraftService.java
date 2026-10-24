@@ -1,7 +1,7 @@
 package com.ilicitan_airlines.backend.aircraft.service;
 
-import com.ilicitan_airlines.backend.aircraft.dto.request.AircraftUpdateAdminRequest;
-import com.ilicitan_airlines.backend.aircraft.dto.response.AircraftModelOptionResponse;
+import com.ilicitan_airlines.backend.aircraft.dto.admin.request.AircraftUpdateAdminRequest;
+import com.ilicitan_airlines.backend.aircraft.dto.admin.request.AircraftModelOptionResponse;
 import com.ilicitan_airlines.backend.aircraft.entity.Aircraft;
 import com.ilicitan_airlines.backend.aircraft.entity.AircraftModel;
 import com.ilicitan_airlines.backend.aircraft.repository.AircraftModelRepository;
