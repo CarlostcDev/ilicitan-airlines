@@ -3,7 +3,7 @@ CREATE TABLE aircraft_model (
     manufacturer VARCHAR(100) NOT NULL,
     model VARCHAR(100) NOT NULL,
     capacity SMALLINT UNSIGNED NOT NULL,
-    range_km SMALLINT UNSIGNED NOT NULL,
+    range_km MEDIUMINT UNSIGNED NOT NULL,
     cruise_speed_kmh SMALLINT UNSIGNED NOT NULL,
     UNIQUE KEY uq_aircraft_model (manufacturer, model),
     CONSTRAINT chk_aircraft_model_capacity CHECK (capacity > 0),

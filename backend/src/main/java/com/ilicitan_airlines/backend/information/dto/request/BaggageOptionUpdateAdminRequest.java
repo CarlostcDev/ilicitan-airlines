@@ -8,8 +8,8 @@ import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 import java.math.BigDecimal;
 
-@Schema(name = "BaggageOptionUpdateRequest", description = "Actualización del equipaje")
-public record BaggageOptionUpdateRequest(
+@Schema(name = "BaggageOptionUpdateAdminRequest", description = "Actualización del equipaje")
+public record BaggageOptionUpdateAdminRequest(
         @Schema(description = "Nombre del equipaje", example = "Equipaje de cabina")
         @Size(min = 1, max = 100) @Pattern(regexp = ".*\\S.*") String name,
 

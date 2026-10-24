@@ -1,6 +1,6 @@
 package com.ilicitan_airlines.backend.information.service;
 
-import com.ilicitan_airlines.backend.information.dto.request.BaggageOptionUpdateRequest;
+import com.ilicitan_airlines.backend.information.dto.request.BaggageOptionUpdateAdminRequest;
 import com.ilicitan_airlines.backend.information.dto.response.BaggageOptionAdminResponse;
 import com.ilicitan_airlines.backend.information.dto.response.BaggageOptionResponse;
 import com.ilicitan_airlines.backend.information.entity.BaggageOption;
@@ -55,7 +55,7 @@ public class BaggageOptionService {
     }
 
     @Transactional
-    public void updateBaggageOption(Long id, BaggageOptionUpdateRequest request) {
+    public void updateBaggageOption(Long id, BaggageOptionUpdateAdminRequest request) {
         BaggageOption baggageOption = baggageOptionRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("No se ha encontrado el equipaje " + id));
 

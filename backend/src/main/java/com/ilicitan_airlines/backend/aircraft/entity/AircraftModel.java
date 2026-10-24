@@ -31,7 +31,7 @@ public class AircraftModel {
     @NotNull
     @Positive
     @Column(name = "range_km", nullable = false)
-    private Short range;
+    private Integer range;
 
     @NotNull
     @Positive
@@ -39,7 +39,7 @@ public class AircraftModel {
     private Short cruiseSpeed;
 
     @Builder
-    public AircraftModel(String manufacturer, String model, Short capacity, Short range, Short cruiseSpeed) {
+    public AircraftModel(String manufacturer, String model, Short capacity, Integer range, Short cruiseSpeed) {
         this.manufacturer = manufacturer;
         this.model = model;
         this.capacity = capacity;
