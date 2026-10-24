@@ -1,6 +1,7 @@
 package com.ilicitan_airlines.backend.logging.controller;
 
 import com.ilicitan_airlines.backend.logging.dto.admin.response.ActivityLogsResponse;
+import com.ilicitan_airlines.backend.logging.enums.LogLevelFilter;
 import com.ilicitan_airlines.backend.logging.service.ActivityLogsService;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -16,17 +17,22 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/admin/global-logs")
+@RequestMapping("/admin/logs")
 @RequiredArgsConstructor
 @Validated
 @Slf4j
 public class ActivityLogsController {
     private final ActivityLogsService activityLogsService;
 
-    @GetMapping
-    public ActivityLogsResponse getLogs(@RequestParam(defaultValue = "1000") @Min(1) @Max(1000) int lines, Authentication authentication) {
-        List<String> logLines = activityLogsService.getLastLines(lines);
-        log.info("Administrator {} accessed the logs. Number of lines returned: {}", authentication.getName(), logLines.size());
+    @GetMapping("/global")
+    public ActivityLogsResponse getLogs(
+            @RequestParam(defaultValue = "1000") @Min(1) @Max(1000) int lines,
+            @RequestParam(defaultValue = "ALL") LogLevelFilter level,
+            Authentication authentication
+    ) {
+        List<String> logLines = activityLogsService.getLastLines(lines, level);
+        log.info("Administrator {} accessed the logs. Level: {}. Number of lines returned: {}",
+                authentication.getName(), level, logLines.size());
         return new ActivityLogsResponse(logLines, logLines.size());
     }
 }
