@@ -1,10 +1,12 @@
 package com.ilicitan_airlines.backend.information.service;
 
+import com.ilicitan_airlines.backend.information.dto.request.BaggageOptionUpdateRequest;
 import com.ilicitan_airlines.backend.information.dto.response.BaggageOptionAdminResponse;
 import com.ilicitan_airlines.backend.information.dto.response.BaggageOptionResponse;
 import com.ilicitan_airlines.backend.information.entity.BaggageOption;
 import com.ilicitan_airlines.backend.information.enums.BaggageStatus;
 import com.ilicitan_airlines.backend.information.repository.BaggageOptionRepository;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
@@ -50,5 +52,23 @@ public class BaggageOptionService {
                         .updatedAt(bo.getUpdatedAt())
                         .build())
                 .toList();
+    }
+
+    @Transactional
+    public void updateBaggageOption(Long id, BaggageOptionUpdateRequest request) {
+        BaggageOption baggageOption = baggageOptionRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("No se ha encontrado el equipaje " + id));
+
+        baggageOption.updateDetails(
+                request.name(),
+                request.type(),
+                request.weight(),
+                request.length(),
+                request.width(),
+                request.height(),
+                request.price(),
+                request.currency(),
+                request.status()
+        );
     }
 }
