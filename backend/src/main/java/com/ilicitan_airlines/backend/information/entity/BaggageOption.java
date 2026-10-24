@@ -86,8 +86,8 @@ public class BaggageOption {
         this.status = status != null ? status : BaggageStatus.INACTIVE;
     }
 
-    public void updateDetails(String name, BaggageType type, BigDecimal weight, Short length, Short width,
-                              Short height, BigDecimal price, String currency, BaggageStatus status) {
+    public void updateBaggageOption(String name, BaggageType type, BigDecimal weight, Short length, Short width,
+                                    Short height, BigDecimal price, String currency, BaggageStatus status) {
         if (name != null) this.name = name;
         if (type != null) this.type = type;
         if (weight != null) this.weight = weight;

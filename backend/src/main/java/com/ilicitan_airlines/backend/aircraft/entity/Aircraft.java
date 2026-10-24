@@ -52,4 +52,12 @@ public class Aircraft {
         this.starlink = starlink != null && starlink;
         this.status = status != null ? status : AircraftStatus.INACTIVE;
     }
+
+    public void updateAircraft(AircraftModel aircraftModel, String registration, String serialNumber, Boolean starlink, AircraftStatus status) {
+        if (aircraftModel != null) this.aircraftModel = aircraftModel;
+        if (registration != null) this.registration = registration;
+        if (serialNumber != null) this.serialNumber = serialNumber;
+        if (starlink != null) this.starlink = starlink;
+        if (status != null) this.status = status;
+    }
 }

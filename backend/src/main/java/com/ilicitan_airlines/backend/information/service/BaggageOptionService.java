@@ -59,7 +59,7 @@ public class BaggageOptionService {
         BaggageOption baggageOption = baggageOptionRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("No se ha encontrado el equipaje " + id));
 
-        baggageOption.updateDetails(
+        baggageOption.updateBaggageOption(
                 request.name(),
                 request.type(),
                 request.weight(),

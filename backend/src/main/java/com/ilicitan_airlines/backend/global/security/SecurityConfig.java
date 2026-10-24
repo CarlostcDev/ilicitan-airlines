@@ -1,4 +1,4 @@
-package com.ilicitan_airlines.backend.config;
+package com.ilicitan_airlines.backend.global.security;
 
 import org.springframework.context.annotation.*;
 import org.springframework.security.config.Customizer;
