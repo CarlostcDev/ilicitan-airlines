@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/admin/role")
+@RequestMapping("/admin/roles")
 @Tag(name = "Roles", description = "User role management for administrators")
 public class RoleAdminController {
     private final RoleService roleService;

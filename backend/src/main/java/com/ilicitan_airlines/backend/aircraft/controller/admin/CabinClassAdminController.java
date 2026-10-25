@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/admin/cabin-class")
-@Tag(name = "cabin-class", description = "Managing in-cabin classes for administrators")
+@RequestMapping("/admin/cabin-classes")
+@Tag(name = "Cabin Classes", description = "Managing in-cabin classes for administrators")
 public class CabinClassAdminController {
     private final CabinClassService cabinClassService;
 }

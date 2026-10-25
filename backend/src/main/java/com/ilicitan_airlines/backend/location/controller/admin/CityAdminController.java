@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/admin/city")
+@RequestMapping("/admin/cities")
 @Tag(name = "city", description = "City management for administrators")
 public class CityAdminController {
     private final CityService cityService;

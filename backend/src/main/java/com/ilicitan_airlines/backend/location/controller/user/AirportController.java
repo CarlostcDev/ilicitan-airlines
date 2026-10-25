@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/airport")
+@RequestMapping("/airports")
 @Tag(name = "Airports", description = "Origin and destination airports for the flights")
 public class AirportController {
     private final AirportService airportService;

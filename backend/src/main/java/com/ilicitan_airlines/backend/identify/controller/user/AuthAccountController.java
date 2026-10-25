@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/auth-account")
+@RequestMapping("/auth-accounts")
 @Tag(name = "Auth Accounts", description = "Account authentication inquiry and retrieval")
 public class AuthAccountController {
     private final AuthAccountService authAccountService;

@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/admin/baggage")
-@Tag(name = "Baggage", description = "Baggage management reserved for administrators")
+@RequestMapping("/admin/baggages")
+@Tag(name = "Baggages", description = "Baggage management reserved for administrators")
 public class BaggageAdminController {
     private final BaggageService baggageService;
 }

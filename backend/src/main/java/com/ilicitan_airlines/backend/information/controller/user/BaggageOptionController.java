@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/baggage-option")
+@RequestMapping("/baggage-options")
 @Tag(name = "Baggage Options", description = "Obtaining and using baggage options")
 public class BaggageOptionController {
     private final BaggageOptionService baggageOptionService;

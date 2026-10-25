@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/payment")
+@RequestMapping("/payments")
 @Tag(name = "Payments", description = "User payments for bookings")
 public class PaymentController {
     private final PaymentService paymentService;

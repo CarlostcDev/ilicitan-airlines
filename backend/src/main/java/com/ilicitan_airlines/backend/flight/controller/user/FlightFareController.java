@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/flight-fare")
+@RequestMapping("/flight-fares")
 @Tag(name = "Flight Fares", description = "Flight fare management and consultation")
 public class FlightFareController {
     private final FlightFareService flightFareService;

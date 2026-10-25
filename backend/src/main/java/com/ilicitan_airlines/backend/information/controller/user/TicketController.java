@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/ticket")
-@Tag(name = "ticket", description = "Booking management per passenger")
+@RequestMapping("/tickets")
+@Tag(name = "Tickets", description = "Booking management per passenger")
 public class TicketController {
     private final TicketService ticketService;
 }

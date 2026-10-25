@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/aircraft-model")
+@RequestMapping("/aircraft-models")
 @Tag(name = "Aircraft Models", description = "Management of aircraft models")
 public class AircraftModelController {
     private final AircraftModelService aircraftModelService;

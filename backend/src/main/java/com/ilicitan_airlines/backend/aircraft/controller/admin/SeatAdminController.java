@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/admin/seat")
+@RequestMapping("/admin/seats")
 @Tag(name = "Seats", description = "Seat management for administrators")
 public class SeatAdminController {
     private final SeatService seatService;

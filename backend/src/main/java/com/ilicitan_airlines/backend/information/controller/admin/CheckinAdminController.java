@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/admin/checkin")
-@Tag(name = "Checkin", description = "Check-in management for administrators")
+@RequestMapping("/admin/checkins")
+@Tag(name = "Checkins", description = "Check-in management for administrators")
 public class CheckinAdminController {
     private final CheckinService checkinService;
 }

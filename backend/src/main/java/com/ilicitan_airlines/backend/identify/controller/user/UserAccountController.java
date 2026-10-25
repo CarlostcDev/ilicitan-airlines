@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/user-account")
+@RequestMapping("/user-accounts")
 @Tag(name = "User Accounts", description = "User account use and management")
 public class UserAccountController {
     private final UserAccountService userAccountService;

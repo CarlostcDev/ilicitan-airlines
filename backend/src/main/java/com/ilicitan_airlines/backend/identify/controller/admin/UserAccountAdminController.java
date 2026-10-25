@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/admin/user-account")
+@RequestMapping("/admin/user-accounts")
 @Tag(name = "User Accounts", description = "User account management for administrators")
 public class UserAccountAdminController {
     private final UserAccountService userAccountService;

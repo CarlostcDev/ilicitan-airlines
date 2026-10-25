@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/flight-seat")
+@RequestMapping("/flight-seats")
 @Tag(name = "Flight Seats", description = "Flight seat search")
 public class FlightSeatController {
     private final FlightSeatService flightSeatService;

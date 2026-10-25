@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/admin/country")
+@RequestMapping("/admin/countries")
 @Tag(name = "Countries", description = "Country management for administrators")
 public class CountryAdminController {
     private final CountryService countryService;
