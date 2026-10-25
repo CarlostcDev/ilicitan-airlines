@@ -36,3 +36,7 @@ SOURCE data/location/location-data.sql;
 SOURCE data/flight/flight-data.sql;
 SOURCE data/flight/flight-seat-data.sql;
 SOURCE data/flight/flight-fare-data.sql;
+SOURCE data/identity/identity-data.sql;
+SOURCE data/reservation/reservation-data.sql;
+SOURCE data/information/information-data.sql;
+SOURCE data/payment/payment-data.sql;

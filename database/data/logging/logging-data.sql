@@ -1,0 +1,16 @@
+INSERT INTO admin_log (id, admin_user_id, action, entity_type, entity_id, details) VALUES
+(1, 1, 'USER_ACCOUNT_UPDATED', 'USER_ACCOUNT', 3, '{"email": "elena.torres@ilicitan-airlines.com", "changes": {"status": "ACTIVE"}}'),
+(2, 1, 'USER_ACCOUNT_SUSPENDED', 'USER_ACCOUNT', 4, '{"email": "david.navarro@ilicitan-airlines.com", "reason": "Administrative review"}'),
+(3, 2, 'USER_ACCOUNT_UPDATED', 'USER_ACCOUNT', 1, '{"email": "lucia.fernandez@ilicitan-airlines.com", "changes": {"phone": "+34600111222"}}'),
+(4, 2, 'USER_ACCOUNT_REACTIVATED', 'USER_ACCOUNT', 4, '{"email": "david.navarro@ilicitan-airlines.com", "previousStatus": "SUSPENDED", "newStatus": "ACTIVE"}'),
+(5, 3, 'FLIGHT_STATUS_UPDATED', 'FLIGHT', 1, '{"flightIata": "IL601", "previousStatus": "DELAYED", "newStatus": "SCHEDULED"}'),
+(6, 3, 'FLIGHT_FARE_UPDATED', 'FLIGHT_FARE', 1, '{"flightId": 1, "fareCode": "ECONOMY", "previousPrice": 449.99, "newPrice": 434.99, "currency": "EUR"}'),
+(7, 3, 'FLIGHT_CREATED', 'FLIGHT', 201, '{"flightIata": "IL801", "originAirportId": 8, "destinationAirportId": 12, "status": "SCHEDULED"}'),
+(8, 4, 'AIRCRAFT_STATUS_UPDATED', 'AIRCRAFT', 3, '{"registration": "EC-OCA", "previousStatus": "MAINTENANCE", "newStatus": "ACTIVE"}'),
+(9, 4, 'FLIGHT_STATUS_UPDATED', 'FLIGHT', 5, '{"flightIata": "IL805", "previousStatus": "SCHEDULED", "newStatus": "DELAYED", "reason": "Operational disruption"}'),
+(10, 4, 'BAGGAGE_OPTION_UPDATED', 'BAGGAGE_OPTION', 3, '{"name": "Checked Bag - 23 kg", "previousPrice": 59.99, "newPrice": 64.99, "currency": "EUR"}'),
+(11, 5, 'ROLE_UPDATED', 'ROLE', 2, '{"roleCode": "FLIGHT_ADMIN", "changes": {"name": "Flight Operations Administrator"}}'),
+(12, 5, 'USER_ROLE_CHANGED', 'USER_ACCOUNT', 3, '{"email": "elena.torres@ilicitan-airlines.com", "previousRole": "FLIGHT_ADMIN", "newRole": "USER_ADMIN"}'),
+(13, 5, 'RESERVATION_REVIEWED', 'RESERVATION', 1, '{"bookingReference": "IL7K2A", "status": "CONFIRMED", "reviewResult": "Approved"}'),
+(14, 5, 'PAYMENT_REFUND_REVIEWED', 'PAYMENT', 4, '{"transactionReference": "pi_test_IL2X6B_001", "amount": 859.98, "currency": "EUR", "status": "REFUNDED"}'),
+(15, 1, 'BAGGAGE_OPTION_DEACTIVATED', 'BAGGAGE_OPTION', 7, '{"name": "Legacy Cabin Bag - 8 kg", "previousStatus": "ACTIVE", "newStatus": "INACTIVE"}');
