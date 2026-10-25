@@ -19,7 +19,7 @@ public record AircraftModelAdminResponse(
         Short capacity,
 
         @Schema(description = "Autonomía máxima en kilómetros", example = "6100")
-        Short rangeKm,
+        Integer rangeKm,
 
         @Schema(description = "Velocidad de crucero en km/h", example = "840")
         Short cruiseSpeedKmh

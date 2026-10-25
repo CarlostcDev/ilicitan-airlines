@@ -1,11 +1,11 @@
 INSERT INTO baggage_option (id, name, type, weight_kg, length_cm, width_cm, height_cm, price_amount, currency, status) VALUES
-(1, 'Additional Personal Item - 40x30x15 cm', 'PERSONAL_ITEM', 5.00, 40, 30, 15, 19.99, 'EUR', 'ACTIVE'),
-(2, 'Cabin Bag - 10 kg - 55x40x23 cm', 'CABIN', 10.00, 55, 40, 23, 45.00, 'EUR', 'ACTIVE'),
-(3, 'Checked Bag - 23 kg - 158 cm total', 'CHECKED', 23.00, 75, 50, 30, 64.99, 'EUR', 'ACTIVE'),
-(4, 'Heavy Checked Bag - 32 kg - 158 cm total', 'CHECKED', 32.00, 75, 50, 30, 109.99, 'EUR', 'ACTIVE'),
-(5, 'Oversized Checked Bag - 23 kg - 200 cm total', 'CHECKED', 23.00, 100, 60, 40, 149.99, 'EUR', 'ACTIVE'),
-(6, 'Sports Equipment - Up to 23 kg', 'CHECKED', 23.00, 140, 40, 30, 119.99, 'EUR', 'ACTIVE'),
-(7, 'Legacy Cabin Bag - 8 kg', 'CABIN', 8.00, 55, 40, 20, 39.99, 'EUR', 'INACTIVE');
+(1, 'Additional Personal Item', 'PERSONAL_ITEM', 5.00, 40, 30, 15, 19.99, 'EUR', 'ACTIVE'),
+(2, 'Cabin Bag', 'CABIN', 10.00, 55, 40, 23, 45.00, 'EUR', 'ACTIVE'),
+(3, 'Checked Bag', 'CHECKED', 23.00, 75, 50, 30, 64.99, 'EUR', 'ACTIVE'),
+(4, 'Heavy Checked Bag', 'CHECKED', 32.00, 75, 50, 30, 109.99, 'EUR', 'ACTIVE'),
+(5, 'Oversized Checked Bag', 'CHECKED', 23.00, 100, 60, 40, 149.99, 'EUR', 'ACTIVE'),
+(6, 'Sports Equipment', 'CHECKED', 23.00, 140, 40, 30, 119.99, 'EUR', 'ACTIVE'),
+(7, 'Legacy Cabin Bag', 'CABIN', 8.00, 55, 40, 20, 39.99, 'EUR', 'INACTIVE');
 
 INSERT INTO ticket (id, reservation_flight_id, reservation_passenger_id, flight_seat_id, ticket_number, status, base_fare, taxes) VALUES
 (1, 1, 1, 1, '1234567890001', 'CHECKED_IN', 350.00, 84.99),

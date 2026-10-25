@@ -1,9 +1,9 @@
-package com.ilicitan_airlines.backend.aircraft.dto.admin.request;
+package com.ilicitan_airlines.backend.aircraft.dto.admin.response;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 
 @Schema(name = "AircraftModelOptionResponse", description = "Modelo de avión disponible para seleccionar")
-public record AircraftModelOptionResponse(
+public record AircraftModelOptionAdminResponse(
         @Schema(description = "Identificador del modelo", example = "1")
         Long id,
 
