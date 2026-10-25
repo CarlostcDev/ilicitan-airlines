@@ -94,7 +94,7 @@ This generated password is for development use only. Your security configuration
 2026-10-24T22:37:51.756+02:00 ERROR 24612 --- [ilicitan-airlines] [http-nio-127.0.0.1-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null] with root cause
 
 java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
-	at com.ilicitan_airlines.backend.logging.controller.ActivityLogsController.getLogs(ActivityLogsController.java:29) ~[classes/:na]
+	at com.ilicitan_airlines.backend.logging.controller.admin.ActivityLogsController.getLogs(ActivityLogsController.java:29) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
 	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.9.jar:7.0.9]
@@ -103,7 +103,7 @@ java.lang.NullPointerException: Cannot invoke "org.springframework.security.core
 	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:172) ~[spring-context-7.0.9.jar:7.0.9]
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.9.jar:7.0.9]
-	at com.ilicitan_airlines.backend.logging.controller.ActivityLogsController$$SpringCGLIB$$0.getLogs(<generated>) ~[classes/:na]
+	at com.ilicitan_airlines.backend.logging.controller.admin.ActivityLogsController$$SpringCGLIB$$0.getLogs(<generated>) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]
@@ -233,7 +233,7 @@ java.lang.NullPointerException: Cannot invoke "org.springframework.security.core
 2026-10-24T22:38:01.720+02:00 ERROR 24612 --- [ilicitan-airlines] [http-nio-127.0.0.1-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null] with root cause
 
 java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
-	at com.ilicitan_airlines.backend.logging.controller.ActivityLogsController.getLogs(ActivityLogsController.java:29) ~[classes/:na]
+	at com.ilicitan_airlines.backend.logging.controller.admin.ActivityLogsController.getLogs(ActivityLogsController.java:29) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
 	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.9.jar:7.0.9]
@@ -242,7 +242,7 @@ java.lang.NullPointerException: Cannot invoke "org.springframework.security.core
 	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:172) ~[spring-context-7.0.9.jar:7.0.9]
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.9.jar:7.0.9]
-	at com.ilicitan_airlines.backend.logging.controller.ActivityLogsController$$SpringCGLIB$$0.getLogs(<generated>) ~[classes/:na]
+	at com.ilicitan_airlines.backend.logging.controller.admin.ActivityLogsController$$SpringCGLIB$$0.getLogs(<generated>) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]
@@ -421,7 +421,7 @@ This generated password is for development use only. Your security configuration
 2026-10-24T22:39:56.166+02:00 ERROR 22960 --- [ilicitan-airlines] [http-nio-127.0.0.1-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null] with root cause
 
 java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
-	at com.ilicitan_airlines.backend.logging.controller.ActivityLogsController.getLogs(ActivityLogsController.java:29) ~[classes/:na]
+	at com.ilicitan_airlines.backend.logging.controller.admin.ActivityLogsController.getLogs(ActivityLogsController.java:29) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
 	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.9.jar:7.0.9]
@@ -430,7 +430,7 @@ java.lang.NullPointerException: Cannot invoke "org.springframework.security.core
 	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:172) ~[spring-context-7.0.9.jar:7.0.9]
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.9.jar:7.0.9]
-	at com.ilicitan_airlines.backend.logging.controller.ActivityLogsController$$SpringCGLIB$$0.getLogs(<generated>) ~[classes/:na]
+	at com.ilicitan_airlines.backend.logging.controller.admin.ActivityLogsController$$SpringCGLIB$$0.getLogs(<generated>) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]

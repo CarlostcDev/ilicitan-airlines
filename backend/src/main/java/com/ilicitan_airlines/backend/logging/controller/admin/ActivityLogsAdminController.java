@@ -1,4 +1,4 @@
-package com.ilicitan_airlines.backend.logging.controller;
+package com.ilicitan_airlines.backend.logging.controller.admin;
 
 import com.ilicitan_airlines.backend.logging.dto.admin.response.ActivityLogsResponse;
 import com.ilicitan_airlines.backend.logging.enums.LogLevelFilter;
@@ -21,9 +21,9 @@ import java.util.List;
 @Validated
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/admin/logs")
-@Tag(name = "Loggings", description = "Logs y registros de usuarios y administradores")
-public class ActivityLogsController {
+@RequestMapping("/admin/activity-logs")
+@Tag(name = "Activity Logs", description = "User and administrator logs and records for administrators")
+public class ActivityLogsAdminController {
     private final ActivityLogsService activityLogsService;
 
     @GetMapping("/global")
