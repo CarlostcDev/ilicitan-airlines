@@ -610,3 +610,159 @@ This generated password is for development use only. Your security configuration
 2026-10-24T22:57:49.874+02:00  INFO 24392 --- [ilicitan-airlines] [RMI TCP Connection(2)-169.254.99.124] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2026-10-24T22:57:49.876+02:00  INFO 24392 --- [ilicitan-airlines] [RMI TCP Connection(2)-169.254.99.124] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2026-10-24T22:58:08.195+02:00  INFO 24392 --- [ilicitan-airlines] [http-nio-127.0.0.1-8080-exec-3] c.i.b.l.c.ActivityLogsController         : Administrator user accessed the logs. Level: INFO. Number of lines returned: 118
+2026-10-24T23:21:20.439+02:00  INFO 24392 --- [ilicitan-airlines] [http-nio-127.0.0.1-8080-exec-5] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 237 ms
+2026-10-24T23:22:12.387+02:00  INFO 24392 --- [ilicitan-airlines] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-24T23:22:12.389+02:00  INFO 24392 --- [ilicitan-airlines] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-24T23:22:12.397+02:00  INFO 24392 --- [ilicitan-airlines] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-24T23:22:12.399+02:00  INFO 24392 --- [ilicitan-airlines] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-24T23:22:12.400+02:00  INFO 24392 --- [ilicitan-airlines] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-24T23:22:14.916+02:00  INFO 20220 --- [ilicitan-airlines] [main] com.ilicitan_airlines.backend.Backend    : Starting Backend using Java 25 with PID 20220 (C:\Users\gamep\Proyectos\ilicitan-airlines\backend\target\classes started by gamep in C:\Users\gamep\Proyectos\ilicitan-airlines\backend)
+2026-10-24T23:22:14.918+02:00  INFO 20220 --- [ilicitan-airlines] [main] com.ilicitan_airlines.backend.Backend    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T23:22:15.609+02:00  INFO 20220 --- [ilicitan-airlines] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-24T23:22:15.686+02:00  INFO 20220 --- [ilicitan-airlines] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 25 JPA repository interfaces.
+2026-10-24T23:22:16.116+02:00  INFO 20220 --- [ilicitan-airlines] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-24T23:22:16.125+02:00  INFO 20220 --- [ilicitan-airlines] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-24T23:22:16.126+02:00  INFO 20220 --- [ilicitan-airlines] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-24T23:22:16.164+02:00  INFO 20220 --- [ilicitan-airlines] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1211 ms
+2026-10-24T23:22:16.343+02:00  INFO 20220 --- [ilicitan-airlines] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-24T23:22:16.384+02:00  INFO 20220 --- [ilicitan-airlines] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-24T23:22:16.686+02:00  INFO 20220 --- [ilicitan-airlines] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-24T23:22:16.707+02:00  INFO 20220 --- [ilicitan-airlines] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-24T23:22:16.765+02:00  INFO 20220 --- [ilicitan-airlines] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7bc8ffbc
+2026-10-24T23:22:16.766+02:00  INFO 20220 --- [ilicitan-airlines] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-24T23:22:16.804+02:00  INFO 20220 --- [ilicitan-airlines] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mariadb://localhost/ilicitan_airlines?user=carlos&password=123]
+	Database driver: MariaDB Connector/J
+	Database dialect: MariaDBDialect
+	Database version: 12.3.3
+	Default catalog/schema: ilicitan_airlines/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-24T23:22:17.602+02:00  INFO 20220 --- [ilicitan-airlines] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-24T23:22:17.638+02:00  INFO 20220 --- [ilicitan-airlines] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-24T23:22:17.678+02:00  INFO 20220 --- [ilicitan-airlines] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-24T23:22:18.335+02:00  WARN 20220 --- [ilicitan-airlines] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b3c62b24-380a-4074-9d71-72ac6054d92b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-10-24T23:22:18.340+02:00  INFO 20220 --- [ilicitan-airlines] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-10-24T23:22:18.782+02:00  INFO 20220 --- [ilicitan-airlines] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-24T23:22:18.830+02:00  INFO 20220 --- [ilicitan-airlines] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-24T23:22:18.836+02:00  INFO 20220 --- [ilicitan-airlines] [main] com.ilicitan_airlines.backend.Backend    : Started Backend in 4.227 seconds (process running for 4.636)
+2026-10-24T23:22:18.840+02:00  WARN 20220 --- [ilicitan-airlines] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T23:22:18.840+02:00  WARN 20220 --- [ilicitan-airlines] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-24T23:22:19.342+02:00  INFO 20220 --- [ilicitan-airlines] [RMI TCP Connection(4)-169.254.99.124] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-24T23:22:19.342+02:00  INFO 20220 --- [ilicitan-airlines] [RMI TCP Connection(4)-169.254.99.124] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-24T23:22:19.343+02:00  INFO 20220 --- [ilicitan-airlines] [RMI TCP Connection(4)-169.254.99.124] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-24T23:24:51.833+02:00  INFO 20220 --- [ilicitan-airlines] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-24T23:24:51.835+02:00  INFO 20220 --- [ilicitan-airlines] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-24T23:24:51.841+02:00  INFO 20220 --- [ilicitan-airlines] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-24T23:24:51.843+02:00  INFO 20220 --- [ilicitan-airlines] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-24T23:24:51.845+02:00  INFO 20220 --- [ilicitan-airlines] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-24T23:24:54.299+02:00  INFO 36160 --- [ilicitan-airlines] [main] com.ilicitan_airlines.backend.Backend    : Starting Backend using Java 25 with PID 36160 (C:\Users\gamep\Proyectos\ilicitan-airlines\backend\target\classes started by gamep in C:\Users\gamep\Proyectos\ilicitan-airlines\backend)
+2026-10-24T23:24:54.301+02:00  INFO 36160 --- [ilicitan-airlines] [main] com.ilicitan_airlines.backend.Backend    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T23:24:54.955+02:00  INFO 36160 --- [ilicitan-airlines] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-24T23:24:55.029+02:00  INFO 36160 --- [ilicitan-airlines] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 25 JPA repository interfaces.
+2026-10-24T23:24:55.387+02:00  INFO 36160 --- [ilicitan-airlines] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-24T23:24:55.396+02:00  INFO 36160 --- [ilicitan-airlines] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-24T23:24:55.397+02:00  INFO 36160 --- [ilicitan-airlines] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-24T23:24:55.436+02:00  INFO 36160 --- [ilicitan-airlines] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1101 ms
+2026-10-24T23:24:55.613+02:00  INFO 36160 --- [ilicitan-airlines] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-24T23:24:55.645+02:00  INFO 36160 --- [ilicitan-airlines] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-24T23:24:55.910+02:00  INFO 36160 --- [ilicitan-airlines] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-24T23:24:55.935+02:00  INFO 36160 --- [ilicitan-airlines] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-24T23:24:55.989+02:00  INFO 36160 --- [ilicitan-airlines] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@1ac25dbb
+2026-10-24T23:24:55.990+02:00  INFO 36160 --- [ilicitan-airlines] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-24T23:24:56.025+02:00  INFO 36160 --- [ilicitan-airlines] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mariadb://localhost/ilicitan_airlines?user=carlos&password=123]
+	Database driver: MariaDB Connector/J
+	Database dialect: MariaDBDialect
+	Database version: 12.3.3
+	Default catalog/schema: ilicitan_airlines/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-24T23:24:56.825+02:00  INFO 36160 --- [ilicitan-airlines] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-24T23:24:56.863+02:00  INFO 36160 --- [ilicitan-airlines] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-24T23:24:56.908+02:00  INFO 36160 --- [ilicitan-airlines] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-24T23:24:57.586+02:00  WARN 36160 --- [ilicitan-airlines] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 84aa66a7-f90e-4df6-95e1-354bfccb81b9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-10-24T23:24:57.591+02:00  INFO 36160 --- [ilicitan-airlines] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-10-24T23:24:58.016+02:00  INFO 36160 --- [ilicitan-airlines] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-24T23:24:58.069+02:00  INFO 36160 --- [ilicitan-airlines] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-24T23:24:58.076+02:00  INFO 36160 --- [ilicitan-airlines] [main] com.ilicitan_airlines.backend.Backend    : Started Backend in 4.043 seconds (process running for 4.441)
+2026-10-24T23:24:58.081+02:00  WARN 36160 --- [ilicitan-airlines] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T23:24:58.082+02:00  WARN 36160 --- [ilicitan-airlines] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-24T23:24:58.306+02:00  INFO 36160 --- [ilicitan-airlines] [RMI TCP Connection(3)-169.254.99.124] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-24T23:24:58.306+02:00  INFO 36160 --- [ilicitan-airlines] [RMI TCP Connection(3)-169.254.99.124] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-24T23:24:58.308+02:00  INFO 36160 --- [ilicitan-airlines] [RMI TCP Connection(3)-169.254.99.124] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-24T23:25:08.298+02:00  INFO 36160 --- [ilicitan-airlines] [http-nio-127.0.0.1-8080-exec-2] c.i.b.l.c.ActivityLogsController         : Administrator user accessed the logs. Level: INFO. Number of lines returned: 180
+2026-10-24T23:26:50.601+02:00  INFO 36160 --- [ilicitan-airlines] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-24T23:26:50.603+02:00  INFO 36160 --- [ilicitan-airlines] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-24T23:26:50.609+02:00  INFO 36160 --- [ilicitan-airlines] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-24T23:26:50.610+02:00  INFO 36160 --- [ilicitan-airlines] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-24T23:26:50.612+02:00  INFO 36160 --- [ilicitan-airlines] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-24T23:26:52.968+02:00  INFO 9636 --- [ilicitan-airlines] [main] com.ilicitan_airlines.backend.Backend    : Starting Backend using Java 25 with PID 9636 (C:\Users\gamep\Proyectos\ilicitan-airlines\backend\target\classes started by gamep in C:\Users\gamep\Proyectos\ilicitan-airlines\backend)
+2026-10-24T23:26:52.969+02:00  INFO 9636 --- [ilicitan-airlines] [main] com.ilicitan_airlines.backend.Backend    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T23:26:53.622+02:00  INFO 9636 --- [ilicitan-airlines] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-24T23:26:53.700+02:00  INFO 9636 --- [ilicitan-airlines] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 25 JPA repository interfaces.
+2026-10-24T23:26:54.160+02:00  INFO 9636 --- [ilicitan-airlines] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-24T23:26:54.169+02:00  INFO 9636 --- [ilicitan-airlines] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-24T23:26:54.170+02:00  INFO 9636 --- [ilicitan-airlines] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-24T23:26:54.208+02:00  INFO 9636 --- [ilicitan-airlines] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1208 ms
+2026-10-24T23:26:54.368+02:00  INFO 9636 --- [ilicitan-airlines] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-24T23:26:54.401+02:00  INFO 9636 --- [ilicitan-airlines] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-24T23:26:54.654+02:00  INFO 9636 --- [ilicitan-airlines] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-24T23:26:54.674+02:00  INFO 9636 --- [ilicitan-airlines] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-24T23:26:54.725+02:00  INFO 9636 --- [ilicitan-airlines] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@1ac25dbb
+2026-10-24T23:26:54.726+02:00  INFO 9636 --- [ilicitan-airlines] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-24T23:26:54.760+02:00  INFO 9636 --- [ilicitan-airlines] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mariadb://localhost/ilicitan_airlines?user=carlos&password=123]
+	Database driver: MariaDB Connector/J
+	Database dialect: MariaDBDialect
+	Database version: 12.3.3
+	Default catalog/schema: ilicitan_airlines/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-24T23:26:55.534+02:00  INFO 9636 --- [ilicitan-airlines] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-24T23:26:55.568+02:00  INFO 9636 --- [ilicitan-airlines] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-24T23:26:55.611+02:00  INFO 9636 --- [ilicitan-airlines] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-24T23:26:56.239+02:00  WARN 9636 --- [ilicitan-airlines] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ffdb25f1-794f-4cd3-946a-31f0235a50dd
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-10-24T23:26:56.244+02:00  INFO 9636 --- [ilicitan-airlines] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-10-24T23:26:56.689+02:00  INFO 9636 --- [ilicitan-airlines] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-24T23:26:56.741+02:00  INFO 9636 --- [ilicitan-airlines] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-24T23:26:56.747+02:00  INFO 9636 --- [ilicitan-airlines] [main] com.ilicitan_airlines.backend.Backend    : Started Backend in 4.087 seconds (process running for 4.482)
+2026-10-24T23:26:56.752+02:00  WARN 9636 --- [ilicitan-airlines] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T23:26:56.752+02:00  WARN 9636 --- [ilicitan-airlines] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-24T23:26:56.902+02:00  INFO 9636 --- [ilicitan-airlines] [RMI TCP Connection(4)-169.254.99.124] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-24T23:26:56.903+02:00  INFO 9636 --- [ilicitan-airlines] [RMI TCP Connection(4)-169.254.99.124] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-24T23:26:56.905+02:00  INFO 9636 --- [ilicitan-airlines] [RMI TCP Connection(4)-169.254.99.124] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-24T23:27:08.075+02:00  INFO 9636 --- [ilicitan-airlines] [http-nio-127.0.0.1-8080-exec-2] c.i.b.l.c.ActivityLogsController         : Administrator user accessed the logs. Level: INFO. Number of lines returned: 211
+2026-10-24T23:27:12.484+02:00  INFO 9636 --- [ilicitan-airlines] [http-nio-127.0.0.1-8080-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 216 ms
+2026-10-24T23:38:45.659+02:00  INFO 9636 --- [ilicitan-airlines] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-24T23:38:45.661+02:00  INFO 9636 --- [ilicitan-airlines] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-24T23:38:45.667+02:00  INFO 9636 --- [ilicitan-airlines] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-24T23:38:45.668+02:00  INFO 9636 --- [ilicitan-airlines] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-24T23:38:45.670+02:00  INFO 9636 --- [ilicitan-airlines] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -3,6 +3,7 @@ package com.ilicitan_airlines.backend.logging.controller;
 import com.ilicitan_airlines.backend.logging.dto.admin.response.ActivityLogsResponse;
 import com.ilicitan_airlines.backend.logging.enums.LogLevelFilter;
 import com.ilicitan_airlines.backend.logging.service.ActivityLogsService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import lombok.RequiredArgsConstructor;
@@ -16,11 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("/admin/logs")
-@RequiredArgsConstructor
-@Validated
 @Slf4j
+@Validated
+@RestController
+@RequiredArgsConstructor
+@RequestMapping("/admin/logs")
+@Tag(name = "Loggings", description = "Logs y registros de usuarios y administradores")
 public class ActivityLogsController {
     private final ActivityLogsService activityLogsService;
 

@@ -14,18 +14,15 @@ import java.util.List;
 public class SecurityConfig {
 
     @Bean
-    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    SecurityFilterChain securityFilterChain(HttpSecurity http) {
         return http
                 .cors(Customizer.withDefaults())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
                                 "/swagger-ui.html",
                                 "/swagger-ui/**",
-                                "/v3/api-docs/**"
-                        ).permitAll()
-                        .requestMatchers(
-                                "/admin/global-logs",
-                                "/admin/global-logs/**"
+                                "/v3/api-docs/**",
+                                "/admin/logs/global"
                         ).permitAll()
                         .anyRequest().authenticated()
                 )
