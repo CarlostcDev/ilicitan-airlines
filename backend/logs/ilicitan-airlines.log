@@ -1015,3 +1015,8 @@ This generated password is for development use only. Your security configuration
 2026-10-25T18:13:06.190+01:00 TRACE 28720 --- [ilicitan-airlines] [http-nio-127.0.0.1-8080-exec-2] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [3]
 2026-10-25T18:13:06.210+01:00 DEBUG 28720 --- [ilicitan-airlines] [http-nio-127.0.0.1-8080-exec-2] org.hibernate.SQL                        : select am1_0.id,am1_0.capacity,am1_0.cruise_speed_kmh,am1_0.manufacturer,am1_0.model,am1_0.range_km from aircraft_model am1_0 where am1_0.id=?
 2026-10-25T18:13:06.210+01:00 TRACE 28720 --- [ilicitan-airlines] [http-nio-127.0.0.1-8080-exec-2] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [3]
+2026-10-25T18:39:08.794+01:00  INFO 28720 --- [ilicitan-airlines] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-25T18:39:08.796+01:00  INFO 28720 --- [ilicitan-airlines] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-25T18:39:08.804+01:00  INFO 28720 --- [ilicitan-airlines] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-25T18:39:08.806+01:00  INFO 28720 --- [ilicitan-airlines] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-25T18:39:08.807+01:00  INFO 28720 --- [ilicitan-airlines] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
