@@ -1,20 +1,25 @@
 package com.carlostcdev.ilicitanairlines.ui.components
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.carlostcdev.ilicitanairlines.ui.enums.ButtonType
 import com.carlostcdev.ilicitanairlines.ui.theme.AppDimensions
 import com.carlostcdev.ilicitanairlines.ui.theme.AppShapes
+import com.carlostcdev.ilicitanairlines.ui.theme.AppSpacing
 import com.carlostcdev.ilicitanairlines.ui.theme.AppTextSizes
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanColors
 
@@ -36,14 +41,15 @@ fun ActionButton(
                 colors = ButtonDefaults.buttonColors(
                     containerColor = IlicitanColors.Button.default,
                     contentColor = IlicitanColors.Text.hover,
-                    disabledContainerColor = IlicitanColors.Button.disabled,
-                    disabledContentColor = IlicitanColors.Text.disabled
+                    disabledContainerColor = IlicitanColors.Button.primaryDisabled,
+                    disabledContentColor = IlicitanColors.Button.contentDisabled
                 )
             ) {
                 Text(
                     text = label,
-                    fontSize = AppTextSizes.xxlarge,
-                    fontWeight = FontWeight.Bold
+                    fontSize = AppTextSizes.large,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.padding(AppSpacing.small)
                 )
             }
 
@@ -56,18 +62,16 @@ fun ActionButton(
                 colors = ButtonDefaults.outlinedButtonColors(
                     containerColor = Color.Transparent,
                     contentColor = IlicitanColors.Text.secondary,
-                    disabledContainerColor = Color.Transparent,
-                    disabledContentColor = IlicitanColors.Text.disabled
+                    disabledContainerColor = IlicitanColors.Button.secondaryDisabled,
+                    disabledContentColor = IlicitanColors.Button.contentDisabled
                 ),
-                border = BorderStroke(
-                    AppDimensions.borderWidth,
-                    if (enabled) IlicitanColors.Button.default else IlicitanColors.Button.disabled
-                )
+                border = if (enabled) BorderStroke(AppDimensions.borderWidth, IlicitanColors.Button.default) else null
             ) {
                 Text(
                     text = label,
-                    fontSize = AppTextSizes.xxlarge,
-                    fontWeight = FontWeight.Bold
+                    fontSize = AppTextSizes.large,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.padding(AppSpacing.small)
                 )
             }
     }
@@ -76,15 +80,29 @@ fun ActionButton(
 @Preview
 @Composable
 fun ActionButtonPreview() {
-    Column {
+    Column(
+        verticalArrangement = Arrangement.spacedBy(20.dp)
+    ) {
         ActionButton(
-            label = "Primary",
+            label = "Primary Enabled",
             onClick = {},
             buttonType = ButtonType.PRIMARY
         )
         ActionButton(
-            label = "Secondary",
+            label = "Primary Disabled",
             onClick = {},
+            enabled = false,
+            buttonType = ButtonType.PRIMARY
+        )
+        ActionButton(
+            label = "Secondary Enabled",
+            onClick = {},
+            buttonType = ButtonType.SECONDARY
+        )
+        ActionButton(
+            label = "Secondary Disabled",
+            onClick = {},
+            enabled = false,
             buttonType = ButtonType.SECONDARY
         )
     }

@@ -16,6 +16,8 @@ object IlicitanColors {
         val default = Palette.primary
         val hover = Palette.secondary
         val focus = Palette.secondary
-        val disabled = Palette.lightGray
+        val primaryDisabled = Palette.blackGray
+        val secondaryDisabled = Palette.gray
+        val contentDisabled = Palette.white
     }
 }
