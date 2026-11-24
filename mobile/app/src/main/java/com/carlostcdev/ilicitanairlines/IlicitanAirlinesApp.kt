@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import com.carlostcdev.ilicitanairlines.ui.components.TextField
 import com.carlostcdev.ilicitanairlines.ui.theme.AppTextSizes
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanAirlinesTheme
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanColors
@@ -18,7 +19,7 @@ import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanColors
 fun IlicitanAirlinesApp() {
     IlicitanAirlinesTheme {
         Scaffold(
-            containerColor = Color.Black,
+            containerColor = Color.White,
             modifier = Modifier.fillMaxSize()
         ) { innerPadding ->
             Column(
@@ -26,7 +27,7 @@ fun IlicitanAirlinesApp() {
             ) {
                 Text(
                     text = stringResource(R.string.coming_soon),
-                    color = IlicitanColors.Text.defaultSecondary,
+                    color = IlicitanColors.Text.defaultPrimary,
                     fontSize = AppTextSizes.xxlarge
                 )
             }

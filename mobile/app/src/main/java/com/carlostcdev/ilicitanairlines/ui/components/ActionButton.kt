@@ -90,8 +90,10 @@ fun ActionButton(
 @Composable
 fun ActionButtonPreview() {
     Column(
-        verticalArrangement = Arrangement.spacedBy(20.dp),
-        modifier = Modifier.background(IlicitanColors.Surface.default)
+        verticalArrangement = Arrangement.spacedBy(AppSpacing.mediumLarge),
+        modifier = Modifier
+            .background(IlicitanColors.Surface.default)
+            .padding(AppSpacing.medium)
     ) {
         ActionButton(
             label = "Primary Enabled",

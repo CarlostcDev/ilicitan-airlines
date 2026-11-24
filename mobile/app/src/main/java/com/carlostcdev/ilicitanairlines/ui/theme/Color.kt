@@ -22,4 +22,8 @@ object IlicitanColors {
         val contentDisabled = Palette.white
         val contentEnabled = Palette.white
     }
+
+    object Input {
+        val defaultBackground = Palette.lightGray
+    }
 }
