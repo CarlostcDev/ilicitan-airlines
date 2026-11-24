@@ -1,5 +1,6 @@
 package com.carlostcdev.ilicitanairlines
 
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -17,11 +18,15 @@ fun IlicitanAirlinesApp() {
             containerColor = Color.Black,
             modifier = Modifier.fillMaxSize()
         ) { innerPadding ->
-            Text(
-                text = "🚀 Coming soon...",
-                color = Color.White,
+            Column(
                 modifier = Modifier.padding(innerPadding)
-            )
+            ) {
+                Text(
+                    text = "🚀 Coming soon...",
+                    color = Color.White,
+                    modifier = Modifier.padding(innerPadding)
+                )
+            }
         }
     }
 }
