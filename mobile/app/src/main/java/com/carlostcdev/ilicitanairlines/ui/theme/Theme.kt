@@ -26,7 +26,7 @@ fun IlicitanAirlinesTheme(
 ) {
     MaterialTheme(
         colorScheme = LightColorScheme,
-        typography = Typography,
+        typography = AppTypography,
         content = content
     )
 }

@@ -2,33 +2,32 @@ package com.carlostcdev.ilicitanairlines.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.sp
+import com.carlostcdev.ilicitanairlines.R
 
-// Set of Material typography styles to start with
-val Typography = Typography(
-    bodyLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
-        lineHeight = 24.sp,
-        letterSpacing = 0.5.sp
-    )
-    /* Other default text styles to override
-    titleLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 22.sp,
-        lineHeight = 28.sp,
-        letterSpacing = 0.sp
-    ),
-    labelSmall = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Medium,
-        fontSize = 11.sp,
-        lineHeight = 16.sp,
-        letterSpacing = 0.5.sp
-    )
-    */
+val IlicitanSans = FontFamily(
+    Font(R.font.ilicitan_sans_regular, FontWeight.Normal),
+    Font(R.font.ilicitan_sans_medium, FontWeight.Medium),
+    Font(R.font.ilicitan_sans_semibold, FontWeight.SemiBold),
+    Font(R.font.ilicitan_sans_bold, FontWeight.Bold)
+)
+
+val AppTypography = Typography(
+    displayLarge = TextStyle(fontFamily = IlicitanSans),
+    displayMedium = TextStyle(fontFamily = IlicitanSans),
+    displaySmall = TextStyle(fontFamily = IlicitanSans),
+    headlineLarge = TextStyle(fontFamily = IlicitanSans),
+    headlineMedium = TextStyle(fontFamily = IlicitanSans),
+    headlineSmall = TextStyle(fontFamily = IlicitanSans),
+    titleLarge = TextStyle(fontFamily = IlicitanSans),
+    titleMedium = TextStyle(fontFamily = IlicitanSans),
+    titleSmall = TextStyle(fontFamily = IlicitanSans),
+    bodyLarge = TextStyle(fontFamily = IlicitanSans),
+    bodyMedium = TextStyle(fontFamily = IlicitanSans),
+    bodySmall = TextStyle(fontFamily = IlicitanSans),
+    labelLarge = TextStyle(fontFamily = IlicitanSans),
+    labelMedium = TextStyle(fontFamily = IlicitanSans),
+    labelSmall = TextStyle(fontFamily = IlicitanSans)
 )

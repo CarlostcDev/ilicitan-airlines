@@ -28,6 +28,4 @@ fun IlicitanAirlinesApp() {
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun IlicitanAirlinesAppPreview() {
-    IlicitanAirlinesApp()
-}
+fun IlicitanAirlinesAppPreview() = IlicitanAirlinesApp()
