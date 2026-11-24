@@ -2,10 +2,11 @@ package com.carlostcdev.ilicitanairlines.ui.theme
 
 object IlicitanColors {
     object Text {
-        val default = Palette.black
-        val hover = Palette.white
+        val defaultPrimary = Palette.black
+        val pressed = Palette.white
         val secondary = Palette.primary
         val disabled = Palette.gray
+        val defaultSecondary = Palette.white
     }
 
     object Surface {
@@ -14,10 +15,11 @@ object IlicitanColors {
 
     object Button {
         val default = Palette.primary
-        val hover = Palette.secondary
-        val focus = Palette.secondary
+        val primaryPressed = Palette.secondary
+        val secondaryPressed = Palette.silverGray
         val primaryDisabled = Palette.blackGray
         val secondaryDisabled = Palette.gray
         val contentDisabled = Palette.white
+        val contentEnabled = Palette.white
     }
 }

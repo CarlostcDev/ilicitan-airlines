@@ -7,6 +7,7 @@ internal object Palette {
     val lightGray = Color(0xFFF2F2F2)
     val blackGray = Color(0xFF808080)
     val darkGray = Color(0xFFA0A0A0)
+    val silverGray = Color(0xFFE3E3E3)
     val gray = Color(0xFFACACAC)
     val primary = Color(0xFF00803E)
     val secondary = Color(0xFF026634)

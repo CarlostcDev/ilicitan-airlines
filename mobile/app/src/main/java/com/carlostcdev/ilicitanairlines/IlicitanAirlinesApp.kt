@@ -12,6 +12,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.carlostcdev.ilicitanairlines.ui.theme.AppTextSizes
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanAirlinesTheme
+import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanColors
 
 @Composable
 fun IlicitanAirlinesApp() {
@@ -25,7 +26,7 @@ fun IlicitanAirlinesApp() {
             ) {
                 Text(
                     text = stringResource(R.string.coming_soon),
-                    color = Color.White,
+                    color = IlicitanColors.Text.defaultSecondary,
                     fontSize = AppTextSizes.xxlarge
                 )
             }

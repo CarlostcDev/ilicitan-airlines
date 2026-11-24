@@ -1,6 +1,9 @@
 package com.carlostcdev.ilicitanairlines.ui.components
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -10,7 +13,8 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
@@ -31,16 +35,20 @@ fun ActionButton(
     buttonType: ButtonType = ButtonType.PRIMARY,
     enabled: Boolean = true
 ) {
+    val interactionSource = remember { MutableInteractionSource() }
+    val isPressed by interactionSource.collectIsPressedAsState()
+
     when (buttonType) {
         ButtonType.PRIMARY ->
             Button(
                 onClick = onClick,
                 enabled = enabled,
+                interactionSource = interactionSource,
                 modifier = modifier.fillMaxWidth(),
                 shape = AppShapes.button,
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = IlicitanColors.Button.default,
-                    contentColor = IlicitanColors.Text.hover,
+                    containerColor = if (isPressed) IlicitanColors.Button.primaryPressed else IlicitanColors.Button.default,
+                    contentColor = IlicitanColors.Button.contentEnabled,
                     disabledContainerColor = IlicitanColors.Button.primaryDisabled,
                     disabledContentColor = IlicitanColors.Button.contentDisabled
                 )
@@ -57,11 +65,12 @@ fun ActionButton(
             OutlinedButton(
                 onClick = onClick,
                 enabled = enabled,
+                interactionSource = interactionSource,
                 modifier = modifier.fillMaxWidth(),
                 shape = AppShapes.button,
                 colors = ButtonDefaults.outlinedButtonColors(
-                    containerColor = Color.Transparent,
-                    contentColor = IlicitanColors.Text.secondary,
+                    containerColor = if (isPressed) IlicitanColors.Button.secondaryPressed else Color.Transparent,
+                    contentColor = IlicitanColors.Button.default,
                     disabledContainerColor = IlicitanColors.Button.secondaryDisabled,
                     disabledContentColor = IlicitanColors.Button.contentDisabled
                 ),
@@ -81,7 +90,8 @@ fun ActionButton(
 @Composable
 fun ActionButtonPreview() {
     Column(
-        verticalArrangement = Arrangement.spacedBy(20.dp)
+        verticalArrangement = Arrangement.spacedBy(20.dp),
+        modifier = Modifier.background(IlicitanColors.Surface.default)
     ) {
         ActionButton(
             label = "Primary Enabled",
