@@ -77,7 +77,7 @@ fun TextField(
             modifier = Modifier
                 .fillMaxWidth()
                 .then(
-                    if (showBorder) Modifier.border(AppDimensions.borderWidth, borderColor, AppShapes.input)
+                    if (showBorder) Modifier.border(AppDimensions.primaryBorderWidth, borderColor, AppShapes.input)
                     else Modifier
                 )
         ) {

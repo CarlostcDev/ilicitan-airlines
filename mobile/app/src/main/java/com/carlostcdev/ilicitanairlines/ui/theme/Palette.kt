@@ -13,7 +13,7 @@ internal object Palette {
     val secondary = Color(0xFF026634)
     val black = Color(0xFF1A1A1A)
     val dark = Color(0xFF232323)
-    val error = Color(0xFFB32A19)
+    val error = Color(0xFFCC0000)
     val success = Color(0xFF1EAB53)
     val warn = Color(0xFFDE4103)
 }

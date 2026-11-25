@@ -11,6 +11,9 @@ object IlicitanColors {
 
     object Surface {
         val default = Palette.white
+        val borderSuccess = Palette.success
+        val borderWarn = Palette.warn
+        val borderAlert = Palette.error
     }
 
     object Button {

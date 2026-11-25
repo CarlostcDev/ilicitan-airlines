@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Ilicitan Airlines</string>
     <string name="coming_soon">🚀 Coming soon…</string>
+    <string name="on_time">En hora</string>
+    <string name="delayed">Con retraso</string>
+    <string name="canceled">Cancelado</string>
 </resources>

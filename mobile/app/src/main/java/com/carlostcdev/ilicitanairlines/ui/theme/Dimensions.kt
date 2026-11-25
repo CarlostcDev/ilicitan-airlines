@@ -4,5 +4,6 @@ import androidx.compose.ui.unit.dp
 
 object AppDimensions {
     val iconSize = 24.dp
-    val borderWidth = 2.dp
+    val primaryBorderWidth = 2.dp
+    val secondaryBorderWidth = 1.dp
 }

@@ -19,7 +19,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import com.carlostcdev.ilicitanairlines.ui.enums.ButtonType
 import com.carlostcdev.ilicitanairlines.ui.theme.AppDimensions
 import com.carlostcdev.ilicitanairlines.ui.theme.AppShapes
@@ -74,7 +73,7 @@ fun ActionButton(
                     disabledContainerColor = IlicitanColors.Button.secondaryDisabled,
                     disabledContentColor = IlicitanColors.Button.contentDisabled
                 ),
-                border = if (enabled) BorderStroke(AppDimensions.borderWidth, IlicitanColors.Button.default) else null
+                border = if (enabled) BorderStroke(AppDimensions.primaryBorderWidth, IlicitanColors.Button.default) else null
             ) {
                 Text(
                     text = label,
