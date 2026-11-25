@@ -87,11 +87,11 @@ fun ActionButton(
 
 @Preview
 @Composable
-fun ActionButtonPreview() {
+private fun ActionButtonPreview() {
     Column(
         verticalArrangement = Arrangement.spacedBy(AppSpacing.mediumLarge),
         modifier = Modifier
-            .background(IlicitanColors.Surface.default)
+            .background(IlicitanColors.Surface.defaultPrimary)
             .padding(AppSpacing.medium)
     ) {
         ActionButton(

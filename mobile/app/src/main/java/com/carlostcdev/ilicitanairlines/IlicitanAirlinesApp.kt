@@ -27,7 +27,7 @@ fun IlicitanAirlinesApp() {
                 Text(
                     text = stringResource(R.string.coming_soon),
                     color = IlicitanColors.Text.defaultPrimary,
-                    fontSize = AppTextSizes.xxlarge
+                    fontSize = AppTextSizes.xxLarge
                 )
             }
         }

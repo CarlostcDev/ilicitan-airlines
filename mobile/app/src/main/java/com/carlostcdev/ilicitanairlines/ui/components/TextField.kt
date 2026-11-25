@@ -132,11 +132,11 @@ fun TextField(
 
 @Preview(showBackground = true)
 @Composable
-fun TextFieldPreview() {
+private fun TextFieldPreview() {
     Column(
         verticalArrangement = Arrangement.spacedBy(AppSpacing.mediumLarge),
         modifier = Modifier
-            .background(IlicitanColors.Surface.default)
+            .background(IlicitanColors.Surface.defaultPrimary)
             .padding(AppSpacing.medium)
     ) {
         TextField(

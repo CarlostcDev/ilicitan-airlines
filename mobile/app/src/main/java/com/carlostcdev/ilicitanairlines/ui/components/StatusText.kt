@@ -22,7 +22,7 @@ import com.carlostcdev.ilicitanairlines.ui.enums.StatusTextType
 import com.carlostcdev.ilicitanairlines.ui.theme.AppDimensions
 import com.carlostcdev.ilicitanairlines.ui.theme.AppShapes
 import com.carlostcdev.ilicitanairlines.ui.theme.AppSpacing
-import com.carlostcdev.ilicitanairlines.ui.theme.AppTypography
+import com.carlostcdev.ilicitanairlines.ui.theme.AppTextSizes
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanColors
 
 @Composable
@@ -38,7 +38,7 @@ fun StatusText(
     }
 
     Surface(
-        color = IlicitanColors.Surface.default,
+        color = IlicitanColors.Surface.defaultPrimary,
         shape = AppShapes.card,
         border = BorderStroke(AppDimensions.secondaryBorderWidth, color = color),
         modifier = modifier
@@ -55,7 +55,7 @@ fun StatusText(
             )
             Text(
                 text = text,
-                fontSize = AppTypography.labelSmall.fontSize
+                fontSize = AppTextSizes.xSmall
             )
         }
     }
@@ -63,10 +63,10 @@ fun StatusText(
 
 @Preview
 @Composable
-fun StatusTextPreview() {
+private fun StatusTextPreview() {
     Column(
         modifier = Modifier
-            .background(IlicitanColors.Surface.default)
+            .background(IlicitanColors.Surface.defaultPrimary)
             .padding(AppSpacing.xSmall),
         verticalArrangement = Arrangement.spacedBy(AppSpacing.xSmall),
     ) {

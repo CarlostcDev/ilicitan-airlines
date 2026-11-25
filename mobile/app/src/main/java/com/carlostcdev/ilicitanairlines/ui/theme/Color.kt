@@ -9,8 +9,15 @@ object IlicitanColors {
         val defaultSecondary = Palette.white
     }
 
+    object Icon {
+        val defaultPrimary = Palette.dark
+        val defaultSecondary = Palette.white
+        val disabled = Palette.gray
+    }
+
     object Surface {
-        val default = Palette.white
+        val defaultPrimary = Palette.white
+        val defaultSecondary = Palette.primary
         val borderSuccess = Palette.success
         val borderWarn = Palette.warn
         val borderAlert = Palette.error

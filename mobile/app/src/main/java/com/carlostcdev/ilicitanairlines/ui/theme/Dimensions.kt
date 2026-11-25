@@ -6,4 +6,5 @@ object AppDimensions {
     val iconSize = 24.dp
     val primaryBorderWidth = 2.dp
     val secondaryBorderWidth = 1.dp
+    val largeIconSize = 30.dp
 }
