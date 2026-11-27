@@ -27,7 +27,7 @@ import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanAirlinesTheme
 import com.carlostcdev.ilicitanairlines.ui.theme.Palette
 
 @Composable
-fun ActionButton(
+fun AppButton(
     label: String,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
@@ -88,29 +88,29 @@ fun ActionButton(
 
 @Preview(showBackground = true)
 @Composable
-private fun ActionButtonPreview() {
+private fun AppButtonPreview() {
     IlicitanAirlinesTheme {
         Column(
             verticalArrangement = Arrangement.spacedBy(AppSpacing.p20),
             modifier = Modifier.padding(AppSpacing.p16)
         ) {
-            ActionButton(
+            AppButton(
                 label = "Primary Enabled",
                 onClick = {},
                 buttonType = ButtonType.PRIMARY
             )
-            ActionButton(
+            AppButton(
                 label = "Primary Disabled",
                 onClick = {},
                 enabled = false,
                 buttonType = ButtonType.PRIMARY
             )
-            ActionButton(
+            AppButton(
                 label = "Secondary Enabled",
                 onClick = {},
                 buttonType = ButtonType.SECONDARY
             )
-            ActionButton(
+            AppButton(
                 label = "Secondary Disabled",
                 onClick = {},
                 enabled = false,
