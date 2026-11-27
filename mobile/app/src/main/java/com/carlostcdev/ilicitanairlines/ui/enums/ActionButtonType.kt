@@ -1,6 +1,7 @@
 package com.carlostcdev.ilicitanairlines.ui.enums
 
-enum class ButtonType {
+enum class ActionButtonType {
     PRIMARY,
-    SECONDARY
+    SECONDARY,
+    TERTIARY
 }

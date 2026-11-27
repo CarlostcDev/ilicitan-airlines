@@ -19,7 +19,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import com.carlostcdev.ilicitanairlines.R
 import com.carlostcdev.ilicitanairlines.ui.theme.AppDimensions
 import com.carlostcdev.ilicitanairlines.ui.theme.AppShapes
@@ -67,7 +66,7 @@ fun HeaderBar(
                             contentDescription = null,
                             modifier = Modifier
                                 .padding(horizontal = AppSpacing.p20)
-                                .size(AppDimensions.largeIconSize)
+                                .size(AppDimensions.ic30)
                         )
                     }
                 }
@@ -77,7 +76,7 @@ fun HeaderBar(
                     Icon(
                         painter = painterResource(R.drawable.ic_arrow_back),
                         contentDescription = "Volver",
-                        modifier = Modifier.size(AppDimensions.iconSize)
+                        modifier = Modifier.size(AppDimensions.ic24)
                     )
                 }
             }

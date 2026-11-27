@@ -88,7 +88,7 @@ fun TextField(
                         painter = painterResource(icon),
                         contentDescription = title,
                         tint = iconColor,
-                        modifier = Modifier.size(AppDimensions.iconSize)
+                        modifier = Modifier.size(AppDimensions.ic24)
                     )
                 } } else null,
                 readOnly = !writable,

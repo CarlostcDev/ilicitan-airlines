@@ -18,7 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
-import com.carlostcdev.ilicitanairlines.ui.enums.ButtonType
+import com.carlostcdev.ilicitanairlines.ui.enums.AppButtonType
 import com.carlostcdev.ilicitanairlines.ui.theme.AppDimensions
 import com.carlostcdev.ilicitanairlines.ui.theme.AppShapes
 import com.carlostcdev.ilicitanairlines.ui.theme.AppSpacing
@@ -31,7 +31,7 @@ fun AppButton(
     label: String,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
-    buttonType: ButtonType = ButtonType.PRIMARY,
+    buttonType: AppButtonType = AppButtonType.PRIMARY,
     buttonBackground: Color? = null,
     enabled: Boolean = true
 ) {
@@ -39,7 +39,7 @@ fun AppButton(
     val isPressed by interactionSource.collectIsPressedAsState()
 
     when (buttonType) {
-        ButtonType.PRIMARY ->
+        AppButtonType.PRIMARY ->
             Button(
                 onClick = onClick,
                 enabled = enabled,
@@ -61,7 +61,7 @@ fun AppButton(
                 )
             }
 
-        ButtonType.SECONDARY ->
+        AppButtonType.SECONDARY ->
             OutlinedButton(
                 onClick = onClick,
                 enabled = enabled,
@@ -97,24 +97,24 @@ private fun AppButtonPreview() {
             AppButton(
                 label = "Primary Enabled",
                 onClick = {},
-                buttonType = ButtonType.PRIMARY
+                buttonType = AppButtonType.PRIMARY
             )
             AppButton(
                 label = "Primary Disabled",
                 onClick = {},
                 enabled = false,
-                buttonType = ButtonType.PRIMARY
+                buttonType = AppButtonType.PRIMARY
             )
             AppButton(
                 label = "Secondary Enabled",
                 onClick = {},
-                buttonType = ButtonType.SECONDARY
+                buttonType = AppButtonType.SECONDARY
             )
             AppButton(
                 label = "Secondary Disabled",
                 onClick = {},
                 enabled = false,
-                buttonType = ButtonType.SECONDARY
+                buttonType = AppButtonType.SECONDARY
             )
         }
     }

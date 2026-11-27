@@ -70,7 +70,7 @@ fun FlightRouteTimeline(
                     modifier = Modifier
                         .padding(horizontal = AppSpacing.p4)
                         .rotate(90f)
-                        .size(AppDimensions.largeIconSize),
+                        .size(AppDimensions.ic30),
                     tint = Palette.dark
                 )
                 DashedLine(modifier = Modifier.weight(1f))
