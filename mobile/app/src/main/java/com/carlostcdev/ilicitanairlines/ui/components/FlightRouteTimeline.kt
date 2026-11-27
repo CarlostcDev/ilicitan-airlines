@@ -26,6 +26,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.carlostcdev.ilicitanairlines.R
 import com.carlostcdev.ilicitanairlines.ui.theme.AppDimensions
+import com.carlostcdev.ilicitanairlines.ui.theme.AppShapes
 import com.carlostcdev.ilicitanairlines.ui.theme.AppSpacing
 import com.carlostcdev.ilicitanairlines.ui.theme.AppTextSizes
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanColors
@@ -103,7 +104,7 @@ private fun DashedLine(modifier: Modifier = Modifier) {
             color = IlicitanColors.Text.defaultPrimary,
             start = Offset(0f, 0f),
             end = Offset(size.width, 0f),
-            strokeWidth = 2.dp.toPx(),
+            strokeWidth = AppDimensions.primaryBorderWidth.toPx(),
             pathEffect = PathEffect.dashPathEffect(floatArrayOf(10f, 8f), 0f)
         )
     }
@@ -118,6 +119,6 @@ private fun FlightRouteTimelinePreview() {
         destinationCode = "MAD",
         destinationCity = "Madrid",
         duration = "12h 25m",
-        modifier = Modifier.padding(16.dp)
+        modifier = Modifier.padding(AppSpacing.small)
     )
 }
