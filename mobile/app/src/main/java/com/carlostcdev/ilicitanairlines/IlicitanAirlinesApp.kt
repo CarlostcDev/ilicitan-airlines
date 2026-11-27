@@ -10,7 +10,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import com.carlostcdev.ilicitanairlines.ui.components.ReservationCard
 import com.carlostcdev.ilicitanairlines.ui.theme.AppTextSizes
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanAirlinesTheme
 import com.carlostcdev.ilicitanairlines.ui.theme.Palette
@@ -29,12 +28,6 @@ fun IlicitanAirlinesApp() {
                     text = stringResource(R.string.coming_soon),
                     color = Palette.black,
                     fontSize = AppTextSizes.t24
-                )
-
-                ReservationCard(
-                    url = "https://assets.ilicitan-airlines.com/backgrounds/HND-background.webp",
-                    city = "Tokyo",
-                    departureDate = "Oct 15, 2027"
                 )
             }
         }

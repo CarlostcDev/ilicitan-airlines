@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
@@ -16,6 +17,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import com.carlostcdev.ilicitanairlines.R
 import com.carlostcdev.ilicitanairlines.ui.enums.BaggageType
@@ -41,7 +43,7 @@ fun InformationBaggage(
     }
 
     Row(
-        modifier = modifier.height(IntrinsicSize.Min),
+        modifier = modifier.height(IntrinsicSize.Min).fillMaxWidth(),
         horizontalArrangement = Arrangement.spacedBy(AppSpacing.p12),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -56,13 +58,14 @@ fun InformationBaggage(
                 text = name,
                 fontSize = AppTextSizes.t20,
                 fontWeight = FontWeight.Medium,
-                color = Palette.black
+                maxLines = 1,
+                softWrap = false,
+                overflow = TextOverflow.Ellipsis
             )
             Text(
                 text = stringResource(R.string.baggage_dimensions_weight, height, width, length, weight),
-                fontSize = AppTextSizes.t14,
-                fontWeight = FontWeight.Normal,
-                color = Palette.dark
+                maxLines = 1,
+                softWrap = false
             )
         }
     }
