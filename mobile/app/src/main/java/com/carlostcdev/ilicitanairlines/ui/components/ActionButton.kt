@@ -24,6 +24,7 @@ import com.carlostcdev.ilicitanairlines.ui.theme.AppDimensions
 import com.carlostcdev.ilicitanairlines.ui.theme.AppShapes
 import com.carlostcdev.ilicitanairlines.ui.theme.AppSpacing
 import com.carlostcdev.ilicitanairlines.ui.theme.AppTextSizes
+import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanAirlinesTheme
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanColors
 
 @Composable
@@ -32,6 +33,7 @@ fun ActionButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     buttonType: ButtonType = ButtonType.PRIMARY,
+    buttonBackground: Color? = null,
     enabled: Boolean = true
 ) {
     val interactionSource = remember { MutableInteractionSource() }
@@ -46,7 +48,7 @@ fun ActionButton(
                 modifier = modifier.fillMaxWidth(),
                 shape = AppShapes.button,
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = if (isPressed) IlicitanColors.Button.primaryPressed else IlicitanColors.Button.default,
+                    containerColor = buttonBackground ?: if (isPressed) IlicitanColors.Button.primaryPressed else IlicitanColors.Button.default,
                     contentColor = IlicitanColors.Button.contentEnabled,
                     disabledContainerColor = IlicitanColors.Button.primaryDisabled,
                     disabledContentColor = IlicitanColors.Button.contentDisabled
@@ -68,7 +70,7 @@ fun ActionButton(
                 modifier = modifier.fillMaxWidth(),
                 shape = AppShapes.button,
                 colors = ButtonDefaults.outlinedButtonColors(
-                    containerColor = if (isPressed) IlicitanColors.Button.secondaryPressed else Color.Transparent,
+                    containerColor = buttonBackground ?: if (isPressed) IlicitanColors.Button.secondaryPressed else Color.Transparent,
                     contentColor = IlicitanColors.Button.default,
                     disabledContainerColor = IlicitanColors.Button.secondaryDisabled,
                     disabledContentColor = IlicitanColors.Button.contentDisabled
@@ -88,33 +90,35 @@ fun ActionButton(
 @Preview
 @Composable
 private fun ActionButtonPreview() {
-    Column(
-        verticalArrangement = Arrangement.spacedBy(AppSpacing.mediumLarge),
-        modifier = Modifier
-            .background(IlicitanColors.Surface.defaultPrimary)
-            .padding(AppSpacing.medium)
-    ) {
-        ActionButton(
-            label = "Primary Enabled",
-            onClick = {},
-            buttonType = ButtonType.PRIMARY
-        )
-        ActionButton(
-            label = "Primary Disabled",
-            onClick = {},
-            enabled = false,
-            buttonType = ButtonType.PRIMARY
-        )
-        ActionButton(
-            label = "Secondary Enabled",
-            onClick = {},
-            buttonType = ButtonType.SECONDARY
-        )
-        ActionButton(
-            label = "Secondary Disabled",
-            onClick = {},
-            enabled = false,
-            buttonType = ButtonType.SECONDARY
-        )
+    IlicitanAirlinesTheme {
+        Column(
+            verticalArrangement = Arrangement.spacedBy(AppSpacing.mediumLarge),
+            modifier = Modifier
+                .background(IlicitanColors.Surface.defaultPrimary)
+                .padding(AppSpacing.medium)
+        ) {
+            ActionButton(
+                label = "Primary Enabled",
+                onClick = {},
+                buttonType = ButtonType.PRIMARY
+            )
+            ActionButton(
+                label = "Primary Disabled",
+                onClick = {},
+                enabled = false,
+                buttonType = ButtonType.PRIMARY
+            )
+            ActionButton(
+                label = "Secondary Enabled",
+                onClick = {},
+                buttonType = ButtonType.SECONDARY
+            )
+            ActionButton(
+                label = "Secondary Disabled",
+                onClick = {},
+                enabled = false,
+                buttonType = ButtonType.SECONDARY
+            )
+        }
     }
 }

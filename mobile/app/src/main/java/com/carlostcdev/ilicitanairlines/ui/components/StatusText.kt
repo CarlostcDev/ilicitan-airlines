@@ -23,6 +23,7 @@ import com.carlostcdev.ilicitanairlines.ui.theme.AppDimensions
 import com.carlostcdev.ilicitanairlines.ui.theme.AppShapes
 import com.carlostcdev.ilicitanairlines.ui.theme.AppSpacing
 import com.carlostcdev.ilicitanairlines.ui.theme.AppTextSizes
+import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanAirlinesTheme
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanColors
 
 @Composable
@@ -64,23 +65,25 @@ fun StatusText(
 @Preview
 @Composable
 private fun StatusTextPreview() {
-    Column(
-        modifier = Modifier
-            .background(IlicitanColors.Surface.defaultPrimary)
-            .padding(AppSpacing.xSmall),
-        verticalArrangement = Arrangement.spacedBy(AppSpacing.xSmall),
-    ) {
-        StatusText(
-            text = stringResource(R.string.on_time),
-            status = StatusTextType.SUCCESS
-        )
-        StatusText(
-            text = stringResource(R.string.delayed),
-            status = StatusTextType.WARN
-        )
-        StatusText(
-            text = stringResource(R.string.canceled),
-            status = StatusTextType.ALERT
-        )
+    IlicitanAirlinesTheme {
+        Column(
+            modifier = Modifier
+                .background(IlicitanColors.Surface.defaultPrimary)
+                .padding(AppSpacing.xSmall),
+            verticalArrangement = Arrangement.spacedBy(AppSpacing.xSmall),
+        ) {
+            StatusText(
+                text = stringResource(R.string.on_time),
+                status = StatusTextType.SUCCESS
+            )
+            StatusText(
+                text = stringResource(R.string.delayed),
+                status = StatusTextType.WARN
+            )
+            StatusText(
+                text = stringResource(R.string.canceled),
+                status = StatusTextType.ALERT
+            )
+        }
     }
 }

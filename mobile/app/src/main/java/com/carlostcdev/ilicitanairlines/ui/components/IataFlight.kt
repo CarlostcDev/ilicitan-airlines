@@ -14,6 +14,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.carlostcdev.ilicitanairlines.R
+import com.carlostcdev.ilicitanairlines.ui.theme.AppTextSizes
+import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanAirlinesTheme
 
 @Composable
 fun IataFlight(
@@ -22,24 +24,29 @@ fun IataFlight(
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(7.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
         modifier = modifier
     ) {
         Image(
             painter = painterResource(R.drawable.ic_ilicitan_airlines),
             contentDescription = null,
-            modifier = Modifier.size(15.dp)
+            modifier = Modifier.size(20.dp)
         )
         Text(
             text = "IL$iataCode",
-            fontWeight = FontWeight.Bold
+            fontWeight = FontWeight.Bold,
+            fontSize = AppTextSizes.large
         )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-fun IataFlightPreview() = IataFlight(
-    "849",
-    Modifier.padding(5.dp)
-)
+private fun IataFlightPreview() {
+    IlicitanAirlinesTheme {
+        IataFlight(
+            "849",
+            Modifier.padding(5.dp)
+        )
+    }
+}

@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import com.carlostcdev.ilicitanairlines.ui.components.FlightCard
 import com.carlostcdev.ilicitanairlines.ui.theme.AppTextSizes
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanAirlinesTheme
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanColors
@@ -28,6 +29,10 @@ fun IlicitanAirlinesApp() {
                     text = stringResource(R.string.coming_soon),
                     color = IlicitanColors.Text.defaultPrimary,
                     fontSize = AppTextSizes.xxLarge
+                )
+
+                FlightCard(
+                    onClick = { }
                 )
             }
         }

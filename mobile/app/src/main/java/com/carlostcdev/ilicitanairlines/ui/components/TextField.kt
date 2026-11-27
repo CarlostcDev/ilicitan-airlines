@@ -25,6 +25,7 @@ import com.carlostcdev.ilicitanairlines.R
 import com.carlostcdev.ilicitanairlines.ui.theme.AppDimensions
 import com.carlostcdev.ilicitanairlines.ui.theme.AppShapes
 import com.carlostcdev.ilicitanairlines.ui.theme.AppSpacing
+import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanAirlinesTheme
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanColors
 import com.carlostcdev.ilicitanairlines.ui.theme.Palette
 
@@ -133,35 +134,37 @@ fun TextField(
 @Preview(showBackground = true)
 @Composable
 private fun TextFieldPreview() {
-    Column(
-        verticalArrangement = Arrangement.spacedBy(AppSpacing.mediumLarge),
-        modifier = Modifier
-            .background(IlicitanColors.Surface.defaultPrimary)
-            .padding(AppSpacing.medium)
-    ) {
-        TextField(
-            title = "Origen",
-            value = "",
-            onValueChange = {},
-            placeholder = "Ej: MAD",
-            icon = R.drawable.ic_flight_takeoff
-        )
+    IlicitanAirlinesTheme {
+        Column(
+            verticalArrangement = Arrangement.spacedBy(AppSpacing.mediumLarge),
+            modifier = Modifier
+                .background(IlicitanColors.Surface.defaultPrimary)
+                .padding(AppSpacing.medium)
+        ) {
+            TextField(
+                title = "Origen",
+                value = "",
+                onValueChange = {},
+                placeholder = "Ej: MAD",
+                icon = R.drawable.ic_flight_takeoff
+            )
 
-        TextField(
-            title = "Origen",
-            value = "HND",
-            onValueChange = {},
-            placeholder = "Ej: MAD",
-            icon = R.drawable.ic_flight_takeoff
-        )
+            TextField(
+                title = "Origen",
+                value = "HND",
+                onValueChange = {},
+                placeholder = "Ej: MAD",
+                icon = R.drawable.ic_flight_takeoff
+            )
 
-        TextField(
-            title = "Origen",
-            value = "HND",
-            onValueChange = {},
-            placeholder = "Ej: MAD",
-            errorMsg = "Indica un origen válido",
-            icon = R.drawable.ic_flight_takeoff
-        )
+            TextField(
+                title = "Origen",
+                value = "HND",
+                onValueChange = {},
+                placeholder = "Ej: MAD",
+                errorMsg = "Indica un origen válido",
+                icon = R.drawable.ic_flight_takeoff
+            )
+        }
     }
 }
