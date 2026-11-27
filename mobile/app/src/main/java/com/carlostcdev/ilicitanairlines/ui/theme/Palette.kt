@@ -16,5 +16,7 @@ internal object Palette {
     val error = Color(0xFFCC0000)
     val success = Color(0xFF1EAB53)
     val warn = Color(0xFFDE4103)
+    val transparentGreen = Color(0x6600803E)
+    val transparentBlack = Color(0x66000000)
     val transparent = Color(0x00000000)
 }

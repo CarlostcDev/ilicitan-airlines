@@ -13,4 +13,5 @@
     <string name="flight_time">%1$dh %2$dm</string>
 
     <string name="price">%,.2f€</string>
+    <string name="reservation_flight">Viaje a %1$s</string>
 </resources>

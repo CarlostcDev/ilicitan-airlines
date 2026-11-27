@@ -31,7 +31,11 @@ fun IlicitanAirlinesApp() {
                     fontSize = AppTextSizes.t24
                 )
 
-                ReservationCard("", "")
+                ReservationCard(
+                    url = "https://assets.ilicitan-airlines.com/backgrounds/HND-background.webp",
+                    city = "Tokyo",
+                    departureDate = "Oct 15, 2027"
+                )
             }
         }
     }

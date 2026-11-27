@@ -42,7 +42,7 @@ fun HeaderBar(
             .padding(start = AppSpacing.p8, end = AppSpacing.p8, top = AppSpacing.p28),
         shape = AppShapes.b20,
         color = Palette.white,
-        shadowElevation = 4.dp
+        shadowElevation = AppDimensions.shadow
     ) {
         TopAppBar(
             windowInsets = WindowInsets(0, 0, 0, 0),

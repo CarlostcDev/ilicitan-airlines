@@ -7,5 +7,6 @@ object AppTextSizes {
     val t18 = 18.sp
     val t20 = 20.sp
     val t24 = 24.sp
+    val t28 = 28.sp
     val t32 = 32.sp
 }
