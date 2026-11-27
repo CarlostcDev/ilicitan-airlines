@@ -22,6 +22,9 @@ import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.toUpperCase
+import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.carlostcdev.ilicitanairlines.R
@@ -30,9 +33,26 @@ import com.carlostcdev.ilicitanairlines.ui.theme.AppSpacing
 import com.carlostcdev.ilicitanairlines.ui.theme.AppTextSizes
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanAirlinesTheme
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanColors
+import java.util.Locale
+import java.util.Locale.getDefault
+import androidx.compose.ui.platform.LocalLocale
 
 @Composable
 fun FlightCard(
+    statusText: String,
+    statusType: StatusTextType,
+    iataCode: String,
+    originCode: String,
+    originCity: String,
+    destinationCode: String,
+    destinationCity: String,
+    duration: String,
+    cabinClass: String,
+    departureDate: String,
+    departureTime: String,
+    arrivalDate: String,
+    arrivalTime: String,
+    price: String,
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -48,8 +68,9 @@ fun FlightCard(
         ) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(5.dp),
                 modifier = Modifier
-                    .padding(AppSpacing.small)
+                    .padding(AppSpacing.smallMedium)
                     .weight(3f)
             ) {
                 Row(
@@ -58,24 +79,51 @@ fun FlightCard(
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     StatusText(
-                        "En hora",
-                        StatusTextType.SUCCESS
+                        text = statusText,
+                        status = statusType
                     )
                     IataFlight(
-                        "789"
+                        iataCode = iataCode
                     )
                 }
                 FlightRouteTimeline(
-                    originCode = "MAD",
-                    originCity = "Madrid",
-                    destinationCode = "HND",
-                    destinationCity = "Tokyo",
-                    duration = "13h 25m"
+                    originCode = originCode.trim().uppercase(Locale.ROOT),
+                    originCity = originCity,
+                    destinationCode = destinationCode.trim().uppercase(Locale.ROOT),
+                    destinationCity = destinationCity,
+                    duration = duration
                 )
+                Row(
+                    modifier = modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Column {
+                        Text(
+                            text = departureDate,
+                            fontSize = AppTextSizes.xSmall
+                        )
+                        Text(
+                            text = departureTime,
+                            fontSize = AppTextSizes.xSmall
+                        )
+                    }
+                    Column(
+                        horizontalAlignment = Alignment.End
+                    ) {
+                        Text(
+                            text = arrivalDate,
+                            fontSize = AppTextSizes.xSmall
+                        )
+                        Text(
+                            text = arrivalTime,
+                            fontSize = AppTextSizes.xSmall
+                        )
+                    }
+                }
             }
             Column(
                 modifier = Modifier
-                    .weight(1f)
+                    .weight(1.1f)
                     .fillMaxHeight()
                     .background(IlicitanColors.Surface.defaultSecondary)
                     .drawBehind {
@@ -83,38 +131,43 @@ fun FlightCard(
                             color = IlicitanColors.Text.defaultPrimary,
                             start = Offset(2.dp.toPx(), 0f),
                             end = Offset(2.dp.toPx(), size.height),
-                            strokeWidth = 4.dp.toPx(),
+                            strokeWidth = 3.dp.toPx(),
                             cap = StrokeCap.Butt,
-                            pathEffect = PathEffect.dashPathEffect(
-                                floatArrayOf(10.dp.toPx(), 6.dp.toPx())
-                            )
+                            pathEffect = PathEffect.dashPathEffect(floatArrayOf(6.dp.toPx(), 5.dp.toPx()))
                         )
                     },
-                horizontalAlignment = Alignment.CenterHorizontally
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.SpaceBetween
             ) {
                 Icon(
                     painter = painterResource(R.drawable.ic_flight_ticket),
                     contentDescription = null,
-                    tint = IlicitanColors.Icon.defaultSecondary
+                    tint = IlicitanColors.Icon.defaultSecondary,
+                    modifier = Modifier.padding(top = 20.dp)
                 )
                 Text(
-                    text = "ECONOMY",
+                    text = cabinClass.trim().replace(" ", "\n"),
                     fontSize = AppTextSizes.large,
                     fontWeight = FontWeight.Bold,
-                    color = IlicitanColors.Text.defaultSecondary
+                    color = IlicitanColors.Text.defaultSecondary,
+                    textAlign = TextAlign.Center,
+                    softWrap = false
                 )
                 Text(
-                    text = "859,90€",
-                    fontSize = AppTextSizes.large,
+                    text = price.trim(),
+                    fontSize = AppTextSizes.xLarge,
                     fontWeight = FontWeight.Bold,
-                    color = IlicitanColors.Text.defaultSecondary
+                    color = IlicitanColors.Text.defaultSecondary,
+                    modifier = Modifier.padding(bottom = 10.dp),
+                    maxLines = 1,
+                    softWrap = false
                 )
             }
         }
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, device = Devices.PIXEL_9_PRO_XL)
 @Composable
 private fun FlightCardPreview() {
     IlicitanAirlinesTheme {
@@ -123,15 +176,56 @@ private fun FlightCardPreview() {
             modifier = Modifier.padding(AppSpacing.medium)
         ) {
             FlightCard(
-                onClick = { }
+                statusText = "En hora",
+                statusType = StatusTextType.SUCCESS,
+                iataCode = "IL789",
+                originCode = "MAD",
+                originCity = "Madrid",
+                destinationCode = "HND",
+                destinationCity = "Tokyo",
+                duration = "13h 25m",
+                cabinClass = "ECONOMY PREMIUM",
+                departureDate = "Oct 10, 2027",
+                departureTime = "12:45",
+                arrivalDate = "Oct 11, 2027",
+                arrivalTime = "09:10",
+                price = "859,90€",
+                onClick = {}
             )
             FlightCard(
-                onClick = { }
+                statusText = "Retrasado",
+                statusType = StatusTextType.WARN,
+                iataCode = "IL412",
+                originCode = "ALC",
+                originCity = "Alicante",
+                destinationCode = "NRT",
+                destinationCity = "Tokyo",
+                duration = "14h 10m",
+                cabinClass = "BUSINESS",
+                departureDate = "Nov 15, 2027",
+                departureTime = "08:30",
+                arrivalDate = "Nov 15, 2027",
+                arrivalTime = "22:40",
+                price = "1.420,00€",
+                onClick = {}
             )
             FlightCard(
-                onClick = { }
+                statusText = "Cancelado",
+                statusType = StatusTextType.ALERT,
+                iataCode = "IL105",
+                originCode = "BCN",
+                originCity = "Barcelona",
+                destinationCode = "ICN",
+                destinationCity = "Seoul",
+                duration = "12h 50m",
+                cabinClass = "ECONOMY",
+                departureDate = "Dec 22, 2027",
+                departureTime = "17:20",
+                arrivalDate = "Dec 23, 2027",
+                arrivalTime = "14:10",
+                price = "689,50€",
+                onClick = {}
             )
         }
     }
-
 }

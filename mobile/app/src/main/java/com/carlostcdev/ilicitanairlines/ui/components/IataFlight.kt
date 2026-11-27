@@ -33,7 +33,7 @@ fun IataFlight(
             modifier = Modifier.size(20.dp)
         )
         Text(
-            text = "IL$iataCode",
+            text = iataCode,
             fontWeight = FontWeight.Bold,
             fontSize = AppTextSizes.large
         )
