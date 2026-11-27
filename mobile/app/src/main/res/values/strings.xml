@@ -17,4 +17,5 @@
     <string name="reservation_flight_description">Reserva de vuelo a %1$s el día %2$s</string>
 
     <string name="back">Volver</string>
+    <string name="baggage_dimensions_weight">%1$dcm x %2$dcm x %3$dcm · %4$.0fkg</string>
 </resources>
