@@ -45,7 +45,7 @@ fun ActionButton(
                 enabled = enabled,
                 interactionSource = interactionSource,
                 modifier = modifier.fillMaxWidth(),
-                shape = AppShapes.button,
+                shape = AppShapes.b5,
                 colors = ButtonDefaults.buttonColors(
                     containerColor = buttonBackground ?: if (isPressed) Palette.secondary else Palette.primary,
                     contentColor = Palette.white,
@@ -55,9 +55,9 @@ fun ActionButton(
             ) {
                 Text(
                     text = label,
-                    fontSize = AppTextSizes.large,
+                    fontSize = AppTextSizes.t18,
                     fontWeight = FontWeight.Bold,
-                    modifier = Modifier.padding(AppSpacing.small)
+                    modifier = Modifier.padding(AppSpacing.p8)
                 )
             }
 
@@ -67,7 +67,7 @@ fun ActionButton(
                 enabled = enabled,
                 interactionSource = interactionSource,
                 modifier = modifier.fillMaxWidth(),
-                shape = AppShapes.button,
+                shape = AppShapes.b5,
                 colors = ButtonDefaults.outlinedButtonColors(
                     containerColor = buttonBackground ?: if (isPressed) Palette.silverGray else Palette.transparent,
                     contentColor = Palette.primary,
@@ -78,9 +78,9 @@ fun ActionButton(
             ) {
                 Text(
                     text = label,
-                    fontSize = AppTextSizes.large,
+                    fontSize = AppTextSizes.t18,
                     fontWeight = FontWeight.Bold,
-                    modifier = Modifier.padding(AppSpacing.small)
+                    modifier = Modifier.padding(AppSpacing.p8)
                 )
             }
     }
@@ -91,8 +91,8 @@ fun ActionButton(
 private fun ActionButtonPreview() {
     IlicitanAirlinesTheme {
         Column(
-            verticalArrangement = Arrangement.spacedBy(AppSpacing.mediumLarge),
-            modifier = Modifier.padding(AppSpacing.medium)
+            verticalArrangement = Arrangement.spacedBy(AppSpacing.p20),
+            modifier = Modifier.padding(AppSpacing.p16)
         ) {
             ActionButton(
                 label = "Primary Enabled",

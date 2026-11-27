@@ -44,12 +44,12 @@ fun FlightRouteTimeline(
         Column {
             Text(
                 text = originCode.trim().uppercase(Locale.ROOT),
-                fontSize = AppTextSizes.xxxLarge,
+                fontSize = AppTextSizes.t32,
                 fontWeight = FontWeight.Bold
             )
             Text(
                 text = originCity,
-                fontSize = AppTextSizes.large,
+                fontSize = AppTextSizes.t18,
                 fontWeight = FontWeight.Medium
             )
         }
@@ -68,7 +68,7 @@ fun FlightRouteTimeline(
                     painter = painterResource(R.drawable.ic_aircraft),
                     contentDescription = null,
                     modifier = Modifier
-                        .padding(horizontal = AppSpacing.xSmall)
+                        .padding(horizontal = AppSpacing.p4)
                         .rotate(90f)
                         .size(AppDimensions.largeIconSize),
                     tint = Palette.dark
@@ -77,7 +77,7 @@ fun FlightRouteTimeline(
             }
             Text(
                 text = duration,
-                fontSize = AppTextSizes.xSmall
+                fontSize = AppTextSizes.t12
             )
         }
         Column(
@@ -85,12 +85,12 @@ fun FlightRouteTimeline(
         ) {
             Text(
                 text = destinationCode.trim().uppercase(Locale.ROOT),
-                fontSize = AppTextSizes.xxxLarge,
+                fontSize = AppTextSizes.t32,
                 fontWeight = FontWeight.Bold
             )
             Text(
                 text = destinationCity,
-                fontSize = AppTextSizes.large,
+                fontSize = AppTextSizes.t18,
                 fontWeight = FontWeight.Medium
             )
         }
@@ -120,7 +120,7 @@ private fun FlightRouteTimelinePreview() {
             destinationCode = "MAD",
             destinationCity = "Madrid",
             duration = stringResource(R.string.flight_time, 13, 25),
-            modifier = Modifier.padding(AppSpacing.small)
+            modifier = Modifier.padding(AppSpacing.p8)
         )
     }
 

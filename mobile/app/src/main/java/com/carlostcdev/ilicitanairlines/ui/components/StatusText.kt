@@ -40,14 +40,14 @@ fun StatusText(
 
     Surface(
         color = Palette.white,
-        shape = AppShapes.card,
+        shape = AppShapes.b20,
         border = BorderStroke(AppDimensions.secondaryBorderWidth, color = color),
         modifier = modifier
     ) {
         Row(
-            modifier = Modifier.padding(horizontal = AppSpacing.smallMedium, vertical = AppSpacing.xSmall),
+            modifier = Modifier.padding(horizontal = AppSpacing.p12, vertical = AppSpacing.p4),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(AppSpacing.small)
+            horizontalArrangement = Arrangement.spacedBy(AppSpacing.p8)
         ) {
             Box(
                 modifier = Modifier
@@ -56,7 +56,7 @@ fun StatusText(
             )
             Text(
                 text = text,
-                fontSize = AppTextSizes.xSmall
+                fontSize = AppTextSizes.t12
             )
         }
     }
@@ -67,8 +67,8 @@ fun StatusText(
 private fun StatusTextPreview() {
     IlicitanAirlinesTheme {
         Column(
-            modifier = Modifier.padding(AppSpacing.xSmall),
-            verticalArrangement = Arrangement.spacedBy(AppSpacing.xSmall),
+            modifier = Modifier.padding(AppSpacing.p4),
+            verticalArrangement = Arrangement.spacedBy(AppSpacing.p4),
         ) {
             StatusText(
                 text = stringResource(R.string.on_time),

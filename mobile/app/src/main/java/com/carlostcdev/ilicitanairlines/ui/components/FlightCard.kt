@@ -67,7 +67,7 @@ fun FlightCard(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(5.dp),
                 modifier = Modifier
-                    .padding(AppSpacing.smallMedium)
+                    .padding(AppSpacing.p12)
                     .weight(3f)
             ) {
                 Row(
@@ -97,11 +97,11 @@ fun FlightCard(
                     Column {
                         Text(
                             text = departureDate,
-                            fontSize = AppTextSizes.xSmall
+                            fontSize = AppTextSizes.t12
                         )
                         Text(
                             text = departureTime,
-                            fontSize = AppTextSizes.xSmall
+                            fontSize = AppTextSizes.t12
                         )
                     }
                     Column(
@@ -109,11 +109,11 @@ fun FlightCard(
                     ) {
                         Text(
                             text = arrivalDate,
-                            fontSize = AppTextSizes.xSmall
+                            fontSize = AppTextSizes.t12
                         )
                         Text(
                             text = arrivalTime,
-                            fontSize = AppTextSizes.xSmall
+                            fontSize = AppTextSizes.t12
                         )
                     }
                 }
@@ -144,7 +144,7 @@ fun FlightCard(
                 )
                 Text(
                     text = cabinClass.trim().replace(" ", "\n"),
-                    fontSize = AppTextSizes.large,
+                    fontSize = AppTextSizes.t18,
                     fontWeight = FontWeight.Bold,
                     color = Palette.white,
                     textAlign = TextAlign.Center,
@@ -152,7 +152,7 @@ fun FlightCard(
                 )
                 Text(
                     text = price.trim(),
-                    fontSize = AppTextSizes.xLarge,
+                    fontSize = AppTextSizes.t20,
                     fontWeight = FontWeight.Bold,
                     color = Palette.white,
                     modifier = Modifier.padding(bottom = 10.dp),
@@ -169,8 +169,8 @@ fun FlightCard(
 private fun FlightCardPreview() {
     IlicitanAirlinesTheme {
         Column(
-            verticalArrangement = Arrangement.spacedBy(AppSpacing.medium),
-            modifier = Modifier.padding(AppSpacing.medium)
+            verticalArrangement = Arrangement.spacedBy(AppSpacing.p16),
+            modifier = Modifier.padding(AppSpacing.p16)
         ) {
             FlightCard(
                 statusText = "En hora",

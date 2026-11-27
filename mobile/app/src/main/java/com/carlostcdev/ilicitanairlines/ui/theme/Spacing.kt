@@ -3,12 +3,9 @@ package com.carlostcdev.ilicitanairlines.ui.theme
 import androidx.compose.ui.unit.dp
 
 object AppSpacing {
-    val xSmall = 4.dp
-    val small = 8.dp
-    val smallMedium = 12.dp
-    val medium = 16.dp
-    val mediumLarge = 20.dp
-    val large = 24.dp
-    val xlarge = 32.dp
-    val xxLarge = 48.dp
+    val p4 = 4.dp
+    val p8 = 8.dp
+    val p12 = 12.dp
+    val p16 = 16.dp
+    val p20 = 20.dp
 }

@@ -62,7 +62,7 @@ fun TextField(
 
     Column(
         modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(AppSpacing.xSmall)
+        verticalArrangement = Arrangement.spacedBy(AppSpacing.p4)
     ) {
         Text(
             text = title,
@@ -73,7 +73,7 @@ fun TextField(
             modifier = Modifier
                 .fillMaxWidth()
                 .then(
-                    if (showBorder) Modifier.border(AppDimensions.primaryBorderWidth, borderColor, AppShapes.input)
+                    if (showBorder) Modifier.border(AppDimensions.primaryBorderWidth, borderColor, AppShapes.b5)
                     else Modifier
                 )
         ) {
@@ -94,7 +94,7 @@ fun TextField(
                 readOnly = !writable,
                 singleLine = true,
                 isError = errorMsg.isNotBlank(),
-                shape = AppShapes.input,
+                shape = AppShapes.b5,
                 colors = OutlinedTextFieldDefaults.colors(
                     focusedContainerColor = Palette.lightGray,
                     unfocusedContainerColor = Palette.lightGray,
@@ -120,7 +120,7 @@ fun TextField(
             Text(
                 text = errorMsg,
                 color = Palette.error,
-                modifier = Modifier.padding(top = AppSpacing.xSmall)
+                modifier = Modifier.padding(top = AppSpacing.p4)
             )
         }
     }
@@ -131,8 +131,8 @@ fun TextField(
 private fun TextFieldPreview() {
     IlicitanAirlinesTheme {
         Column(
-            verticalArrangement = Arrangement.spacedBy(AppSpacing.mediumLarge),
-            modifier = Modifier.padding(AppSpacing.medium)
+            verticalArrangement = Arrangement.spacedBy(AppSpacing.p20),
+            modifier = Modifier.padding(AppSpacing.p16)
         ) {
             TextField(
                 title = "Origen",

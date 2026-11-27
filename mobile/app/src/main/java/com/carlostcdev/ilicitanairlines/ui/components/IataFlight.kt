@@ -35,7 +35,7 @@ fun IataFlight(
         Text(
             text = iataCode,
             fontWeight = FontWeight.Bold,
-            fontSize = AppTextSizes.large
+            fontSize = AppTextSizes.t18
         )
     }
 }
