@@ -21,9 +21,9 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.toUpperCase
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -34,8 +34,6 @@ import com.carlostcdev.ilicitanairlines.ui.theme.AppTextSizes
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanAirlinesTheme
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanColors
 import java.util.Locale
-import java.util.Locale.getDefault
-import androidx.compose.ui.platform.LocalLocale
 
 @Composable
 fun FlightCard(
@@ -87,9 +85,9 @@ fun FlightCard(
                     )
                 }
                 FlightRouteTimeline(
-                    originCode = originCode.trim().uppercase(Locale.ROOT),
+                    originCode = originCode,
                     originCity = originCity,
-                    destinationCode = destinationCode.trim().uppercase(Locale.ROOT),
+                    destinationCode = destinationCode,
                     destinationCity = destinationCity,
                     duration = duration
                 )
@@ -183,8 +181,8 @@ private fun FlightCardPreview() {
                 originCity = "Madrid",
                 destinationCode = "HND",
                 destinationCity = "Tokyo",
-                duration = "13h 25m",
-                cabinClass = "ECONOMY PREMIUM",
+                duration = stringResource(R.string.flight_time, 13, 25),
+                cabinClass = stringResource(R.string.economy_premium_class),
                 departureDate = "Oct 10, 2027",
                 departureTime = "12:45",
                 arrivalDate = "Oct 11, 2027",
@@ -200,8 +198,8 @@ private fun FlightCardPreview() {
                 originCity = "Alicante",
                 destinationCode = "NRT",
                 destinationCity = "Tokyo",
-                duration = "14h 10m",
-                cabinClass = "BUSINESS",
+                duration = stringResource(R.string.flight_time, 14, 10),
+                cabinClass = stringResource(R.string.business_class),
                 departureDate = "Nov 15, 2027",
                 departureTime = "08:30",
                 arrivalDate = "Nov 15, 2027",
@@ -217,8 +215,8 @@ private fun FlightCardPreview() {
                 originCity = "Barcelona",
                 destinationCode = "ICN",
                 destinationCity = "Seoul",
-                duration = "12h 50m",
-                cabinClass = "ECONOMY",
+                duration = stringResource(R.string.flight_time, 12, 10),
+                cabinClass = stringResource(R.string.economy_class),
                 departureDate = "Dec 22, 2027",
                 departureTime = "17:20",
                 arrivalDate = "Dec 23, 2027",

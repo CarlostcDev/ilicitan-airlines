@@ -16,6 +16,7 @@ import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -25,6 +26,7 @@ import com.carlostcdev.ilicitanairlines.ui.theme.AppSpacing
 import com.carlostcdev.ilicitanairlines.ui.theme.AppTextSizes
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanAirlinesTheme
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanColors
+import java.util.Locale
 
 @Composable
 fun FlightRouteTimeline(
@@ -41,13 +43,14 @@ fun FlightRouteTimeline(
     ) {
         Column {
             Text(
-                text = originCode,
+                text = originCode.trim().uppercase(Locale.ROOT),
                 fontSize = AppTextSizes.xxxLarge,
                 fontWeight = FontWeight.Bold
             )
             Text(
                 text = originCity,
-                fontSize = AppTextSizes.large
+                fontSize = AppTextSizes.large,
+                fontWeight = FontWeight.Medium
             )
         }
         Column(
@@ -81,13 +84,14 @@ fun FlightRouteTimeline(
             horizontalAlignment = Alignment.End
         ) {
             Text(
-                text = destinationCode,
+                text = destinationCode.trim().uppercase(Locale.ROOT),
                 fontSize = AppTextSizes.xxxLarge,
                 fontWeight = FontWeight.Bold
             )
             Text(
                 text = destinationCity,
-                fontSize = AppTextSizes.large
+                fontSize = AppTextSizes.large,
+                fontWeight = FontWeight.Medium
             )
         }
     }
@@ -115,7 +119,7 @@ private fun FlightRouteTimelinePreview() {
             originCity = "Tokyo",
             destinationCode = "MAD",
             destinationCity = "Madrid",
-            duration = "12h 25m",
+            duration = stringResource(R.string.flight_time, 13, 25),
             modifier = Modifier.padding(AppSpacing.small)
         )
     }
