@@ -14,4 +14,7 @@
 
     <string name="price">%,.2f€</string>
     <string name="reservation_flight">Viaje a %1$s</string>
+    <string name="reservation_flight_description">Reserva de vuelo a %1$s el día %2$s</string>
+
+    <string name="back">Volver</string>
 </resources>

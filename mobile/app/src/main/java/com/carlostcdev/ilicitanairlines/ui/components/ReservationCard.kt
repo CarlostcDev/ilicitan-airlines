@@ -43,7 +43,7 @@ fun ReservationCard(
         Box(modifier = Modifier.fillMaxSize()) {
             AsyncImage(
                 model = url,
-                contentDescription = "Reserva de vuelo a $city el dia $departureDate",
+                contentDescription = stringResource(R.string.reservation_flight_description, city, departureDate),
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize()
             )

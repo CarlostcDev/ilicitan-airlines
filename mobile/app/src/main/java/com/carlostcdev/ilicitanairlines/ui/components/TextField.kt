@@ -1,5 +1,6 @@
 package com.carlostcdev.ilicitanairlines.ui.components
 
+import androidx.annotation.DrawableRes
 import androidx.compose.foundation.border
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsFocusedAsState
@@ -35,7 +36,7 @@ fun TextField(
     placeholder: String,
     modifier: Modifier = Modifier,
     errorMsg: String = "",
-    icon: Int? = null,
+    @DrawableRes icon: Int? = null,
     writable: Boolean = true
 ) {
     val interactionSource = remember { MutableInteractionSource() }
