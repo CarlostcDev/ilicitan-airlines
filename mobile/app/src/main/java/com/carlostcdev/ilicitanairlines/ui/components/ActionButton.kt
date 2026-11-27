@@ -1,7 +1,6 @@
 package com.carlostcdev.ilicitanairlines.ui.components
 
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.background
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
@@ -25,7 +24,7 @@ import com.carlostcdev.ilicitanairlines.ui.theme.AppShapes
 import com.carlostcdev.ilicitanairlines.ui.theme.AppSpacing
 import com.carlostcdev.ilicitanairlines.ui.theme.AppTextSizes
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanAirlinesTheme
-import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanColors
+import com.carlostcdev.ilicitanairlines.ui.theme.Palette
 
 @Composable
 fun ActionButton(
@@ -48,10 +47,10 @@ fun ActionButton(
                 modifier = modifier.fillMaxWidth(),
                 shape = AppShapes.button,
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = buttonBackground ?: if (isPressed) IlicitanColors.Button.primaryPressed else IlicitanColors.Button.default,
-                    contentColor = IlicitanColors.Button.contentEnabled,
-                    disabledContainerColor = IlicitanColors.Button.primaryDisabled,
-                    disabledContentColor = IlicitanColors.Button.contentDisabled
+                    containerColor = buttonBackground ?: if (isPressed) Palette.secondary else Palette.primary,
+                    contentColor = Palette.white,
+                    disabledContainerColor = Palette.blackGray,
+                    disabledContentColor = Palette.white
                 )
             ) {
                 Text(
@@ -70,12 +69,12 @@ fun ActionButton(
                 modifier = modifier.fillMaxWidth(),
                 shape = AppShapes.button,
                 colors = ButtonDefaults.outlinedButtonColors(
-                    containerColor = buttonBackground ?: if (isPressed) IlicitanColors.Button.secondaryPressed else Color.Transparent,
-                    contentColor = IlicitanColors.Button.default,
-                    disabledContainerColor = IlicitanColors.Button.secondaryDisabled,
-                    disabledContentColor = IlicitanColors.Button.contentDisabled
+                    containerColor = buttonBackground ?: if (isPressed) Palette.silverGray else Palette.transparent,
+                    contentColor = Palette.primary,
+                    disabledContainerColor = Palette.gray,
+                    disabledContentColor = Palette.white
                 ),
-                border = if (enabled) BorderStroke(AppDimensions.primaryBorderWidth, IlicitanColors.Button.default) else null
+                border = if (enabled) BorderStroke(AppDimensions.primaryBorderWidth, Palette.primary) else null
             ) {
                 Text(
                     text = label,
@@ -87,15 +86,13 @@ fun ActionButton(
     }
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 private fun ActionButtonPreview() {
     IlicitanAirlinesTheme {
         Column(
             verticalArrangement = Arrangement.spacedBy(AppSpacing.mediumLarge),
-            modifier = Modifier
-                .background(IlicitanColors.Surface.defaultPrimary)
-                .padding(AppSpacing.medium)
+            modifier = Modifier.padding(AppSpacing.medium)
         ) {
             ActionButton(
                 label = "Primary Enabled",

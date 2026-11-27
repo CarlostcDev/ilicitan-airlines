@@ -1,6 +1,5 @@
 package com.carlostcdev.ilicitanairlines.ui.components
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsFocusedAsState
@@ -26,7 +25,6 @@ import com.carlostcdev.ilicitanairlines.ui.theme.AppDimensions
 import com.carlostcdev.ilicitanairlines.ui.theme.AppShapes
 import com.carlostcdev.ilicitanairlines.ui.theme.AppSpacing
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanAirlinesTheme
-import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanColors
 import com.carlostcdev.ilicitanairlines.ui.theme.Palette
 
 @Composable
@@ -42,26 +40,23 @@ fun TextField(
 ) {
     val interactionSource = remember { MutableInteractionSource() }
     val isFocused by interactionSource.collectIsFocusedAsState()
-
-    val hasValue = value.isNotBlank()
-    val hasError = errorMsg.isNotBlank()
-    val showBorder = isFocused || hasValue || hasError
+    val showBorder = isFocused || value.isNotBlank() || errorMsg.isNotBlank()
 
     val titleColor = when {
-        hasError -> Palette.error
-        hasValue -> Palette.primary
+        errorMsg.isNotBlank() -> Palette.error
+        value.isNotBlank() -> Palette.primary
         else -> Palette.black
     }
 
     val iconColor = when {
-        hasError -> Palette.error
-        isFocused || hasValue -> Palette.primary
+        errorMsg.isNotBlank() -> Palette.error
+        isFocused || value.isNotBlank() -> Palette.primary
         else -> Palette.blackGray
     }
 
     val borderColor = when {
-        hasError -> Palette.error
-        isFocused || hasValue -> Palette.primary
+        errorMsg.isNotBlank() -> Palette.error
+        isFocused || value.isNotBlank() -> Palette.primary
         else -> Color.Transparent
     }
 
@@ -98,30 +93,30 @@ fun TextField(
                 } } else null,
                 readOnly = !writable,
                 singleLine = true,
-                isError = hasError,
+                isError = errorMsg.isNotBlank(),
                 shape = AppShapes.input,
                 colors = OutlinedTextFieldDefaults.colors(
-                    focusedContainerColor = IlicitanColors.Input.defaultBackground,
-                    unfocusedContainerColor = IlicitanColors.Input.defaultBackground,
-                    disabledContainerColor = IlicitanColors.Input.defaultBackground,
-                    errorContainerColor = IlicitanColors.Input.defaultBackground,
+                    focusedContainerColor = Palette.lightGray,
+                    unfocusedContainerColor = Palette.lightGray,
+                    disabledContainerColor = Palette.lightGray,
+                    errorContainerColor = Palette.lightGray,
                     focusedTextColor = Palette.black,
                     unfocusedTextColor = Palette.black,
                     errorTextColor = Palette.black,
                     focusedPlaceholderColor = Palette.darkGray,
                     unfocusedPlaceholderColor = Palette.darkGray,
                     errorPlaceholderColor = Palette.darkGray,
-                    focusedBorderColor = Color.Transparent,
-                    unfocusedBorderColor = Color.Transparent,
-                    disabledBorderColor = Color.Transparent,
-                    errorBorderColor = Color.Transparent,
+                    focusedBorderColor = Palette.transparent,
+                    unfocusedBorderColor = Palette.transparent,
+                    disabledBorderColor = Palette.transparent,
+                    errorBorderColor = Palette.transparent,
                     cursorColor = Palette.primary,
                     errorCursorColor = Palette.error
                 )
             )
         }
 
-        if (hasError) {
+        if (errorMsg.isNotBlank()) {
             Text(
                 text = errorMsg,
                 color = Palette.error,
@@ -137,9 +132,7 @@ private fun TextFieldPreview() {
     IlicitanAirlinesTheme {
         Column(
             verticalArrangement = Arrangement.spacedBy(AppSpacing.mediumLarge),
-            modifier = Modifier
-                .background(IlicitanColors.Surface.defaultPrimary)
-                .padding(AppSpacing.medium)
+            modifier = Modifier.padding(AppSpacing.medium)
         ) {
             TextField(
                 title = "Origen",

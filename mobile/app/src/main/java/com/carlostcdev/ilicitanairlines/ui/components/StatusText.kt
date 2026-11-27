@@ -24,7 +24,7 @@ import com.carlostcdev.ilicitanairlines.ui.theme.AppShapes
 import com.carlostcdev.ilicitanairlines.ui.theme.AppSpacing
 import com.carlostcdev.ilicitanairlines.ui.theme.AppTextSizes
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanAirlinesTheme
-import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanColors
+import com.carlostcdev.ilicitanairlines.ui.theme.Palette
 
 @Composable
 fun StatusText(
@@ -33,13 +33,13 @@ fun StatusText(
     modifier: Modifier = Modifier
 ) {
     val color = when(status) {
-        StatusTextType.SUCCESS -> IlicitanColors.Surface.borderSuccess
-        StatusTextType.WARN -> IlicitanColors.Surface.borderWarn
-        StatusTextType.ALERT -> IlicitanColors.Surface.borderAlert
+        StatusTextType.SUCCESS -> Palette.success
+        StatusTextType.WARN -> Palette.warn
+        StatusTextType.ALERT -> Palette.error
     }
 
     Surface(
-        color = IlicitanColors.Surface.defaultPrimary,
+        color = Palette.white,
         shape = AppShapes.card,
         border = BorderStroke(AppDimensions.secondaryBorderWidth, color = color),
         modifier = modifier
@@ -62,14 +62,12 @@ fun StatusText(
     }
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 private fun StatusTextPreview() {
     IlicitanAirlinesTheme {
         Column(
-            modifier = Modifier
-                .background(IlicitanColors.Surface.defaultPrimary)
-                .padding(AppSpacing.xSmall),
+            modifier = Modifier.padding(AppSpacing.xSmall),
             verticalArrangement = Arrangement.spacedBy(AppSpacing.xSmall),
         ) {
             StatusText(

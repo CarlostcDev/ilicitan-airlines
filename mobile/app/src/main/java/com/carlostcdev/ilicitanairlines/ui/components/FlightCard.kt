@@ -32,8 +32,7 @@ import com.carlostcdev.ilicitanairlines.ui.enums.StatusTextType
 import com.carlostcdev.ilicitanairlines.ui.theme.AppSpacing
 import com.carlostcdev.ilicitanairlines.ui.theme.AppTextSizes
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanAirlinesTheme
-import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanColors
-import java.util.Locale
+import com.carlostcdev.ilicitanairlines.ui.theme.Palette
 
 @Composable
 fun FlightCard(
@@ -61,7 +60,7 @@ fun FlightCard(
     ) {
         Row(
             modifier = Modifier
-                .background(IlicitanColors.Surface.defaultPrimary)
+                .background(Palette.white)
                 .height(IntrinsicSize.Min)
         ) {
             Column(
@@ -123,10 +122,10 @@ fun FlightCard(
                 modifier = Modifier
                     .weight(1.1f)
                     .fillMaxHeight()
-                    .background(IlicitanColors.Surface.defaultSecondary)
+                    .background(Palette.primary)
                     .drawBehind {
                         drawLine(
-                            color = IlicitanColors.Text.defaultPrimary,
+                            color = Palette.black,
                             start = Offset(2.dp.toPx(), 0f),
                             end = Offset(2.dp.toPx(), size.height),
                             strokeWidth = 3.dp.toPx(),
@@ -140,14 +139,14 @@ fun FlightCard(
                 Icon(
                     painter = painterResource(R.drawable.ic_flight_ticket),
                     contentDescription = null,
-                    tint = IlicitanColors.Icon.defaultSecondary,
+                    tint = Palette.white,
                     modifier = Modifier.padding(top = 20.dp)
                 )
                 Text(
                     text = cabinClass.trim().replace(" ", "\n"),
                     fontSize = AppTextSizes.large,
                     fontWeight = FontWeight.Bold,
-                    color = IlicitanColors.Text.defaultSecondary,
+                    color = Palette.white,
                     textAlign = TextAlign.Center,
                     softWrap = false
                 )
@@ -155,7 +154,7 @@ fun FlightCard(
                     text = price.trim(),
                     fontSize = AppTextSizes.xLarge,
                     fontWeight = FontWeight.Bold,
-                    color = IlicitanColors.Text.defaultSecondary,
+                    color = Palette.white,
                     modifier = Modifier.padding(bottom = 10.dp),
                     maxLines = 1,
                     softWrap = false
@@ -187,7 +186,7 @@ private fun FlightCardPreview() {
                 departureTime = "12:45",
                 arrivalDate = "Oct 11, 2027",
                 arrivalTime = "09:10",
-                price = "859,90€",
+                price = stringResource(R.string.price, 859.99),
                 onClick = {}
             )
             FlightCard(
@@ -204,7 +203,7 @@ private fun FlightCardPreview() {
                 departureTime = "08:30",
                 arrivalDate = "Nov 15, 2027",
                 arrivalTime = "22:40",
-                price = "1.420,00€",
+                price = stringResource(R.string.price, 1400.20),
                 onClick = {}
             )
             FlightCard(
@@ -221,7 +220,7 @@ private fun FlightCardPreview() {
                 departureTime = "17:20",
                 arrivalDate = "Dec 23, 2027",
                 arrivalTime = "14:10",
-                price = "689,50€",
+                price = stringResource(R.string.price, 689.50),
                 onClick = {}
             )
         }

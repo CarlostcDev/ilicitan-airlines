@@ -25,7 +25,7 @@ import com.carlostcdev.ilicitanairlines.ui.theme.AppDimensions
 import com.carlostcdev.ilicitanairlines.ui.theme.AppSpacing
 import com.carlostcdev.ilicitanairlines.ui.theme.AppTextSizes
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanAirlinesTheme
-import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanColors
+import com.carlostcdev.ilicitanairlines.ui.theme.Palette
 import java.util.Locale
 
 @Composable
@@ -71,7 +71,7 @@ fun FlightRouteTimeline(
                         .padding(horizontal = AppSpacing.xSmall)
                         .rotate(90f)
                         .size(AppDimensions.largeIconSize),
-                    tint = IlicitanColors.Icon.defaultPrimary
+                    tint = Palette.dark
                 )
                 DashedLine(modifier = Modifier.weight(1f))
             }
@@ -101,7 +101,7 @@ fun FlightRouteTimeline(
 private fun DashedLine(modifier: Modifier = Modifier) {
     Canvas(modifier = modifier.height(1.dp)) {
         drawLine(
-            color = IlicitanColors.Text.defaultPrimary,
+            color = Palette.black,
             start = Offset(0f, 0f),
             end = Offset(size.width, 0f),
             strokeWidth = AppDimensions.primaryBorderWidth.toPx(),
