@@ -1,4 +1,4 @@
-package com.carlostcdev.ilicitanairlines.ui.components
+package com.carlostcdev.ilicitanairlines.ui.sections
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.background
@@ -27,6 +27,7 @@ import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import com.carlostcdev.ilicitanairlines.R
 import com.carlostcdev.ilicitanairlines.model.Baggage
+import com.carlostcdev.ilicitanairlines.ui.components.InformationBaggage
 import com.carlostcdev.ilicitanairlines.ui.enums.BaggageType
 import com.carlostcdev.ilicitanairlines.ui.theme.AppDimensions
 import com.carlostcdev.ilicitanairlines.ui.theme.AppShapes

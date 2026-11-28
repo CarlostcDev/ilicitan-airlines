@@ -24,7 +24,6 @@ import com.carlostcdev.ilicitanairlines.ui.enums.BaggageType
 import com.carlostcdev.ilicitanairlines.ui.theme.AppSpacing
 import com.carlostcdev.ilicitanairlines.ui.theme.AppTextSizes
 import com.carlostcdev.ilicitanairlines.ui.theme.IlicitanAirlinesTheme
-import com.carlostcdev.ilicitanairlines.ui.theme.Palette
 
 @Composable
 fun InformationBaggage(

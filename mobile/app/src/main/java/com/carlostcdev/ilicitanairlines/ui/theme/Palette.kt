@@ -2,7 +2,7 @@ package com.carlostcdev.ilicitanairlines.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-internal object Palette {
+object Palette {
     val white = Color(0xFFFFFFFF)
     val lightGray = Color(0xFFF2F2F2)
     val blackGray = Color(0xFF808080)

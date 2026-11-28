@@ -1,4 +1,4 @@
-package com.carlostcdev.ilicitanairlines.ui.components
+package com.carlostcdev.ilicitanairlines.ui.sections
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -28,6 +28,9 @@ import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.carlostcdev.ilicitanairlines.R
+import com.carlostcdev.ilicitanairlines.ui.components.FlightRouteTimeline
+import com.carlostcdev.ilicitanairlines.ui.components.IataFlight
+import com.carlostcdev.ilicitanairlines.ui.components.StatusText
 import com.carlostcdev.ilicitanairlines.ui.enums.StatusTextType
 import com.carlostcdev.ilicitanairlines.ui.theme.AppSpacing
 import com.carlostcdev.ilicitanairlines.ui.theme.AppTextSizes
